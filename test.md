@@ -3,7 +3,7 @@ layout: page
 title: Test
 ---
 
-## Test
+# Test
 
 ```lua
 --this is a comment
