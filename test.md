@@ -2,7 +2,7 @@
 layout: page
 title: Test
 ---
-{% highlight lua %}
---this is a comment
+{% highlight json %}
+//this is a comment
 thisTable = thisTable or {}
 {% endhighlight %}
