@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc_one.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/demonnic.textFormatter.html">demonnic.textFormatter</a></li>
+  <li><a href="../modules/demonnic.html">demonnic</a></li>
+  <li><strong>demonnic.TableMaker</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>demonnic.TableMaker</code></h1>
+<p>Easy formatting for text tables</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:addColumn">demonnic.TableMaker:addColumn (options, position)</a></td>
+	<td class="summary">Adds a column definition for the table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:deleteColumn">demonnic.TableMaker:deleteColumn (position)</a></td>
+	<td class="summary">Deletes a column at the given position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:replaceColumn">demonnic.TableMaker:replaceColumn (options, position)</a></td>
+	<td class="summary">Replaces a column at a specific position with the newly provided formatting</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:addRow">demonnic.TableMaker:addRow (columnEntries, position)</a></td>
+	<td class="summary">Adds a row of output to the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:deleteRow">demonnic.TableMaker:deleteRow (position)</a></td>
+	<td class="summary">Deletes the row at the given position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:replaceRow">demonnic.TableMaker:replaceRow (columnEntries, position)</a></td>
+	<td class="summary">Replaces a row of output in the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:setCell">demonnic.TableMaker:setCell (row, column, entry)</a></td>
+	<td class="summary">Sets a specific cell's display information</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:enablePopups">demonnic.TableMaker:enablePopups ()</a></td>
+	<td class="summary">enables making cells which incorporate insertLink/insertPopup</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:enableAutoEcho">demonnic.TableMaker:enableAutoEcho ()</a></td>
+	<td class="summary">enables autoEcho so that when assemble is called it echos automatically</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:disableAutoEcho">demonnic.TableMaker:disableAutoEcho ()</a></td>
+	<td class="summary">disables autoecho.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:enableAutoClear">demonnic.TableMaker:enableAutoClear ()</a></td>
+	<td class="summary">Enables automatically clearing the miniconsole we echo to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:disableAutoClear">demonnic.TableMaker:disableAutoClear ()</a></td>
+	<td class="summary">Disables automatically clearing the miniconsole we echo to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:setAutoEchoConsole">demonnic.TableMaker:setAutoEchoConsole (console)</a></td>
+	<td class="summary">Set the miniconsole to echo to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:assemble">demonnic.TableMaker:assemble ()</a></td>
+	<td class="summary">Assemble the table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#demonnic.TableMaker:new">demonnic.TableMaker:new (options)</a></td>
+	<td class="summary">Creates and returns a new TableMaker.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "demonnic.TableMaker:addColumn"></a>
+    <strong>demonnic.TableMaker:addColumn (options, position)</strong>
+    </dt>
+    <dd>
+    Adds a column definition for the table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table of options suitable for a TextFormatter object. See https://github.com/demonnic/fText/wiki/fText
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         The position of the column you're adding, counting from the left. If not provided will add it as the last column
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:deleteColumn"></a>
+    <strong>demonnic.TableMaker:deleteColumn (position)</strong>
+    </dt>
+    <dd>
+    Deletes a column at the given position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         the column you wish to delete
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:replaceColumn"></a>
+    <strong>demonnic.TableMaker:replaceColumn (options, position)</strong>
+    </dt>
+    <dd>
+    Replaces a column at a specific position with the newly provided formatting
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of options suitable for a TextFormatter object. See https://github.com/demonnic/fText/wiki/fText
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         which column you are replacing, counting from the left.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:addRow"></a>
+    <strong>demonnic.TableMaker:addRow (columnEntries, position)</strong>
+    </dt>
+    <dd>
+    Adds a row of output to the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">columnEntries</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         This indexed table contains an entry for each column in the table. Entries in the table must be strings, a table of options for insertPopup or insertLink, or a function which returns one of these things
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         position for the row you want to add, counting from the top down. If not provided defaults to the last line in the table.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:deleteRow"></a>
+    <strong>demonnic.TableMaker:deleteRow (position)</strong>
+    </dt>
+    <dd>
+    Deletes the row at the given position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         the row to delete
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:replaceRow"></a>
+    <strong>demonnic.TableMaker:replaceRow (columnEntries, position)</strong>
+    </dt>
+    <dd>
+    Replaces a row of output in the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">columnEntries</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         This indexed table contains an entry for each column in the table. Entries in the table must be strings, a table of options for insertPopup or insertLink, or a function which returns one of these things
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         position for the row you want to add, counting from the top down.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:setCell"></a>
+    <strong>demonnic.TableMaker:setCell (row, column, entry)</strong>
+    </dt>
+    <dd>
+    Sets a specific cell's display information
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">row</span>
+            <span class="types"><span class="type">number</span></span>
+         the row number of the cell, counted from the top down
+        </li>
+        <li><span class="parameter">column</span>
+            <span class="types"><span class="type">number</span></span>
+         the column number of the cell, counted from the left
+        </li>
+        <li><span class="parameter">entry</span>
+         What to set the entry to. Must be a string, or a table of options for insertLink/insertPopup if allowPopups is set. Or a function which returns one of these things
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:enablePopups"></a>
+    <strong>demonnic.TableMaker:enablePopups ()</strong>
+    </dt>
+    <dd>
+    enables making cells which incorporate insertLink/insertPopup
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:enableAutoEcho"></a>
+    <strong>demonnic.TableMaker:enableAutoEcho ()</strong>
+    </dt>
+    <dd>
+    enables autoEcho so that when assemble is called it echos automatically
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:disableAutoEcho"></a>
+    <strong>demonnic.TableMaker:disableAutoEcho ()</strong>
+    </dt>
+    <dd>
+    disables autoecho.  Cannot be used if allowPopups is set
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:enableAutoClear"></a>
+    <strong>demonnic.TableMaker:enableAutoClear ()</strong>
+    </dt>
+    <dd>
+    Enables automatically clearing the miniconsole we echo to
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:disableAutoClear"></a>
+    <strong>demonnic.TableMaker:disableAutoClear ()</strong>
+    </dt>
+    <dd>
+    Disables automatically clearing the miniconsole we echo to
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:setAutoEchoConsole"></a>
+    <strong>demonnic.TableMaker:setAutoEchoConsole (console)</strong>
+    </dt>
+    <dd>
+    Set the miniconsole to echo to
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">console</span>
+         The miniconsole to autoecho to. Set to "main" or do not pass the parameter to autoecho to the main console. Can be a string name of the console, or a Geyser MiniConsole
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:assemble"></a>
+    <strong>demonnic.TableMaker:assemble ()</strong>
+    </dt>
+    <dd>
+    Assemble the table.  If autoEcho is enabled/set to true, will automatically echo. Otherwise, returns the formatted string to echo the table
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "demonnic.TableMaker:new"></a>
+    <strong>demonnic.TableMaker:new (options)</strong>
+    </dt>
+    <dd>
+    Creates and returns a new TableMaker.  See https://github.com/demonnic/fText/wiki/TableMaker for valid entries to the options table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of options for the TableMaker object
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2019-11-30 01:01:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
