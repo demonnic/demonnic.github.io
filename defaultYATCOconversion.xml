@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<ScriptPackage>
+		<Script isActive="yes" isFolder="no">
+			<name>DefaultYATCOConversion</name>
+			<packageName></packageName>
+			<script>-- These are the same as the default YATCO options on a 1080p monitor. 
+demonnic = demonnic or {}
+demonnic.chat = demonnic.chat or EMCO:new({
+  -- these are the x and y coordinates for the top-left of the tabbed container
+  x = 1486,
+  y = 0,
+  -- height and width of the overall tabbed box
+  width = 419,
+  height = 705,
+  -- display timestamps and format it
+  timestamp = true,
+  timestampFormat = "HH:mm:ss",
+  -- we do not use a custom color for the timestamp by default
+  customTimestampColor = false,
+  -- but we do define the colors anyways, as an example/
+  timestampFGColor = "red",
+  timestampBGColor = "blue",
+  -- what names to give to the console. This is what shows up in the tabs
+  consoles = {
+    "All",
+    "City",
+    "Guild",
+    "Clans",
+    "Local"
+  },
+  -- do you want to have a tab which displays everything? defaults to true
+  allTab = true,
+  -- the tab everything gets sent to is called 'All'. Make sure that whatever you put here is also in consoles above.
+  allTabName = "All",
+  -- do we want one of the tabs to display the Mudlet mapper? Set to false if not (default) but if so
+  -- change to the name of the tab you want to show the map. "Map" or "Local" or whatever you like. Make
+  -- sure it appears in the consoles list above
+  mapTab = false,
+  -- should we blink tabs to draw your attention to new information?
+  blink = true,
+  -- if you're looking at the all tab, should we blink anyway? 
+  blinkFromAll = false,
+  -- font size for all the miniconsoles
+  fontSize = 9,
+  -- should we make sure the background in the miniconsole never changes from the consoleColor/css background?
+  preserveBackground = false,
+  -- also include a deleteLine() when doing append()s?
+  gag = false,
+  -- what color should we make the active tab? Defaults to green. Can use any name from showColors
+  activeTabBGColor = "&lt;0,180,0&gt;",
+  -- what color should the inactive tabs be? Defaults to a lightish grey
+  inactiveTabBGColor = "&lt;60,60,60&gt;",
+  -- what color to make the console background? This is the main section where the text is displayed
+  consoleColor = "&lt;0,0,0&gt;",
+  -- what color should the text in the active tab be? 
+  activeTabFGColor = "purple",
+  -- and the inactive tab text color
+  inactiveTabFGColor = "white"
+})
+--- End script</script>
+			<eventHandlerList />
+		</Script>
+	</ScriptPackage>
+</MudletPackage>
