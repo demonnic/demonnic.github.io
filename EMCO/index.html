@@ -221,24 +221,64 @@
 	<td class="summary">Sets the number of characters to wordwrap the attached consoles at.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#append">append (tabName)</a></td>
+	<td class="name" nowrap><a href="#append">append (tabName, excludeAll)</a></td>
 	<td class="summary">Appends the current line from the MUD to a tab.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho">cecho (tabName, message)</a></td>
+	<td class="name" nowrap><a href="#cecho">cecho (tabName, message, excludeAll)</a></td>
 	<td class="summary">cecho to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho">decho (tabName, message)</a></td>
+	<td class="name" nowrap><a href="#decho">decho (tabName, message, excludeAll)</a></td>
 	<td class="summary">decho to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho">hecho (tabName, message)</a></td>
+	<td class="name" nowrap><a href="#hecho">hecho (tabName, message, excludeAll)</a></td>
 	<td class="summary">hecho to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#echo">echo (tabName, message)</a></td>
+	<td class="name" nowrap><a href="#echo">echo (tabName, message, excludeAll)</a></td>
 	<td class="summary">echo to a tab, maintaining functionality</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cechoLink">cechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="summary">cechoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dechoLink">dechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="summary">dechoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hechoLink">hechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="summary">hechoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#echoLink">echoLink (tabName, text, command, hint, useCurrentFormat, excludeAll)</a></td>
+	<td class="summary">echoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cechoPopup">cechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="summary">cechoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dechoPopup">dechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="summary">dechoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hechoPopup">hechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="summary">hechoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#echoPopup">echoPopup (tabName, text, commands, hints, useCurrentFormat, excludeAll)</a></td>
+	<td class="summary">echoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#addAllTabExclusion">addAllTabExclusion (tabName)</a></td>
+	<td class="summary">adds a tab to the exclusion list for echoing to the allTab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#removeAllTabExclusion">removeAllTabExclusion (tabName)</a></td>
+	<td class="summary">removess a tab from the exclusion list for echoing to the allTab</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#enableBlankLine">enableBlankLine ()</a></td>
@@ -1021,7 +1061,7 @@
 </dd>
     <dt>
     <a name = "append"></a>
-    <strong>append (tabName)</strong>
+    <strong>append (tabName, excludeAll)</strong>
     </dt>
     <dd>
     Appends the current line from the MUD to a tab.
@@ -1035,6 +1075,10 @@
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the tab to append the line to
         </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
     </ul>
 
 
@@ -1044,7 +1088,7 @@
 </dd>
     <dt>
     <a name = "cecho"></a>
-    <strong>cecho (tabName, message)</strong>
+    <strong>cecho (tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     cecho to a tab, maintaining functionality
@@ -1060,6 +1104,10 @@
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          the message to cecho to that tab's console
         </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
     </ul>
 
 
@@ -1069,7 +1117,7 @@
 </dd>
     <dt>
     <a name = "decho"></a>
-    <strong>decho (tabName, message)</strong>
+    <strong>decho (tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     decho to a tab, maintaining functionality
@@ -1085,6 +1133,10 @@
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          the message to decho to that tab's console
         </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
     </ul>
 
 
@@ -1094,7 +1146,7 @@
 </dd>
     <dt>
     <a name = "hecho"></a>
-    <strong>hecho (tabName, message)</strong>
+    <strong>hecho (tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     hecho to a tab, maintaining functionality
@@ -1110,6 +1162,10 @@
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          the message to hecho to that tab's console
         </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
     </ul>
 
 
@@ -1119,7 +1175,7 @@
 </dd>
     <dt>
     <a name = "echo"></a>
-    <strong>echo (tabName, message)</strong>
+    <strong>echo (tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     echo to a tab, maintaining functionality
@@ -1134,6 +1190,356 @@
         <li><span class="parameter">message</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          the message to echo to that tab's console
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cechoLink"></a>
+    <strong>cechoLink (tabName, text, command, hint, excludeAll)</strong>
+    </dt>
+    <dd>
+    cechoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to cechoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dechoLink"></a>
+    <strong>dechoLink (tabName, text, command, hint, excludeAll)</strong>
+    </dt>
+    <dd>
+    dechoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to dechoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hechoLink"></a>
+    <strong>hechoLink (tabName, text, command, hint, excludeAll)</strong>
+    </dt>
+    <dd>
+    hechoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to hechoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "echoLink"></a>
+    <strong>echoLink (tabName, text, command, hint, useCurrentFormat, excludeAll)</strong>
+    </dt>
+    <dd>
+    echoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to echoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">useCurrentFormat</span>
+            <span class="types"><span class="type">boolean</span></span>
+         use the format for the window or blue on black (hyperlink colors)
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cechoPopup"></a>
+    <strong>cechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    </dt>
+    <dd>
+    cechoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to cechoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dechoPopup"></a>
+    <strong>dechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    </dt>
+    <dd>
+    dechoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to dechoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hechoPopup"></a>
+    <strong>hechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    </dt>
+    <dd>
+    hechoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to hechoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "echoPopup"></a>
+    <strong>echoPopup (tabName, text, commands, hints, useCurrentFormat, excludeAll)</strong>
+    </dt>
+    <dd>
+    echoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to echoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">useCurrentFormat</span>
+            <span class="types"><span class="type">boolean</span></span>
+         use the format for the window or blue on black (hyperlink colors)
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "addAllTabExclusion"></a>
+    <strong>addAllTabExclusion (tabName)</strong>
+    </dt>
+    <dd>
+    adds a tab to the exclusion list for echoing to the allTab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to add to the exclusion list
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "removeAllTabExclusion"></a>
+    <strong>removeAllTabExclusion (tabName)</strong>
+    </dt>
+    <dd>
+    removess a tab from the exclusion list for echoing to the allTab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to remove from the exclusion list
         </li>
     </ul>
 
@@ -1236,7 +1642,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2019-08-18 00:28:24 </i>
+<i style="float:right;">Last updated 2020-02-20 22:34:52 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
