@@ -1,0 +1,1808 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc_one.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>EMCO</strong></li>
+  <li><a href="../modules/TextGauge.html">TextGauge</a></li>
+  <li><a href="../modules/ftext.html">ftext</a></li>
+  <li><a href="../modules/TableMaker.html">TableMaker</a></li>
+  <li><a href="../modules/TextFormatter.html">TextFormatter</a></li>
+  <li><a href="../modules/TimerGauge.html">TimerGauge</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>EMCO</code></h1>
+<p>Embeddable Multi Console Object.</p>
+<p>
+ This is essentially YATCO, but with some tweaks, updates, and it returns an object
+ similar to Geyser so that you can a.) have multiple of them and b.) easily embed it
+ into your existing UI as you would any other Geyser element.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#miniConvertYATCO">miniConvertYATCO ()</a></td>
+	<td class="summary">Scans for the old YATCO configuration values and prints out a set of constraints to use.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#convertYATCO">convertYATCO ()</a></td>
+	<td class="summary">Echos to the main console a script object you can add which will fully convert YATCO to EMCO.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#addTab">addTab (tabName[, position])</a></td>
+	<td class="summary">Adds a tab to the EMCO object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#reset">reset ()</a></td>
+	<td class="summary">resets the object, redrawing everything</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#fuzzyBoolean">fuzzyBoolean (bool)</a></td>
+	<td class="summary">Expands boolean definitions to be more flexible.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#clear">clear (tabName)</a></td>
+	<td class="summary">clears a specific tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#clearAll">clearAll ()</a></td>
+	<td class="summary">clears all the tabs</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTabFont">setTabFont (font)</a></td>
+	<td class="summary">sets the font for all tabs</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setSingleTabFont">setSingleTabFont (tabName, font)</a></td>
+	<td class="summary">sets the font for a single tab.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setFont">setFont (font)</a></td>
+	<td class="summary">sets the font for all the miniconsoles</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setSingleWindowFont">setSingleWindowFont (tabName, font)</a></td>
+	<td class="summary">sets the font for a specific miniconsole.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableCustomTimestampColor">enableCustomTimestampColor ()</a></td>
+	<td class="summary">enables custom colors for the timestamp, if displayed</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableCustomTimestampColor">disableCustomTimestampColor ()</a></td>
+	<td class="summary">disables custom colors for the timestamp, if displayed</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableTimestamp">enableTimestamp ()</a></td>
+	<td class="summary">enables the display of timestamps</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableTimestamp">disableTimestamp ()</a></td>
+	<td class="summary">disables the display of timestamps</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTimestampFormat">setTimestampFormat (format)</a></td>
+	<td class="summary">Sets the formatting for the timestamp, if enabled</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTimestampBGColor">setTimestampBGColor (color)</a></td>
+	<td class="summary">Sets the background color for the timestamp, if customTimestampColor is enabled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTimestampFGColor">setTimestampFGColor (color)</a></td>
+	<td class="summary">Sets the foreground color for the timestamp, if customTimestampColor is enabled.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setAllTabName">setAllTabName (allTabName)</a></td>
+	<td class="summary">Sets the 'all' tab name.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableAllTab">enableAllTab ()</a></td>
+	<td class="summary">Enables use of the 'all' tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableAllTab">disableAllTab ()</a></td>
+	<td class="summary">Disables use of the 'all' tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableMapTab">enableMapTab ()</a></td>
+	<td class="summary">Enables tying the Mudlet Mapper to one of the tabs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableMapTab">disableMapTab ()</a></td>
+	<td class="summary">disables binding the Mudlet Mapper to one of the tabs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setMapTabName">setMapTabName (mapTabName)</a></td>
+	<td class="summary">sets the name of the tab to bind the Mudlet Map.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableBlinkFromAll">enableBlinkFromAll ()</a></td>
+	<td class="summary">Enables tab blinking even if you're on the 'all' tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableBlinkFromAll">disableBlinkFromAll ()</a></td>
+	<td class="summary">Disables tab blinking when you're on the 'all' tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableGag">enableGag ()</a></td>
+	<td class="summary">Enables gagging of the line passed in to :append(tabName)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableGag">disableGag ()</a></td>
+	<td class="summary">Disables gagging of the line passed in to :append(tabName)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableBlink">enableBlink ()</a></td>
+	<td class="summary">Enables tab blinking when new information comes in to an inactive tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableBlink">disableBlink ()</a></td>
+	<td class="summary">Disables tab blinking when new information comes in to an inactive tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enablePreserveBackground">enablePreserveBackground ()</a></td>
+	<td class="summary">Enables preserving the chat's background over the background of an incoming :append()</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disablePreserveBackground">disablePreserveBackground ()</a></td>
+	<td class="summary">Enables preserving the chat's background over the background of an incoming :append()</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setBlinkTime">setBlinkTime (blinkTime)</a></td>
+	<td class="summary">Sets how long in seconds to wait between blinks</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setFontSize">setFontSize (fontSize)</a></td>
+	<td class="summary">Sets the font size of the attached consoles</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setActiveTabFGColor">setActiveTabFGColor (color)</a></td>
+	<td class="summary">Sets the FG color for the active tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setInactiveTabFGColor">setInactiveTabFGColor (color)</a></td>
+	<td class="summary">Sets the FG color for the inactive tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setActiveTabBGColor">setActiveTabBGColor (color)</a></td>
+	<td class="summary">Sets the BG color for the active tab.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setInactiveTabBGColor">setInactiveTabBGColor (color)</a></td>
+	<td class="summary">Sets the BG color for the inactive tab.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setConsoleColor">setConsoleColor (color)</a></td>
+	<td class="summary">Sets the BG color for the consoles attached to this object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTabBoxCSS">setTabBoxCSS (css)</a></td>
+	<td class="summary">Sets the CSS to use for the tab box which contains the tabs for the object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTabBoxColor">setTabBoxColor (color)</a></td>
+	<td class="summary">Sets the color to use for the tab box background</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setConsoleContainerColor">setConsoleContainerColor (color)</a></td>
+	<td class="summary">Sets the color for the container which holds the consoles attached to this object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setConsoleContainerCSS">setConsoleContainerCSS (css)</a></td>
+	<td class="summary">Sets the CSS to use for the container which holds the consoles attached to this object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setGap">setGap (gap)</a></td>
+	<td class="summary">Sets the amount of space to use between the tabs and the consoles</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTabHeight">setTabHeight (tabHeight)</a></td>
+	<td class="summary">Sets the height of the tabs in pixels</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableAutoWrap">enableAutoWrap ()</a></td>
+	<td class="summary">Enables autowrap for the object, and by extension all attached consoles.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableAutoWrap">disableAutoWrap ()</a></td>
+	<td class="summary">Disables autowrap for the object, and by extension all attached consoles.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setWrap">setWrap (wrapAt)</a></td>
+	<td class="summary">Sets the number of characters to wordwrap the attached consoles at.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#append">append (tabName, excludeAll)</a></td>
+	<td class="summary">Appends the current line from the MUD to a tab.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cecho">cecho (tabName, message, excludeAll)</a></td>
+	<td class="summary">cecho to a tab, maintaining functionality</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#decho">decho (tabName, message, excludeAll)</a></td>
+	<td class="summary">decho to a tab, maintaining functionality</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hecho">hecho (tabName, message, excludeAll)</a></td>
+	<td class="summary">hecho to a tab, maintaining functionality</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#echo">echo (tabName, message, excludeAll)</a></td>
+	<td class="summary">echo to a tab, maintaining functionality</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cechoLink">cechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="summary">cechoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dechoLink">dechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="summary">dechoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hechoLink">hechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="summary">hechoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#echoLink">echoLink (tabName, text, command, hint, useCurrentFormat, excludeAll)</a></td>
+	<td class="summary">echoLink to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cechoPopup">cechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="summary">cechoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dechoPopup">dechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="summary">dechoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hechoPopup">hechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="summary">hechoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#echoPopup">echoPopup (tabName, text, commands, hints, useCurrentFormat, excludeAll)</a></td>
+	<td class="summary">echoPopup to a tab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#addAllTabExclusion">addAllTabExclusion (tabName)</a></td>
+	<td class="summary">adds a tab to the exclusion list for echoing to the allTab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#removeAllTabExclusion">removeAllTabExclusion (tabName)</a></td>
+	<td class="summary">removess a tab from the exclusion list for echoing to the allTab</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableBlankLine">enableBlankLine ()</a></td>
+	<td class="summary">Enable placing a blank line between all messages.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableBlankLine">disableBlankLine ()</a></td>
+	<td class="summary">Enable placing a blank line between all messages.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#enableScrollbars">enableScrollbars ()</a></td>
+	<td class="summary">Enable scrollbars for the miniconsoles</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#disableScrollbars">disableScrollbars ()</a></td>
+	<td class="summary">Disable scrollbars for the miniconsoles</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#new">new (cons, container)</a></td>
+	<td class="summary">Creates a new Embeddable Multi Console Object.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "miniConvertYATCO"></a>
+    <strong>miniConvertYATCO ()</strong>
+    </dt>
+    <dd>
+    Scans for the old YATCO configuration values and prints out a set of constraints to use.
+ with EMCO to achieve the same effect. Is just the invocation
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "convertYATCO"></a>
+    <strong>convertYATCO ()</strong>
+    </dt>
+    <dd>
+    Echos to the main console a script object you can add which will fully convert YATCO to EMCO.
+ This replaces the demonnic.chat variable with a newly created EMCO object, so that the main
+ functions used to place information on the consoles (append(), cecho(), etc) should continue to
+ work in the user's triggers and events.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "addTab"></a>
+    <strong>addTab (tabName[, position])</strong>
+    </dt>
+    <dd>
+    Adds a tab to the EMCO object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to add
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         position in the tab switcher to put this tab
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "reset"></a>
+    <strong>reset ()</strong>
+    </dt>
+    <dd>
+    resets the object, redrawing everything
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "fuzzyBoolean"></a>
+    <strong>fuzzyBoolean (bool)</strong>
+    </dt>
+    <dd>
+    Expands boolean definitions to be more flexible.
+ <br>True values are "true", "yes", "0", 0, and true
+ <br>False values are "false", "no", "1", 1, false, and nil
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+         item to test for truthiness
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "clear"></a>
+    <strong>clear (tabName)</strong>
+    </dt>
+    <dd>
+    clears a specific tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to clear
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "clearAll"></a>
+    <strong>clearAll ()</strong>
+    </dt>
+    <dd>
+    clears all the tabs
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTabFont"></a>
+    <strong>setTabFont (font)</strong>
+    </dt>
+    <dd>
+    sets the font for all tabs
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the font to use.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setSingleTabFont"></a>
+    <strong>setSingleTabFont (tabName, font)</strong>
+    </dt>
+    <dd>
+    sets the font for a single tab.  If you use setTabFont this will be overridden
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tab to change the font of
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the font to use for that tab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setFont"></a>
+    <strong>setFont (font)</strong>
+    </dt>
+    <dd>
+    sets the font for all the miniconsoles
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the font to use
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setSingleWindowFont"></a>
+    <strong>setSingleWindowFont (tabName, font)</strong>
+    </dt>
+    <dd>
+    sets the font for a specific miniconsole.  If setFont is called this will be overridden
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of window to set the font for
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the font to use
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableCustomTimestampColor"></a>
+    <strong>enableCustomTimestampColor ()</strong>
+    </dt>
+    <dd>
+    enables custom colors for the timestamp, if displayed
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableCustomTimestampColor"></a>
+    <strong>disableCustomTimestampColor ()</strong>
+    </dt>
+    <dd>
+    disables custom colors for the timestamp, if displayed
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableTimestamp"></a>
+    <strong>enableTimestamp ()</strong>
+    </dt>
+    <dd>
+    enables the display of timestamps
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableTimestamp"></a>
+    <strong>disableTimestamp ()</strong>
+    </dt>
+    <dd>
+    disables the display of timestamps
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTimestampFormat"></a>
+    <strong>setTimestampFormat (format)</strong>
+    </dt>
+    <dd>
+    Sets the formatting for the timestamp, if enabled
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">format</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Format string which describes the display of the timestamp. See: https://wiki.mudlet.org/w/Manual:Lua_Functions#getTime
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTimestampBGColor"></a>
+    <strong>setTimestampBGColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the background color for the timestamp, if customTimestampColor is enabled.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTimestampFGColor"></a>
+    <strong>setTimestampFGColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the foreground color for the timestamp, if customTimestampColor is enabled.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setAllTabName"></a>
+    <strong>setAllTabName (allTabName)</strong>
+    </dt>
+    <dd>
+    Sets the 'all' tab name.
+ <br>This is the name of the tab itself
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">allTabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         name of the tab to use as the all tab. Must be a tab which exists in the object.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableAllTab"></a>
+    <strong>enableAllTab ()</strong>
+    </dt>
+    <dd>
+    Enables use of the 'all' tab
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableAllTab"></a>
+    <strong>disableAllTab ()</strong>
+    </dt>
+    <dd>
+    Disables use of the 'all' tab
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableMapTab"></a>
+    <strong>enableMapTab ()</strong>
+    </dt>
+    <dd>
+    Enables tying the Mudlet Mapper to one of the tabs.
+ <br>mapTabName must be set, or this will error. Forces a redraw of the entire object
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableMapTab"></a>
+    <strong>disableMapTab ()</strong>
+    </dt>
+    <dd>
+    disables binding the Mudlet Mapper to one of the tabs.
+ <br>CAUTION: this may have unexpected behaviour, as you can only open one Mapper console per profile
+ so you can't really unbind it. Binding of the Mudlet Mapper is best decided at instantiation.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setMapTabName"></a>
+    <strong>setMapTabName (mapTabName)</strong>
+    </dt>
+    <dd>
+    sets the name of the tab to bind the Mudlet Map.
+ <br>Forces a redraw of the object
+ <br>CAUTION: Mudlet only allows one Map object to be open at one time, so if you are going to attach the map to an object
+ you should probably do it at instantiation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mapTabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         name of the tab to connect the Mudlet Map to.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableBlinkFromAll"></a>
+    <strong>enableBlinkFromAll ()</strong>
+    </dt>
+    <dd>
+    Enables tab blinking even if you're on the 'all' tab
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableBlinkFromAll"></a>
+    <strong>disableBlinkFromAll ()</strong>
+    </dt>
+    <dd>
+    Disables tab blinking when you're on the 'all' tab
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableGag"></a>
+    <strong>enableGag ()</strong>
+    </dt>
+    <dd>
+    Enables gagging of the line passed in to :append(tabName)
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableGag"></a>
+    <strong>disableGag ()</strong>
+    </dt>
+    <dd>
+    Disables gagging of the line passed in to :append(tabName)
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableBlink"></a>
+    <strong>enableBlink ()</strong>
+    </dt>
+    <dd>
+    Enables tab blinking when new information comes in to an inactive tab
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableBlink"></a>
+    <strong>disableBlink ()</strong>
+    </dt>
+    <dd>
+    Disables tab blinking when new information comes in to an inactive tab
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enablePreserveBackground"></a>
+    <strong>enablePreserveBackground ()</strong>
+    </dt>
+    <dd>
+    Enables preserving the chat's background over the background of an incoming :append()
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disablePreserveBackground"></a>
+    <strong>disablePreserveBackground ()</strong>
+    </dt>
+    <dd>
+    Enables preserving the chat's background over the background of an incoming :append()
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setBlinkTime"></a>
+    <strong>setBlinkTime (blinkTime)</strong>
+    </dt>
+    <dd>
+    Sets how long in seconds to wait between blinks
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">blinkTime</span>
+            <span class="types"><span class="type">number</span></span>
+         time in seconds to wait between blinks
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setFontSize"></a>
+    <strong>setFontSize (fontSize)</strong>
+    </dt>
+    <dd>
+    Sets the font size of the attached consoles
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fontSize</span>
+            <span class="types"><span class="type">number</span></span>
+         font size for attached consoles
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setActiveTabFGColor"></a>
+    <strong>setActiveTabFGColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the FG color for the active tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setInactiveTabFGColor"></a>
+    <strong>setInactiveTabFGColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the FG color for the inactive tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setActiveTabBGColor"></a>
+    <strong>setActiveTabBGColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the BG color for the active tab.
+ <br>NOTE: If you set CSS for the active tab, it will override this setting.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setInactiveTabBGColor"></a>
+    <strong>setInactiveTabBGColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the BG color for the inactive tab.
+ <br>NOTE: If you set CSS for the inactive tab, it will override this setting.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setConsoleColor"></a>
+    <strong>setConsoleColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the BG color for the consoles attached to this object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTabBoxCSS"></a>
+    <strong>setTabBoxCSS (css)</strong>
+    </dt>
+    <dd>
+    Sets the CSS to use for the tab box which contains the tabs for the object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">css</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The css styling to use for the tab box
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTabBoxColor"></a>
+    <strong>setTabBoxColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the color to use for the tab box background
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setConsoleContainerColor"></a>
+    <strong>setConsoleContainerColor (color)</strong>
+    </dt>
+    <dd>
+    Sets the color for the container which holds the consoles attached to this object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">color</span>
+         Color string suitable for decho or hecho, or color name eg "purple", or table of colors {r,g,b}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setConsoleContainerCSS"></a>
+    <strong>setConsoleContainerCSS (css)</strong>
+    </dt>
+    <dd>
+    Sets the CSS to use for the container which holds the consoles attached to this object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">css</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         CSS to use for the container
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setGap"></a>
+    <strong>setGap (gap)</strong>
+    </dt>
+    <dd>
+    Sets the amount of space to use between the tabs and the consoles
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">gap</span>
+            <span class="types"><span class="type">number</span></span>
+         Number of pixels to keep between the tabs and consoles
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTabHeight"></a>
+    <strong>setTabHeight (tabHeight)</strong>
+    </dt>
+    <dd>
+    Sets the height of the tabs in pixels
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabHeight</span>
+            <span class="types"><span class="type">number</span></span>
+         the height of the tabs for the object, in pixels
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableAutoWrap"></a>
+    <strong>enableAutoWrap ()</strong>
+    </dt>
+    <dd>
+    Enables autowrap for the object, and by extension all attached consoles.
+ <br>To enable autoWrap for a specific miniconsole only, call myEMCO.windows[tabName]:enableAutoWrap()
+ but be warned if you do this it may be overwritten by future calls to EMCO:enableAutoWrap() or :disableAutoWrap()
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableAutoWrap"></a>
+    <strong>disableAutoWrap ()</strong>
+    </dt>
+    <dd>
+    Disables autowrap for the object, and by extension all attached consoles.
+ <br>To disable autoWrap for a specific miniconsole only, call myEMCO.windows[tabName]:disableAutoWrap()
+ but be warned if you do this it may be overwritten by future calls to EMCO:enableAutoWrap() or :disableAutoWrap()
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setWrap"></a>
+    <strong>setWrap (wrapAt)</strong>
+    </dt>
+    <dd>
+    Sets the number of characters to wordwrap the attached consoles at.
+ <br>it is generally recommended to make use of autoWrap unless you need
+ a specific width for some reason
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">wrapAt</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "append"></a>
+    <strong>append (tabName, excludeAll)</strong>
+    </dt>
+    <dd>
+    Appends the current line from the MUD to a tab.
+ <br>depending on this object's configuration, may gag the line
+ <br>depending on this object's configuration, may gag the next prompt
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the tab to append the line to
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cecho"></a>
+    <strong>cecho (tabName, message, excludeAll)</strong>
+    </dt>
+    <dd>
+    cecho to a tab, maintaining functionality
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to cecho to
+        </li>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the message to cecho to that tab's console
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "decho"></a>
+    <strong>decho (tabName, message, excludeAll)</strong>
+    </dt>
+    <dd>
+    decho to a tab, maintaining functionality
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to decho to
+        </li>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the message to decho to that tab's console
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hecho"></a>
+    <strong>hecho (tabName, message, excludeAll)</strong>
+    </dt>
+    <dd>
+    hecho to a tab, maintaining functionality
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to hecho to
+        </li>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the message to hecho to that tab's console
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "echo"></a>
+    <strong>echo (tabName, message, excludeAll)</strong>
+    </dt>
+    <dd>
+    echo to a tab, maintaining functionality
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to echo to
+        </li>
+        <li><span class="parameter">message</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the message to echo to that tab's console
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cechoLink"></a>
+    <strong>cechoLink (tabName, text, command, hint, excludeAll)</strong>
+    </dt>
+    <dd>
+    cechoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to cechoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dechoLink"></a>
+    <strong>dechoLink (tabName, text, command, hint, excludeAll)</strong>
+    </dt>
+    <dd>
+    dechoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to dechoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hechoLink"></a>
+    <strong>hechoLink (tabName, text, command, hint, excludeAll)</strong>
+    </dt>
+    <dd>
+    hechoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to hechoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "echoLink"></a>
+    <strong>echoLink (tabName, text, command, hint, useCurrentFormat, excludeAll)</strong>
+    </dt>
+    <dd>
+    echoLink to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to echoLink to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">command</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hint</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">useCurrentFormat</span>
+            <span class="types"><span class="type">boolean</span></span>
+         use the format for the window or blue on black (hyperlink colors)
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cechoPopup"></a>
+    <strong>cechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    </dt>
+    <dd>
+    cechoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to cechoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dechoPopup"></a>
+    <strong>dechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    </dt>
+    <dd>
+    dechoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to dechoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hechoPopup"></a>
+    <strong>hechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    </dt>
+    <dd>
+    hechoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to hechoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "echoPopup"></a>
+    <strong>echoPopup (tabName, text, commands, hints, useCurrentFormat, excludeAll)</strong>
+    </dt>
+    <dd>
+    echoPopup to a tab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to echoPopup to
+        </li>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the text underlying the link
+        </li>
+        <li><span class="parameter">commands</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the lua code to run in string format
+        </li>
+        <li><span class="parameter">hints</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the tooltip hint to use for the link
+        </li>
+        <li><span class="parameter">useCurrentFormat</span>
+            <span class="types"><span class="type">boolean</span></span>
+         use the format for the window or blue on black (hyperlink colors)
+        </li>
+        <li><span class="parameter">excludeAll</span>
+            <span class="types"><span class="type">boolean</span></span>
+         if true, will exclude this from being mirrored to the allTab
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "addAllTabExclusion"></a>
+    <strong>addAllTabExclusion (tabName)</strong>
+    </dt>
+    <dd>
+    adds a tab to the exclusion list for echoing to the allTab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to add to the exclusion list
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "removeAllTabExclusion"></a>
+    <strong>removeAllTabExclusion (tabName)</strong>
+    </dt>
+    <dd>
+    removess a tab from the exclusion list for echoing to the allTab
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tabName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the name of the tab to remove from the exclusion list
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableBlankLine"></a>
+    <strong>enableBlankLine ()</strong>
+    </dt>
+    <dd>
+    Enable placing a blank line between all messages.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableBlankLine"></a>
+    <strong>disableBlankLine ()</strong>
+    </dt>
+    <dd>
+    Enable placing a blank line between all messages.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "enableScrollbars"></a>
+    <strong>enableScrollbars ()</strong>
+    </dt>
+    <dd>
+    Enable scrollbars for the miniconsoles
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "disableScrollbars"></a>
+    <strong>disableScrollbars ()</strong>
+    </dt>
+    <dd>
+    Disable scrollbars for the miniconsoles
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "new"></a>
+    <strong>new (cons, container)</strong>
+    </dt>
+    <dd>
+    Creates a new Embeddable Multi Console Object.
+ <br>see https://github.com/demonnic/EMCO/wiki for information on valid constraints and defaults
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of constraints which configures the EMCO.
+        </li>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">GeyserObject</span></span>
+         The container to use as the parent for the EMCO
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        the newly created EMCO
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-06-05 21:15:47 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
