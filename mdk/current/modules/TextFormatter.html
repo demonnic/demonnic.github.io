@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc_one.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/EMCO.html">EMCO</a></li>
+  <li><a href="../modules/TextGauge.html">TextGauge</a></li>
+  <li><a href="../modules/ftext.html">ftext</a></li>
+  <li><a href="../modules/TableMaker.html">TableMaker</a></li>
+  <li><strong>TextFormatter</strong></li>
+  <li><a href="../modules/TimerGauge.html">TimerGauge</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>TextFormatter</code></h1>
+<p>Stand alone text formatter object.</p>
+<p> Remembers the options you set and can be adjusted as needed</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#setType">setType (typeToSet)</a></td>
+	<td class="summary">Set's the formatting type whether it's for cecho, decho, or hecho</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setWrap">setWrap (shouldWrap)</a></td>
+	<td class="summary">Sets whether or not we should do word wrapping.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setWidth">setWidth (width)</a></td>
+	<td class="summary">Sets the width we should format for</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setCap">setCap (cap)</a></td>
+	<td class="summary">Sets the cap for the formatter</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setCapColor">setCapColor (capColor)</a></td>
+	<td class="summary">Sets the color for the format cap</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setSpacerColor">setSpacerColor (spacerColor)</a></td>
+	<td class="summary">Sets the color for spacing character</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setTextColor">setTextColor (textColor)</a></td>
+	<td class="summary">Sets the color for formatted text</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setSpacer">setSpacer (spacer)</a></td>
+	<td class="summary">Sets the spacing character to use.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setAlignment">setAlignment (alignment)</a></td>
+	<td class="summary">Set the alignment to format for</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setInside">setInside (spacerInside)</a></td>
+	<td class="summary">Set whether the the spacer should go inside the the cap or outside of it</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#setMirror">setMirror (shouldMirror)</a></td>
+	<td class="summary">Set whether we should mirror/reverse the caps.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#format">format (str)</a></td>
+	<td class="summary">Format a string based on the stored options</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#new">new (options)</a></td>
+	<td class="summary">Creates and returns a new TextFormatter.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "setType"></a>
+    <strong>setType (typeToSet)</strong>
+    </dt>
+    <dd>
+    Set's the formatting type whether it's for cecho, decho, or hecho
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">typeToSet</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         What type of formatter is this? Valid options are { 'd', 'dec', 'decimal', 'h', 'hex', 'hexidecimal', 'c', 'color', 'colour', 'col', 'name'}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setWrap"></a>
+    <strong>setWrap (shouldWrap)</strong>
+    </dt>
+    <dd>
+    Sets whether or not we should do word wrapping.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">shouldWrap</span>
+            <span class="types"><span class="type">boolean</span></span>
+         should we do wordwrapping?
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setWidth"></a>
+    <strong>setWidth (width)</strong>
+    </dt>
+    <dd>
+    Sets the width we should format for
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         the width we should format for
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setCap"></a>
+    <strong>setCap (cap)</strong>
+    </dt>
+    <dd>
+    Sets the cap for the formatter
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cap</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the string to use for capping the formatted string.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setCapColor"></a>
+    <strong>setCapColor (capColor)</strong>
+    </dt>
+    <dd>
+    Sets the color for the format cap
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">capColor</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Color which can be formatted via Geyser.Color.parse()
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setSpacerColor"></a>
+    <strong>setSpacerColor (spacerColor)</strong>
+    </dt>
+    <dd>
+    Sets the color for spacing character
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">spacerColor</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Color which can be formatted via Geyser.Color.parse()
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setTextColor"></a>
+    <strong>setTextColor (textColor)</strong>
+    </dt>
+    <dd>
+    Sets the color for formatted text
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">textColor</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Color which can be formatted via Geyser.Color.parse()
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setSpacer"></a>
+    <strong>setSpacer (spacer)</strong>
+    </dt>
+    <dd>
+    Sets the spacing character to use.  Should be a single character
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">spacer</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the character to use for spacing
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setAlignment"></a>
+    <strong>setAlignment (alignment)</strong>
+    </dt>
+    <dd>
+    Set the alignment to format for
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">alignment</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         How to align the formatted string. Valid options are 'left', 'right', or 'center'
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setInside"></a>
+    <strong>setInside (spacerInside)</strong>
+    </dt>
+    <dd>
+    Set whether the the spacer should go inside the the cap or outside of it
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">spacerInside</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "setMirror"></a>
+    <strong>setMirror (shouldMirror)</strong>
+    </dt>
+    <dd>
+    Set whether we should mirror/reverse the caps.  IE << becomes >> if set to true
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">shouldMirror</span>
+            <span class="types"><span class="type">boolean</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "format"></a>
+    <strong>format (str)</strong>
+    </dt>
+    <dd>
+    Format a string based on the stored options
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The string to format
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "new"></a>
+    <strong>new (options)</strong>
+    </dt>
+    <dd>
+    Creates and returns a new TextFormatter.  For valid options, please see https://github.com/demonnic/fText/wiki/fText
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the options for the text formatter to use when running format()
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-06-05 21:15:47 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
