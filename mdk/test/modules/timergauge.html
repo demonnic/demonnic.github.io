@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc_one.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/EMCO.html">EMCO</a></li>
+  <li><a href="../modules/TextGauge.html">TextGauge</a></li>
+  <li><a href="../modules/ftext.html">ftext</a></li>
+  <li><a href="../modules/TableMaker.html">TableMaker</a></li>
+  <li><a href="../modules/TextFormatter.html">TextFormatter</a></li>
+  <li><strong>timergauge</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>timergauge</code></h1>
+<p>TimerGauge
+ Animated countdown timer, extends <a href="https://www.mudlet.org/geyser/files/geyser/GeyserGauge.html">Geyser.Gauge</a></p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:start">TimerGauge:start ([show])</a></td>
+	<td class="summary">Starts the timergauge.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:stop">TimerGauge:stop ([hide])</a></td>
+	<td class="summary">Stops the timergauge.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:pause">TimerGauge:pause ([hide])</a></td>
+	<td class="summary">Alias for stop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:reset">TimerGauge:reset ()</a></td>
+	<td class="summary">Resets the time on the timergauge to its original value.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:restart">TimerGauge:restart ([show])</a></td>
+	<td class="summary">Resets and starts the timergauge.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:getTime">TimerGauge:getTime (format)</a></td>
+	<td class="summary">Get the amount of time remaining on the timer, in seconds</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:executeHook">TimerGauge:executeHook ()</a></td>
+	<td class="summary">Execute the timer's hook, if there is one.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:finish">TimerGauge:finish ([skipHook])</a></td>
+	<td class="summary">Sets the timer's remaining time to 0, stops it, and executes the hook if one exists.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:update">TimerGauge:update ([skipHook])</a></td>
+	<td class="summary">Updates the visual representation of the gauge with time remaining</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TimerGauge:setTime">TimerGauge:setTime (time)</a></td>
+	<td class="summary">Sets the amount of time the timer will run for</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "TimerGauge:start"></a>
+    <strong>TimerGauge:start ([show])</strong>
+    </dt>
+    <dd>
+    Starts the timergauge.  Works whether the timer is stopped or not. Does not start a timer which is already at 0
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">show</span>
+            <span class="types"><span class="type">boolean</span></span>
+         override the autoShow property. If you pass false it will not automatically pass :show()
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:stop"></a>
+    <strong>TimerGauge:stop ([hide])</strong>
+    </dt>
+    <dd>
+    Stops the timergauge.  Works whether the timer is started or not.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">hide</span>
+            <span class="types"><span class="type">boolean</span></span>
+         override the autoHide property. If you pass true it will ensure :hide() is called when stopped
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:pause"></a>
+    <strong>TimerGauge:pause ([hide])</strong>
+    </dt>
+    <dd>
+    Alias for stop.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">hide</span>
+            <span class="types"><span class="type">boolean</span></span>
+         override the autoHide property. If you pass true it will ensure :hide() is called when stopped
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:reset"></a>
+    <strong>TimerGauge:reset ()</strong>
+    </dt>
+    <dd>
+    Resets the time on the timergauge to its original value.  Does not alter the running state of the timer
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:restart"></a>
+    <strong>TimerGauge:restart ([show])</strong>
+    </dt>
+    <dd>
+    Resets and starts the timergauge.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">show</span>
+            <span class="types"><span class="type">boolean</span></span>
+         override the autoShow property. If you pass false it will not automatically pass :show(), if you pass true it will.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:getTime"></a>
+    <strong>TimerGauge:getTime (format)</strong>
+    </dt>
+    <dd>
+    Get the amount of time remaining on the timer, in seconds
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">format</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Format string for how to return the time. IF not provided defaults to self.timeFormat(which defaults to "S.t"). If "" is passed will return "" as the time.
+ <br>"hh" is hours with leading 0 (00 - 24)
+ <br>"h" is hours without leading 0 (0-24)
+ <br>"mm" is milliseconds with leading 0s (000 - 999)
+ <br>"m" is milliseconds without leading 0s (0-999)
+ <br>"ss" is seconds with leading 0s (00-60)
+ <br>"s" is seconds without leading 0s (0-60)
+ <br>"S" is total seconds, before breaking down into smaller units. IE if there is 60 seconds left, S will return 60 but s would return 0. (0-*)
+ <br>"t" is tenths of a second (0-9)
+ <br>"MM" is minutes with leading 0s (01 - 59)
+ <br>"M" is minutes without leading 0s (1-59)
+ <br>"dd" is days with one leading 0 (0 - ...)
+ <br>"d" is days without leading 0 (0 - ...)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:executeHook"></a>
+    <strong>TimerGauge:executeHook ()</strong>
+    </dt>
+    <dd>
+    Execute the timer's hook, if there is one.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:finish"></a>
+    <strong>TimerGauge:finish ([skipHook])</strong>
+    </dt>
+    <dd>
+    Sets the timer's remaining time to 0, stops it, and executes the hook if one exists.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skipHook</span>
+            <span class="types"><span class="type">boolean</span></span>
+         use true to have it set the timer to 0 and stop, but not execute the hook.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:update"></a>
+    <strong>TimerGauge:update ([skipHook])</strong>
+    </dt>
+    <dd>
+    Updates the visual representation of the gauge with time remaining
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">skipHook</span>
+            <span class="types"><span class="type">boolean</span></span>
+         use true if you do not want to execute the hook if the timer is at 0
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TimerGauge:setTime"></a>
+    <strong>TimerGauge:setTime (time)</strong>
+    </dt>
+    <dd>
+    Sets the amount of time the timer will run for
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         how long in seconds the timer should run for
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-06-07 17:50:25 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
