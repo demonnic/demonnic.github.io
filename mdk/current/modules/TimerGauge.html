@@ -59,6 +59,14 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#show2">show2 ()</a></td>
+	<td class="summary">Shows the TimerGauge.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#hide2">hide2 ()</a></td>
+	<td class="summary">Hides the TimerGauge.</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#start">start ([show])</a></td>
 	<td class="summary">Starts the timergauge.</td>
 	</tr>
@@ -79,24 +87,20 @@
 	<td class="summary">Resets and starts the timergauge.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getTime">getTime ()</a></td>
+	<td class="name" nowrap><a href="#getTime">getTime (format)</a></td>
 	<td class="summary">Get the amount of time remaining on the timer, in seconds</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#executeHook">executeHook ()</a></td>
-	<td class="summary">Execute the timer's hook, if there is one.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#finish">finish ([skipHook])</a></td>
 	<td class="summary">Sets the timer's remaining time to 0, stops it, and executes the hook if one exists.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#update">update ([skipHook])</a></td>
-	<td class="summary">Updates the visual representation of the gauge with time remaining</td>
+	<td class="name" nowrap><a href="#setTime">setTime (time)</a></td>
+	<td class="summary">Sets the amount of time the timer will run for.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTime">setTime (time)</a></td>
-	<td class="summary">Sets the amount of time the timer will run for</td>
+	<td class="name" nowrap><a href="#new">new (cons, parent)</a></td>
+	<td class="summary">Creates a new TimerGauge instance.</td>
 	</tr>
 </table>
 
@@ -107,6 +111,34 @@
     <h2 class="section-header "><a name="Functions"></a>Functions</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "show2"></a>
+    <strong>show2 ()</strong>
+    </dt>
+    <dd>
+    Shows the TimerGauge.  If manageContainer is true, then will add it back to its container
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "hide2"></a>
+    <strong>hide2 ()</strong>
+    </dt>
+    <dd>
+    Hides the TimerGauge.  If manageContainer is set, then it will remove it from its container and if it's an HBox or VBox it will initiate its size/position management
+
+
+
+
+
+
+
+</dd>
     <dt>
     <a name = "start"></a>
     <strong>start ([show])</strong>
@@ -119,7 +151,7 @@
     <ul>
         <li><span class="parameter">show</span>
             <span class="types"><span class="type">boolean</span></span>
-         override the autoShow property. If you pass false it will not automatically pass :show()
+         override the autoShow property. True will always show, false will never show.
          (<em>optional</em>)
         </li>
     </ul>
@@ -127,6 +159,12 @@
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">myTimerGauge:start() <span class="comment">--starts the timer, will show or not based on autoShow property
+</span>myTimerGauge:start(<span class="keyword">false</span>) <span class="comment">--starts the timer, will not change hidden status, regardless of autoShow property
+</span>myTimerGauge:start(<span class="keyword">true</span>) <span class="comment">--starts the timer, will show it regardless of autoShow property</span></pre>
+    </ul>
 
 </dd>
     <dt>
@@ -141,7 +179,7 @@
     <ul>
         <li><span class="parameter">hide</span>
             <span class="types"><span class="type">boolean</span></span>
-         override the autoHide property. If you pass true it will ensure :hide() is called when stopped
+         override the autoHide property. True will always hide, false will never hide.
          (<em>optional</em>)
         </li>
     </ul>
@@ -149,6 +187,12 @@
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">myTimerGauge:stop() <span class="comment">--stops the timer, will hide or not based on autoHide property
+</span>myTimerGauge:stop(<span class="keyword">false</span>) <span class="comment">--stops the timer, will not change hidden status, regardless of autoHide property
+</span>myTimerGauge:stop(<span class="keyword">true</span>) <span class="comment">--stops the timer, will hide it regardless of autoHide property</span></pre>
+    </ul>
 
 </dd>
     <dt>
@@ -163,7 +207,7 @@
     <ul>
         <li><span class="parameter">hide</span>
             <span class="types"><span class="type">boolean</span></span>
-         override the autoHide property. If you pass true it will ensure :hide() is called when stopped
+         override the autoHide property. True will always hide, false will never hide.
          (<em>optional</em>)
         </li>
     </ul>
@@ -199,7 +243,7 @@
     <ul>
         <li><span class="parameter">show</span>
             <span class="types"><span class="type">boolean</span></span>
-         override the autoShow property. If you pass false it will not automatically pass :show(), if you pass true it will.
+         override the autoShow property. true will always show, falls will never show
          (<em>optional</em>)
         </li>
     </ul>
@@ -207,34 +251,99 @@
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">myTimerGauge:restart() <span class="comment">--restarts the timer, will show or not based on autoShow property
+</span>myTimerGauge:restart(<span class="keyword">false</span>) <span class="comment">--restarts the timer, will not change hidden status, regardless of autoShow property
+</span>myTimerGauge:restart(<span class="keyword">true</span>) <span class="comment">--restarts the timer, will show it regardless of autoShow property</span></pre>
+    </ul>
 
 </dd>
     <dt>
     <a name = "getTime"></a>
-    <strong>getTime ()</strong>
+    <strong>getTime (format)</strong>
     </dt>
     <dd>
     Get the amount of time remaining on the timer, in seconds
 
 
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">format</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Format string for how to return the time. If not provided defaults to self.timeFormat(which defaults to "S.t").<br>
+                      If "" is passed will return "" as the time. See below table for formatting codes<br>
+<table id="t02">
+<tr>
+  <th>format code</th>
+  <th>what it is replaced with</th>
+</tr>
+<tr>
+  <td>S</td>
+  <td>Time left in seconds, unbroken down. Does not include milliseconds.<br>
+      IE a timer with 2 minutes left it would replace S with 120
+  </td>
+</tr>
+<tr>
+  <td>dd</td>
+  <td>Days, with 1 leading 0 (0, 01, 02-...)</td>
+</tr>
+<tr>
+  <td>d</td>
+  <td>Days, with no leading 0 (1,2,3-...)</td>
+</tr>
+<tr>
+  <td>hh</td>
+  <td>hours, with leading 0 (00-24)</td>
+</tr>
+<tr>
+  <td>h</td>
+  <td>hours, without leading 0 (0-24)</td>
+</tr>
+<tr>
+  <td>MM</td>
+  <td>minutes, with a leading 0 (00-59)</td>
+</tr>
+<tr>
+  <td>M</td>
+  <td>minutes, no leading 0 (0-59)</td>
+</tr>
+<tr>
+  <td>ss</td>
+  <td>seconds, with leading 0 (00-59)</td>
+</tr>
+<tr>
+  <td>s</td>
+  <td>seconds, no leading 0 (0-59)</td>
+</tr>
+<tr>
+  <td>t</td>
+  <td>tenths of a second<br>
+      timer with 12.345 seconds left, t would<br>
+      br replaced by 3.
+  </td>
+</tr>
+<tr>
+  <td>mm</td>
+  <td>milliseconds with leadings 0s (000-999)</td>
+</tr>
+<tr>
+  <td>m</td>
+  <td>milliseconds with no leading 0s (0-999)</td>
+</tr>
+</table><br>
+        </li>
+    </ul>
 
 
 
 
-
-</dd>
-    <dt>
-    <a name = "executeHook"></a>
-    <strong>executeHook ()</strong>
-    </dt>
-    <dd>
-    Execute the timer's hook, if there is one.
-
-
-
-
-
-
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">myTimerGauge:getTime() <span class="comment">--returns the time using myTimerGauge.format
+</span>myTimerGauge:getTime(<span class="string">"hh:MM:ss"</span>) <span class="comment">--returns the time as hours, minutes, and seconds, with leading 0s (01:23:04)
+</span>myTimerGauge:getTime(<span class="string">"S.mm"</span>) <span class="comment">--returns the time as the total number of seconds, including milliseconds (114.004)</span></pre>
+    </ul>
 
 </dd>
     <dt>
@@ -257,28 +366,11 @@
 
 
 
-
-</dd>
-    <dt>
-    <a name = "update"></a>
-    <strong>update ([skipHook])</strong>
-    </dt>
-    <dd>
-    Updates the visual representation of the gauge with time remaining
-
-
-    <h3>Parameters:</h3>
+    <h3>Usage:</h3>
     <ul>
-        <li><span class="parameter">skipHook</span>
-            <span class="types"><span class="type">boolean</span></span>
-         use true if you do not want to execute the hook if the timer is at 0
-         (<em>optional</em>)
-        </li>
+        <pre class="example">myTimerGauge:finish() <span class="comment">--executes the hook if it has one
+</span>myTimerGauge:finish(<span class="keyword">false</span>) <span class="comment">--will not execute the hook</span></pre>
     </ul>
-
-
-
-
 
 </dd>
     <dt>
@@ -286,7 +378,9 @@
     <strong>setTime (time)</strong>
     </dt>
     <dd>
-    Sets the amount of time the timer will run for
+    Sets the amount of time the timer will run for.  Make sure to call :reset() or :restart()
+ if you want to cause the timer to run for that amount of time. If you set it to a time lower
+ than the time left on the timer currently, it will reset the current time, otherwise it is left alone
 
 
     <h3>Parameters:</h3>
@@ -300,6 +394,186 @@
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">myTimerGauge:setTime(<span class="number">50</span>) <span class="comment">-- sets myTimerGauge's max time to 50.</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "new"></a>
+    <strong>new (cons, parent)</strong>
+    </dt>
+    <dd>
+    Creates a new TimerGauge instance.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         a table of options (or constraints) for how the TimerGauge will behave. Valid options include:
+<style>
+ table#t01 tr:nth-child(even) {
+   background-color: #eee;
+ }
+ table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+ }
+ table#t02 tr:nth-child(even) {
+   background-color: #eee;
+ }
+ table#t02 tr:nth-child(odd) {
+   background-color: #fff;
+ }
+ table, th,td {
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 15px;
+ }
+</style><br>
+<table id="t01">
+<tr>
+  <th>name</th>
+  <th>description</th>
+  <th>default</th>
+</tr>
+<tr>
+  <td>time</td>
+  <td>how long the timer should run for</td>
+  <td></td>
+</tr>
+<tr>
+  <td>active</td>
+  <td>whether the timer should run or not</td>
+  <td>true</td>
+</tr>
+<tr>
+  <td>showTime</td>
+  <td>should we show the time remaining on the gauge?</td>
+  <td>true</td>
+</tr>
+<tr>
+  <td>prefix</td>
+  <td>text you want shown before the time.</td>
+  <td>""</td>
+</tr>
+<tr>
+  <td>suffix</td>
+  <td>text you want shown after the time.</td>
+  <td>""</td>
+</tr>
+<tr>
+  <td>timerCaption</td>
+  <td>Alias for suffix. Deprecated and may be remove in the future</td>
+  <td/>
+</tr>
+<tr>
+  <td>updateTime</td>
+  <td>number of milliseconds between gauge updates.</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td>autoHide</td>
+  <td>should the timer :hide() itself when it runs out/you stop it?</td>
+  <td>true</td>
+</tr>
+<tr>
+  <td>autoShow</td>
+  <td>should the timer :show() itself when you start it?</td>
+  <td>true</td>
+</tr>
+<tr>
+  <td>manageContainer</td>
+  <td>should the timer remove itself from its container when you call <br>:hide() and add itself back when you call :show()?</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>timeFormat</td>
+  <td>how should the time be displayed/returned if you call :getTime()? <br>See table below for more information</td>
+  <td>"S.t"</td>
+</tr>
+</table>
+<br>Table of time format options
+<table id="t02">
+<tr>
+  <th>format code</th>
+  <th>what it is replaced with</th>
+</tr>
+<tr>
+  <td>S</td>
+  <td>Time left in seconds, unbroken down. Does not include milliseconds.<br>
+      IE a timer with 2 minutes left it would replace S with 120
+  </td>
+</tr>
+<tr>
+  <td>dd</td>
+  <td>Days, with 1 leading 0 (0, 01, 02-...)</td>
+</tr>
+<tr>
+  <td>d</td>
+  <td>Days, with no leading 0 (1,2,3-...)</td>
+</tr>
+<tr>
+  <td>hh</td>
+  <td>hours, with leading 0 (00-24)</td>
+</tr>
+<tr>
+  <td>h</td>
+  <td>hours, without leading 0 (0-24)</td>
+</tr>
+<tr>
+  <td>MM</td>
+  <td>minutes, with a leading 0 (00-59)</td>
+</tr>
+<tr>
+  <td>M</td>
+  <td>minutes, no leading 0 (0-59)</td>
+</tr>
+<tr>
+  <td>ss</td>
+  <td>seconds, with leading 0 (00-59)</td>
+</tr>
+<tr>
+  <td>s</td>
+  <td>seconds, no leading 0 (0-59)</td>
+</tr>
+<tr>
+  <td>t</td>
+  <td>tenths of a second<br>
+      timer with 12.345 seconds left, t would<br>
+      br replaced by 3.
+  </td>
+</tr>
+<tr>
+  <td>mm</td>
+  <td>milliseconds with leadings 0s (000-999)</td>
+</tr>
+<tr>
+  <td>m</td>
+  <td>milliseconds with no leading 0s (0-999)</td>
+</tr>
+</table><br>
+        </li>
+        <li><span class="parameter">parent</span>
+         The Geyser parent for this TimerGauge
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">myTimerGauge = TimerGauge:new({
+  name = <span class="string">"testGauge"</span>,
+  x = <span class="number">100</span>,
+  y = <span class="number">100</span>,
+  height = <span class="number">40</span>,
+  width = <span class="number">200</span>,
+  time = <span class="number">10</span>
+})</pre>
+    </ul>
 
 </dd>
 </dl>
@@ -309,7 +583,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-06-06 14:15:06 </i>
+<i style="float:right;">Last updated 2020-06-07 23:31:25 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
