@@ -71,10 +71,15 @@ body {
 }
 
 code, tt { font-family: monospace; font-size: 1.1em; }
+span.parameter { font-family:monospace; }
+span.parameter:after { content:":"; }
+span.types:before { content:"("; }
+span.types:after { content:")"; }
+.type { font-weight: bold; font-style:italic }
 
 body, p, td, th { font-size: .95em; line-height: 1.2em;}
 
-p, ul { margin: 10px 0 0 10px;}
+p, ul { margin: 10px 0 0 0px;}
 
 strong { font-weight: bold;}
 
@@ -82,7 +87,7 @@ em { font-style: italic;}
 
 h1 {
     font-size: 1.5em;
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
 }
 h2, h3, h4 { margin: 15px 0 10px 0; }
 h2 { font-size: 1.25em; }
@@ -90,7 +95,7 @@ h3 { font-size: 1.15em; }
 h4 { font-size: 1.06em; }
 
 a:link { font-weight: bold; color: #004080; text-decoration: none; }
-a:visited { font-weight: bold; color: #2808FF; text-decoration: none; }
+a:visited { font-weight: bold; color: #006699; text-decoration: none; }
 a:link:hover { text-decoration: underline; }
 
 hr {
@@ -127,7 +132,7 @@ table.index td { text-align: left; vertical-align: top; }
 #container {
     margin-left: 1em;
     margin-right: 1em;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
 }
 
 #product {
@@ -141,14 +146,15 @@ table.index td { text-align: left; vertical-align: top; }
 }
 
 #main {
+    background-color: #f0f0f0;
     border-left: 2px solid #cccccc;
-    border-right: 2px solid #cccccc;
 }
 
 #navigation {
-    float: top;
+    float: left;
+    width: 14em;
     vertical-align: top;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
     overflow: visible;
 }
 
@@ -180,7 +186,10 @@ table.index td { text-align: left; vertical-align: top; }
 }
 
 #content {
+    margin-left: 14em;
     padding: 1em;
+    border-left: 2px solid #cccccc;
+    border-right: 2px solid #cccccc;
     background-color: #ffffff;
 }
 
@@ -223,20 +232,20 @@ table.index td { text-align: left; vertical-align: top; }
     }
 }
 
-table.module_list {
+table.geyser_list {
     border-width: 1px;
     border-style: solid;
     border-color: #cccccc;
     border-collapse: collapse;
 }
-table.module_list td {
+table.geyser_list td {
     border-width: 1px;
     padding: 3px;
     border-style: solid;
     border-color: #cccccc;
 }
-table.module_list td.name { background-color: #f5f5f5; }
-table.module_list td.summary { width: 100%; }
+table.geyser_list td.name { background-color: #f0f0f0; min-width: 200px; }
+table.geyser_list td.summary { width: 100%; }
 
 
 table.function_list {
@@ -251,15 +260,28 @@ table.function_list td {
     border-style: solid;
     border-color: #cccccc;
 }
-table.function_list td.name {
-    background-color: #f5f5f5;
-    white-space: normal;  /* voids the "nowrap" in HTML */
-}
+table.function_list td.name { background-color: #f0f0f0; min-width: 200px; }
 table.function_list td.summary { width: 100%; }
+
+ul.nowrap {
+    overflow:auto;
+    white-space:nowrap;
+}
 
 dl.table dt, dl.function dt {border-top: 1px solid #ccc; padding-top: 1em;}
 dl.table dd, dl.function dd {padding-bottom: 1em; margin: 10px 0 0 20px;}
 dl.table h3, dl.function h3 {font-size: .95em;}
+
+/* stop sublists from having initial vertical space */
+ul ul { margin-top: 0px; }
+ol ul { margin-top: 0px; }
+ol ol { margin-top: 0px; }
+ul ol { margin-top: 0px; }
+
+/* make the target distinct; helps when we're navigating to a function */
+a:target + * {
+  background-color: #FF9;
+}
 
 
 /* styles for prettification of source */
