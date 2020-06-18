@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>MDK</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
+  <li><a href="../classes/SortBox.html">SortBox</a></li>
+  <li><strong>TableMaker</strong></li>
+  <li><a href="../classes/TextFormatter.html">TextFormatter</a></li>
+  <li><a href="../classes/TimerGauge.html">TimerGauge</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/ftext.html">ftext</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>TableMaker</code></h1>
+<p>Easy formatting for text tables</p>
+<p></p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:addColumn">TableMaker:addColumn (options, position)</a></td>
+	<td class="summary">Adds a column definition for the table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:deleteColumn">TableMaker:deleteColumn (position)</a></td>
+	<td class="summary">Deletes a column at the given position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:replaceColumn">TableMaker:replaceColumn (options, position)</a></td>
+	<td class="summary">Replaces a column at a specific position with the newly provided formatting</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:addRow">TableMaker:addRow (columnEntries, position)</a></td>
+	<td class="summary">Adds a row of output to the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:deleteRow">TableMaker:deleteRow (position)</a></td>
+	<td class="summary">Deletes the row at the given position</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:replaceRow">TableMaker:replaceRow (columnEntries, position)</a></td>
+	<td class="summary">Replaces a row of output in the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:setCell">TableMaker:setCell (row, column, entry)</a></td>
+	<td class="summary">Sets a specific cell's display information</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:enablePopups">TableMaker:enablePopups ()</a></td>
+	<td class="summary">enables making cells which incorporate insertLink/insertPopup</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:enableAutoEcho">TableMaker:enableAutoEcho ()</a></td>
+	<td class="summary">enables autoEcho so that when assemble is called it echos automatically</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:disableAutoEcho">TableMaker:disableAutoEcho ()</a></td>
+	<td class="summary">disables autoecho.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:enableAutoClear">TableMaker:enableAutoClear ()</a></td>
+	<td class="summary">Enables automatically clearing the miniconsole we echo to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:disableAutoClear">TableMaker:disableAutoClear ()</a></td>
+	<td class="summary">Disables automatically clearing the miniconsole we echo to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:setAutoEchoConsole">TableMaker:setAutoEchoConsole (console)</a></td>
+	<td class="summary">Set the miniconsole to echo to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:assemble">TableMaker:assemble ()</a></td>
+	<td class="summary">Assemble the table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TableMaker:new">TableMaker:new (options)</a></td>
+	<td class="summary">Creates and returns a new TableMaker.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "TableMaker:addColumn"></a>
+    <strong>TableMaker:addColumn (options, position)</strong>
+    </dt>
+    <dd>
+    Adds a column definition for the table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         Table of options suitable for a TextFormatter object. See https://github.com/demonnic/fText/wiki/fText
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         The position of the column you're adding, counting from the left. If not provided will add it as the last column
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:deleteColumn"></a>
+    <strong>TableMaker:deleteColumn (position)</strong>
+    </dt>
+    <dd>
+    Deletes a column at the given position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         the column you wish to delete
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:replaceColumn"></a>
+    <strong>TableMaker:replaceColumn (options, position)</strong>
+    </dt>
+    <dd>
+    Replaces a column at a specific position with the newly provided formatting
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of options suitable for a TextFormatter object. See https://github.com/demonnic/fText/wiki/fText
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         which column you are replacing, counting from the left.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:addRow"></a>
+    <strong>TableMaker:addRow (columnEntries, position)</strong>
+    </dt>
+    <dd>
+    Adds a row of output to the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">columnEntries</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         This indexed table contains an entry for each column in the table. Entries in the table must be strings, a table of options for insertPopup or insertLink, or a function which returns one of these things
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         position for the row you want to add, counting from the top down. If not provided defaults to the last line in the table.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:deleteRow"></a>
+    <strong>TableMaker:deleteRow (position)</strong>
+    </dt>
+    <dd>
+    Deletes the row at the given position
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         the row to delete
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:replaceRow"></a>
+    <strong>TableMaker:replaceRow (columnEntries, position)</strong>
+    </dt>
+    <dd>
+    Replaces a row of output in the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">columnEntries</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         This indexed table contains an entry for each column in the table. Entries in the table must be strings, a table of options for insertPopup or insertLink, or a function which returns one of these things
+        </li>
+        <li><span class="parameter">position</span>
+            <span class="types"><span class="type">number</span></span>
+         position for the row you want to add, counting from the top down.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:setCell"></a>
+    <strong>TableMaker:setCell (row, column, entry)</strong>
+    </dt>
+    <dd>
+    Sets a specific cell's display information
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">row</span>
+            <span class="types"><span class="type">number</span></span>
+         the row number of the cell, counted from the top down
+        </li>
+        <li><span class="parameter">column</span>
+            <span class="types"><span class="type">number</span></span>
+         the column number of the cell, counted from the left
+        </li>
+        <li><span class="parameter">entry</span>
+         What to set the entry to. Must be a string, or a table of options for insertLink/insertPopup if allowPopups is set. Or a function which returns one of these things
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:enablePopups"></a>
+    <strong>TableMaker:enablePopups ()</strong>
+    </dt>
+    <dd>
+    enables making cells which incorporate insertLink/insertPopup
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:enableAutoEcho"></a>
+    <strong>TableMaker:enableAutoEcho ()</strong>
+    </dt>
+    <dd>
+    enables autoEcho so that when assemble is called it echos automatically
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:disableAutoEcho"></a>
+    <strong>TableMaker:disableAutoEcho ()</strong>
+    </dt>
+    <dd>
+    disables autoecho.  Cannot be used if allowPopups is set
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:enableAutoClear"></a>
+    <strong>TableMaker:enableAutoClear ()</strong>
+    </dt>
+    <dd>
+    Enables automatically clearing the miniconsole we echo to
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:disableAutoClear"></a>
+    <strong>TableMaker:disableAutoClear ()</strong>
+    </dt>
+    <dd>
+    Disables automatically clearing the miniconsole we echo to
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:setAutoEchoConsole"></a>
+    <strong>TableMaker:setAutoEchoConsole (console)</strong>
+    </dt>
+    <dd>
+    Set the miniconsole to echo to
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">console</span>
+         The miniconsole to autoecho to. Set to "main" or do not pass the parameter to autoecho to the main console. Can be a string name of the console, or a Geyser MiniConsole
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:assemble"></a>
+    <strong>TableMaker:assemble ()</strong>
+    </dt>
+    <dd>
+    Assemble the table.  If autoEcho is enabled/set to true, will automatically echo. Otherwise, returns the formatted string to echo the table
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TableMaker:new"></a>
+    <strong>TableMaker:new (options)</strong>
+    </dt>
+    <dd>
+    Creates and returns a new TableMaker.  See https://github.com/demonnic/fText/wiki/TableMaker for valid entries to the options table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">options</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of options for the TableMaker object
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-06-17 23:24:18 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
