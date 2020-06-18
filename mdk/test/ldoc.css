@@ -203,7 +203,7 @@ table.index td { text-align: left; vertical-align: top; }
     clear: both;
     padding: 5px;
     border-top: 2px solid #cccccc;
-    background-color: #ffffff;
+    background-color: #222222;
 }
 
 @media print {
