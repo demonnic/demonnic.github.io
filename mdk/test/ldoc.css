@@ -94,8 +94,8 @@ h2 { font-size: 1.25em; }
 h3 { font-size: 1.15em; }
 h4 { font-size: 1.06em; }
 
-a:link { font-weight: bold; color: #005090; text-decoration: none; }
-a:visited { font-weight: bold; color: #007799; text-decoration: none; }
+a:link { font-weight: bold; color: #0060a0; text-decoration: none; }
+a:visited { font-weight: bold; color: #0088aa; text-decoration: none; }
 a:link:hover { text-decoration: underline; }
 
 hr {
