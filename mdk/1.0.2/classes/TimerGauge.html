@@ -32,78 +32,81 @@
 
 <h2>Contents</h2>
 <ul>
-<li><a href="#Functions">Functions</a></li>
+<li><a href="#Methods">Methods</a></li>
 </ul>
 
 
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
+  <li><a href="../classes/SortBox.html">SortBox</a></li>
+  <li><a href="../classes/TableMaker.html">TableMaker</a></li>
+  <li><a href="../classes/TextFormatter.html">TextFormatter</a></li>
+  <li><strong>TimerGauge</strong></li>
+</ul>
 <h2>Modules</h2>
 <ul class="nowrap">
-  <li><a href="../modules/EMCO.html">EMCO</a></li>
-  <li><a href="../modules/TextGauge.html">TextGauge</a></li>
   <li><a href="../modules/ftext.html">ftext</a></li>
-  <li><a href="../modules/SortBox.html">SortBox</a></li>
-  <li><a href="../modules/TableMaker.html">TableMaker</a></li>
-  <li><a href="../modules/TextFormatter.html">TextFormatter</a></li>
-  <li><strong>TimerGauge</strong></li>
 </ul>
 
 </div>
 
 <div id="content">
 
-<h1>Module <code>TimerGauge</code></h1>
+<h1>Class <code>TimerGauge</code></h1>
 <p>Animated countdown timer, extends <a href="https://www.mudlet.org/geyser/files/geyser/GeyserGauge.html">Geyser.Gauge</a></p>
 <p></p>
 
 
-<h2><a href="#Functions">Functions</a></h2>
+<h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#show2">show2 ()</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:show2">TimerGauge:show2()</a></td>
 	<td class="summary">Shows the TimerGauge.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hide2">hide2 ()</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:hide2">TimerGauge:hide2()</a></td>
 	<td class="summary">Hides the TimerGauge.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#start">start ([show])</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:start">TimerGauge:start([show])</a></td>
 	<td class="summary">Starts the timergauge.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#stop">stop ([hide])</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:stop">TimerGauge:stop([hide])</a></td>
 	<td class="summary">Stops the timergauge.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#pause">pause ([hide])</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:pause">TimerGauge:pause([hide])</a></td>
 	<td class="summary">Alias for stop.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#reset">reset ()</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:reset">TimerGauge:reset()</a></td>
 	<td class="summary">Resets the time on the timergauge to its original value.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#restart">restart ([show])</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:restart">TimerGauge:restart([show])</a></td>
 	<td class="summary">Resets and starts the timergauge.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getTime">getTime (format)</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:getTime">TimerGauge:getTime(format)</a></td>
 	<td class="summary">Get the amount of time remaining on the timer, in seconds</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#finish">finish ([skipHook])</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:finish">TimerGauge:finish([skipHook])</a></td>
 	<td class="summary">Sets the timer's remaining time to 0, stops it, and executes the hook if one exists.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTime">setTime (time)</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:setTime">TimerGauge:setTime(time)</a></td>
 	<td class="summary">Sets the amount of time the timer will run for.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setUpdateTime">setUpdateTime (updateTime)</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:setUpdateTime">TimerGauge:setUpdateTime(updateTime)</a></td>
 	<td class="summary">Changes the time between gauge updates.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#new">new (cons, parent)</a></td>
+	<td class="name" nowrap><a href="#TimerGauge:new">TimerGauge:new(cons, parent)</a></td>
 	<td class="summary">Creates a new TimerGauge instance.</td>
 	</tr>
 </table>
@@ -112,12 +115,12 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
 
     <dl class="function">
     <dt>
-    <a name = "show2"></a>
-    <strong>show2 ()</strong>
+    <a name = "TimerGauge:show2"></a>
+    <strong>TimerGauge:show2()</strong>
     </dt>
     <dd>
     Shows the TimerGauge.  If the manageContainer property is true, then will add it back to its container
@@ -130,8 +133,8 @@
 
 </dd>
     <dt>
-    <a name = "hide2"></a>
-    <strong>hide2 ()</strong>
+    <a name = "TimerGauge:hide2"></a>
+    <strong>TimerGauge:hide2()</strong>
     </dt>
     <dd>
     Hides the TimerGauge.  If manageContainer property is true, then it will remove it from its container and if the container is an HBox or VBox it will initiate size/position management
@@ -144,8 +147,8 @@
 
 </dd>
     <dt>
-    <a name = "start"></a>
-    <strong>start ([show])</strong>
+    <a name = "TimerGauge:start"></a>
+    <strong>TimerGauge:start([show])</strong>
     </dt>
     <dd>
     Starts the timergauge.  Works whether the timer is stopped or not. Does not start a timer which is already at 0
@@ -172,8 +175,8 @@
 
 </dd>
     <dt>
-    <a name = "stop"></a>
-    <strong>stop ([hide])</strong>
+    <a name = "TimerGauge:stop"></a>
+    <strong>TimerGauge:stop([hide])</strong>
     </dt>
     <dd>
     Stops the timergauge.  Works whether the timer is started or not.
@@ -200,8 +203,8 @@
 
 </dd>
     <dt>
-    <a name = "pause"></a>
-    <strong>pause ([hide])</strong>
+    <a name = "TimerGauge:pause"></a>
+    <strong>TimerGauge:pause([hide])</strong>
     </dt>
     <dd>
     Alias for stop.
@@ -222,8 +225,8 @@
 
 </dd>
     <dt>
-    <a name = "reset"></a>
-    <strong>reset ()</strong>
+    <a name = "TimerGauge:reset"></a>
+    <strong>TimerGauge:reset()</strong>
     </dt>
     <dd>
     Resets the time on the timergauge to its original value.  Does not alter the running state of the timer
@@ -236,8 +239,8 @@
 
 </dd>
     <dt>
-    <a name = "restart"></a>
-    <strong>restart ([show])</strong>
+    <a name = "TimerGauge:restart"></a>
+    <strong>TimerGauge:restart([show])</strong>
     </dt>
     <dd>
     Resets and starts the timergauge.
@@ -264,8 +267,8 @@
 
 </dd>
     <dt>
-    <a name = "getTime"></a>
-    <strong>getTime (format)</strong>
+    <a name = "TimerGauge:getTime"></a>
+    <strong>TimerGauge:getTime(format)</strong>
     </dt>
     <dd>
     Get the amount of time remaining on the timer, in seconds
@@ -277,63 +280,63 @@
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Format string for how to return the time. If not provided defaults to self.timeFormat(which defaults to "S.t").<br>
                       If "" is passed will return "" as the time. See below table for formatting codes<br>
-<table id="t02">
+<table class="tg">
 <tr>
   <th>format code</th>
   <th>what it is replaced with</th>
 </tr>
 <tr>
-  <td>S</td>
-  <td>Time left in seconds, unbroken down. Does not include milliseconds.<br>
+  <td class="tg-odd">S</td>
+  <td class="tg-odd">Time left in seconds, unbroken down. Does not include milliseconds.<br>
       IE a timer with 2 minutes left it would replace S with 120
   </td>
 </tr>
 <tr>
-  <td>dd</td>
-  <td>Days, with 1 leading 0 (0, 01, 02-...)</td>
+  <td class="tg-even">dd</td>
+  <td class="tg-even">Days, with 1 leading 0 (0, 01, 02-...)</td>
 </tr>
 <tr>
-  <td>d</td>
-  <td>Days, with no leading 0 (1,2,3-...)</td>
+  <td class="tg-odd">d</td>
+  <td class="tg-odd">Days, with no leading 0 (1,2,3-...)</td>
 </tr>
 <tr>
-  <td>hh</td>
-  <td>hours, with leading 0 (00-24)</td>
+  <td class="tg-even">hh</td>
+  <td class="tg-even">hours, with leading 0 (00-24)</td>
 </tr>
 <tr>
-  <td>h</td>
-  <td>hours, without leading 0 (0-24)</td>
+  <td class="tg-odd">h</td>
+  <td class="tg-odd">hours, without leading 0 (0-24)</td>
 </tr>
 <tr>
-  <td>MM</td>
-  <td>minutes, with a leading 0 (00-59)</td>
+  <td class="tg-even">MM</td>
+  <td class="tg-even">minutes, with a leading 0 (00-59)</td>
 </tr>
 <tr>
-  <td>M</td>
-  <td>minutes, no leading 0 (0-59)</td>
+  <td class="tg-odd">M</td>
+  <td class="tg-odd">minutes, no leading 0 (0-59)</td>
 </tr>
 <tr>
-  <td>ss</td>
-  <td>seconds, with leading 0 (00-59)</td>
+  <td class="tg-even">ss</td>
+  <td class="tg-even">seconds, with leading 0 (00-59)</td>
 </tr>
 <tr>
-  <td>s</td>
-  <td>seconds, no leading 0 (0-59)</td>
+  <td class="tg-odd">s</td>
+  <td class="tg-odd">seconds, no leading 0 (0-59)</td>
 </tr>
 <tr>
-  <td>t</td>
-  <td>tenths of a second<br>
+  <td class="tg-even">t</td>
+  <td class="tg-even">tenths of a second<br>
       timer with 12.345 seconds left, t would<br>
       br replaced by 3.
   </td>
 </tr>
 <tr>
-  <td>mm</td>
-  <td>milliseconds with leadings 0s (000-999)</td>
+  <td class="tg-odd">mm</td>
+  <td class="tg-odd">milliseconds with leadings 0s (000-999)</td>
 </tr>
 <tr>
-  <td>m</td>
-  <td>milliseconds with no leading 0s (0-999)</td>
+  <td class="tg-even">m</td>
+  <td class="tg-even">milliseconds with no leading 0s (0-999)</td>
 </tr>
 </table><br>
         </li>
@@ -351,8 +354,8 @@
 
 </dd>
     <dt>
-    <a name = "finish"></a>
-    <strong>finish ([skipHook])</strong>
+    <a name = "TimerGauge:finish"></a>
+    <strong>TimerGauge:finish([skipHook])</strong>
     </dt>
     <dd>
     Sets the timer's remaining time to 0, stops it, and executes the hook if one exists.
@@ -378,8 +381,8 @@
 
 </dd>
     <dt>
-    <a name = "setTime"></a>
-    <strong>setTime (time)</strong>
+    <a name = "TimerGauge:setTime"></a>
+    <strong>TimerGauge:setTime(time)</strong>
     </dt>
     <dd>
     Sets the amount of time the timer will run for.  Make sure to call :reset() or :restart()
@@ -405,8 +408,8 @@
 
 </dd>
     <dt>
-    <a name = "setUpdateTime"></a>
-    <strong>setUpdateTime (updateTime)</strong>
+    <a name = "TimerGauge:setUpdateTime"></a>
+    <strong>TimerGauge:setUpdateTime(updateTime)</strong>
     </dt>
     <dd>
     Changes the time between gauge updates.
@@ -426,8 +429,8 @@
 
 </dd>
     <dt>
-    <a name = "new"></a>
-    <strong>new (cons, parent)</strong>
+    <a name = "TimerGauge:new"></a>
+    <strong>TimerGauge:new(cons, parent)</strong>
     </dt>
     <dd>
     Creates a new TimerGauge instance.
@@ -438,145 +441,127 @@
         <li><span class="parameter">cons</span>
             <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          a table of options (or constraints) for how the TimerGauge will behave. Valid options include:
-<style>
- table#t01 tr:nth-child(even) {
-   background-color: #eee;
- }
- table#t01 tr:nth-child(odd) {
-   background-color: #fff;
- }
- table#t02 tr:nth-child(even) {
-   background-color: #eee;
- }
- table#t02 tr:nth-child(odd) {
-   background-color: #fff;
- }
- table, th,td {
-   border: 1px solid black;
-   border-collapse: collapse;
-   padding: 15px;
- }
-</style><br>
-<table id="t01">
+<br>
+<table class="tg">
 <tr>
   <th>name</th>
   <th>description</th>
   <th>default</th>
 </tr>
 <tr>
-  <td>time</td>
-  <td>how long the timer should run for</td>
-  <td></td>
+  <td class="tg-odd">time</td>
+  <td class="tg-odd">how long the timer should run for</td>
+  <td class="tg-odd"></td>
 </tr>
 <tr>
-  <td>active</td>
-  <td>whether the timer should run or not</td>
-  <td>true</td>
+  <td class="tg-even">active</td>
+  <td class="tg-even">whether the timer should run or not</td>
+  <td class="tg-even">true</td>
 </tr>
 <tr>
-  <td>showTime</td>
-  <td>should we show the time remaining on the gauge?</td>
-  <td>true</td>
+  <td class="tg-odd">showTime</td>
+  <td class="tg-odd">should we show the time remaining on the gauge?</td>
+  <td class="tg-odd">true</td>
 </tr>
 <tr>
-  <td>prefix</td>
-  <td>text you want shown before the time.</td>
-  <td>""</td>
+  <td class="tg-even">prefix</td>
+  <td class="tg-even">text you want shown before the time.</td>
+  <td class="tg-even">""</td>
 </tr>
 <tr>
-  <td>suffix</td>
-  <td>text you want shown after the time.</td>
-  <td>""</td>
+  <td class="tg-odd">suffix</td>
+  <td class="tg-odd">text you want shown after the time.</td>
+  <td class="tg-odd">""</td>
 </tr>
 <tr>
-  <td>timerCaption</td>
-  <td>Alias for suffix. Deprecated and may be remove in the future</td>
-  <td/>
+  <td class="tg-even">timerCaption</td>
+  <td class="tg-even">Alias for suffix. Deprecated and may be remove in the future</td>
+  <td class="tg-even"/>
 </tr>
 <tr>
-  <td>updateTime</td>
-  <td>number of milliseconds between gauge updates.</td>
-  <td>10</td>
+  <td class="tg-odd">updateTime</td>
+  <td class="tg-odd">number of milliseconds between gauge updates.</td>
+  <td class="tg-odd">10</td>
 </tr>
 <tr>
-  <td>autoHide</td>
-  <td>should the timer :hide() itself when it runs out/you stop it?</td>
-  <td>true</td>
+  <td class="tg-even">autoHide</td>
+  <td class="tg-even">should the timer :hide() itself when it runs out/you stop it?</td>
+  <td class="tg-even">true</td>
 </tr>
 <tr>
-  <td>autoShow</td>
-  <td>should the timer :show() itself when you start it?</td>
-  <td>true</td>
+  <td class="tg-odd">autoShow</td>
+  <td class="tg-odd">should the timer :show() itself when you start it?</td>
+  <td class="tg-odd">true</td>
 </tr>
 <tr>
-  <td>manageContainer</td>
-  <td>should the timer remove itself from its container when you call <br>:hide() and add itself back when you call :show()?</td>
-  <td>false</td>
+  <td class="tg-even">manageContainer</td>
+  <td class="tg-even">should the timer remove itself from its container when you call <br>:hide() and add itself back when you call :show()?</td>
+  <td class="tg-even">false</td>
 </tr>
 <tr>
-  <td>timeFormat</td>
-  <td>how should the time be displayed/returned if you call :getTime()? <br>See table below for more information</td>
-  <td>"S.t"</td>
+  <td class="tg-odd">timeFormat</td>
+  <td class="tg-odd">how should the time be displayed/returned if you call :getTime()? <br>See table below for more information</td>
+  <td class="tg-odd">"S.t"</td>
 </tr>
 </table>
 <br>Table of time format options
-<table id="t02">
+<table class="tg">
 <tr>
   <th>format code</th>
   <th>what it is replaced with</th>
 </tr>
 <tr>
-  <td>S</td>
-  <td>Time left in seconds, unbroken down. Does not include milliseconds.<br>
+  <td class="tg-odd">S</td>
+  <td class="tg-odd">Time left in seconds, unbroken down. Does not include milliseconds.<br>
       IE a timer with 2 minutes left it would replace S with 120
   </td>
 </tr>
 <tr>
-  <td>dd</td>
-  <td>Days, with 1 leading 0 (0, 01, 02-...)</td>
+  <td class="tg-even">dd</td>
+  <td class="tg-even">Days, with 1 leading 0 (0, 01, 02-...)</td>
 </tr>
 <tr>
-  <td>d</td>
-  <td>Days, with no leading 0 (1,2,3-...)</td>
+  <td class="tg-odd">d</td>
+  <td class="tg-odd">Days, with no leading 0 (1,2,3-...)</td>
 </tr>
 <tr>
-  <td>hh</td>
-  <td>hours, with leading 0 (00-24)</td>
+  <td class="tg-even">hh</td>
+  <td class="tg-even">hours, with leading 0 (00-24)</td>
 </tr>
 <tr>
-  <td>h</td>
-  <td>hours, without leading 0 (0-24)</td>
+  <td class="tg-odd">h</td>
+  <td class="tg-odd">hours, without leading 0 (0-24)</td>
 </tr>
 <tr>
-  <td>MM</td>
-  <td>minutes, with a leading 0 (00-59)</td>
+  <td class="tg-even">MM</td>
+  <td class="tg-even">minutes, with a leading 0 (00-59)</td>
 </tr>
 <tr>
-  <td>M</td>
-  <td>minutes, no leading 0 (0-59)</td>
+  <td class="tg-odd">M</td>
+  <td class="tg-odd">minutes, no leading 0 (0-59)</td>
 </tr>
 <tr>
-  <td>ss</td>
-  <td>seconds, with leading 0 (00-59)</td>
+  <td class="tg-even">ss</td>
+  <td class="tg-even">seconds, with leading 0 (00-59)</td>
 </tr>
 <tr>
-  <td>s</td>
-  <td>seconds, no leading 0 (0-59)</td>
+  <td class="tg-odd">s</td>
+  <td class="tg-odd">seconds, no leading 0 (0-59)</td>
 </tr>
 <tr>
-  <td>t</td>
-  <td>tenths of a second<br>
+  <td class="tg-even">t</td>
+  <td class="tg-even">tenths of a second<br>
       timer with 12.345 seconds left, t would<br>
       br replaced by 3.
   </td>
 </tr>
 <tr>
-  <td>mm</td>
-  <td>milliseconds with leadings 0s (000-999)</td>
+  <td class="tg-odd">mm</td>
+  <td class="tg-odd">milliseconds with leadings 0s (000-999)</td>
 </tr>
 <tr>
-  <td>m</td>
-  <td>milliseconds with no leading 0s (0-999)</td>
+  <td class="tg-even">m</td>
+  <td class="tg-even">milliseconds with no leading 0s (0-999)</td>
 </tr>
 </table><br>
         </li>
@@ -608,7 +593,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-06-14 21:39:03 </i>
+<i style="float:right;">Last updated 2020-06-19 19:46:32 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

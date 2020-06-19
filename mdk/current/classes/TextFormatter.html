@@ -32,82 +32,85 @@
 
 <h2>Contents</h2>
 <ul>
-<li><a href="#Functions">Functions</a></li>
+<li><a href="#Methods">Methods</a></li>
 </ul>
 
 
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
+  <li><a href="../classes/SortBox.html">SortBox</a></li>
+  <li><a href="../classes/TableMaker.html">TableMaker</a></li>
+  <li><strong>TextFormatter</strong></li>
+  <li><a href="../classes/TimerGauge.html">TimerGauge</a></li>
+</ul>
 <h2>Modules</h2>
 <ul class="nowrap">
-  <li><a href="../modules/EMCO.html">EMCO</a></li>
-  <li><a href="../modules/TextGauge.html">TextGauge</a></li>
   <li><a href="../modules/ftext.html">ftext</a></li>
-  <li><a href="../modules/SortBox.html">SortBox</a></li>
-  <li><a href="../modules/TableMaker.html">TableMaker</a></li>
-  <li><strong>TextFormatter</strong></li>
-  <li><a href="../modules/TimerGauge.html">TimerGauge</a></li>
 </ul>
 
 </div>
 
 <div id="content">
 
-<h1>Module <code>TextFormatter</code></h1>
+<h1>Class <code>TextFormatter</code></h1>
 <p>Stand alone text formatter object.</p>
 <p> Remembers the options you set and can be adjusted as needed</p>
 
 
-<h2><a href="#Functions">Functions</a></h2>
+<h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#setType">setType (typeToSet)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setType">TextFormatter:setType(typeToSet)</a></td>
 	<td class="summary">Set's the formatting type whether it's for cecho, decho, or hecho</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setWrap">setWrap (shouldWrap)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setWrap">TextFormatter:setWrap(shouldWrap)</a></td>
 	<td class="summary">Sets whether or not we should do word wrapping.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setWidth">setWidth (width)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setWidth">TextFormatter:setWidth(width)</a></td>
 	<td class="summary">Sets the width we should format for</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setCap">setCap (cap)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setCap">TextFormatter:setCap(cap)</a></td>
 	<td class="summary">Sets the cap for the formatter</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setCapColor">setCapColor (capColor)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setCapColor">TextFormatter:setCapColor(capColor)</a></td>
 	<td class="summary">Sets the color for the format cap</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setSpacerColor">setSpacerColor (spacerColor)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setSpacerColor">TextFormatter:setSpacerColor(spacerColor)</a></td>
 	<td class="summary">Sets the color for spacing character</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTextColor">setTextColor (textColor)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setTextColor">TextFormatter:setTextColor(textColor)</a></td>
 	<td class="summary">Sets the color for formatted text</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setSpacer">setSpacer (spacer)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setSpacer">TextFormatter:setSpacer(spacer)</a></td>
 	<td class="summary">Sets the spacing character to use.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setAlignment">setAlignment (alignment)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setAlignment">TextFormatter:setAlignment(alignment)</a></td>
 	<td class="summary">Set the alignment to format for</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setInside">setInside (spacerInside)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setInside">TextFormatter:setInside(spacerInside)</a></td>
 	<td class="summary">Set whether the the spacer should go inside the the cap or outside of it</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setMirror">setMirror (shouldMirror)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:setMirror">TextFormatter:setMirror(shouldMirror)</a></td>
 	<td class="summary">Set whether we should mirror/reverse the caps.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#format">format (str)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:format">TextFormatter:format(str)</a></td>
 	<td class="summary">Format a string based on the stored options</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#new">new (options)</a></td>
+	<td class="name" nowrap><a href="#TextFormatter:new">TextFormatter:new(options)</a></td>
 	<td class="summary">Creates and returns a new TextFormatter.</td>
 	</tr>
 </table>
@@ -116,12 +119,12 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
 
     <dl class="function">
     <dt>
-    <a name = "setType"></a>
-    <strong>setType (typeToSet)</strong>
+    <a name = "TextFormatter:setType"></a>
+    <strong>TextFormatter:setType(typeToSet)</strong>
     </dt>
     <dd>
     Set's the formatting type whether it's for cecho, decho, or hecho
@@ -141,8 +144,8 @@
 
 </dd>
     <dt>
-    <a name = "setWrap"></a>
-    <strong>setWrap (shouldWrap)</strong>
+    <a name = "TextFormatter:setWrap"></a>
+    <strong>TextFormatter:setWrap(shouldWrap)</strong>
     </dt>
     <dd>
     Sets whether or not we should do word wrapping.
@@ -162,8 +165,8 @@
 
 </dd>
     <dt>
-    <a name = "setWidth"></a>
-    <strong>setWidth (width)</strong>
+    <a name = "TextFormatter:setWidth"></a>
+    <strong>TextFormatter:setWidth(width)</strong>
     </dt>
     <dd>
     Sets the width we should format for
@@ -183,8 +186,8 @@
 
 </dd>
     <dt>
-    <a name = "setCap"></a>
-    <strong>setCap (cap)</strong>
+    <a name = "TextFormatter:setCap"></a>
+    <strong>TextFormatter:setCap(cap)</strong>
     </dt>
     <dd>
     Sets the cap for the formatter
@@ -204,8 +207,8 @@
 
 </dd>
     <dt>
-    <a name = "setCapColor"></a>
-    <strong>setCapColor (capColor)</strong>
+    <a name = "TextFormatter:setCapColor"></a>
+    <strong>TextFormatter:setCapColor(capColor)</strong>
     </dt>
     <dd>
     Sets the color for the format cap
@@ -225,8 +228,8 @@
 
 </dd>
     <dt>
-    <a name = "setSpacerColor"></a>
-    <strong>setSpacerColor (spacerColor)</strong>
+    <a name = "TextFormatter:setSpacerColor"></a>
+    <strong>TextFormatter:setSpacerColor(spacerColor)</strong>
     </dt>
     <dd>
     Sets the color for spacing character
@@ -246,8 +249,8 @@
 
 </dd>
     <dt>
-    <a name = "setTextColor"></a>
-    <strong>setTextColor (textColor)</strong>
+    <a name = "TextFormatter:setTextColor"></a>
+    <strong>TextFormatter:setTextColor(textColor)</strong>
     </dt>
     <dd>
     Sets the color for formatted text
@@ -267,8 +270,8 @@
 
 </dd>
     <dt>
-    <a name = "setSpacer"></a>
-    <strong>setSpacer (spacer)</strong>
+    <a name = "TextFormatter:setSpacer"></a>
+    <strong>TextFormatter:setSpacer(spacer)</strong>
     </dt>
     <dd>
     Sets the spacing character to use.  Should be a single character
@@ -288,8 +291,8 @@
 
 </dd>
     <dt>
-    <a name = "setAlignment"></a>
-    <strong>setAlignment (alignment)</strong>
+    <a name = "TextFormatter:setAlignment"></a>
+    <strong>TextFormatter:setAlignment(alignment)</strong>
     </dt>
     <dd>
     Set the alignment to format for
@@ -309,8 +312,8 @@
 
 </dd>
     <dt>
-    <a name = "setInside"></a>
-    <strong>setInside (spacerInside)</strong>
+    <a name = "TextFormatter:setInside"></a>
+    <strong>TextFormatter:setInside(spacerInside)</strong>
     </dt>
     <dd>
     Set whether the the spacer should go inside the the cap or outside of it
@@ -330,8 +333,8 @@
 
 </dd>
     <dt>
-    <a name = "setMirror"></a>
-    <strong>setMirror (shouldMirror)</strong>
+    <a name = "TextFormatter:setMirror"></a>
+    <strong>TextFormatter:setMirror(shouldMirror)</strong>
     </dt>
     <dd>
     Set whether we should mirror/reverse the caps.  IE << becomes >> if set to true
@@ -351,8 +354,8 @@
 
 </dd>
     <dt>
-    <a name = "format"></a>
-    <strong>format (str)</strong>
+    <a name = "TextFormatter:format"></a>
+    <strong>TextFormatter:format(str)</strong>
     </dt>
     <dd>
     Format a string based on the stored options
@@ -372,8 +375,8 @@
 
 </dd>
     <dt>
-    <a name = "new"></a>
-    <strong>new (options)</strong>
+    <a name = "TextFormatter:new"></a>
+    <strong>TextFormatter:new(options)</strong>
     </dt>
     <dd>
     Creates and returns a new TextFormatter.  For valid options, please see https://github.com/demonnic/fText/wiki/fText
@@ -399,7 +402,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-06-14 21:39:03 </i>
+<i style="float:right;">Last updated 2020-06-19 19:46:32 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

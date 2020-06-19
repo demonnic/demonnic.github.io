@@ -62,39 +62,39 @@
 <h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:organize">SortBox:organize ()</a></td>
+	<td class="name" nowrap><a href="#SortBox:organize">SortBox:organize()</a></td>
 	<td class="summary">Calling this will cause the SortBox to reposition/resize everything</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:enableTimer">SortBox:enableTimer ()</a></td>
+	<td class="name" nowrap><a href="#SortBox:enableTimer">SortBox:enableTimer()</a></td>
 	<td class="summary">Starts the SortBox sorting and organizing itself on a timer</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:disableTimer">SortBox:disableTimer ()</a></td>
+	<td class="name" nowrap><a href="#SortBox:disableTimer">SortBox:disableTimer()</a></td>
 	<td class="summary">Stops the SortBox from sorting and organizing itself on a timer</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:setSortInterval">SortBox:setSortInterval (sortInterval)</a></td>
+	<td class="name" nowrap><a href="#SortBox:setSortInterval">SortBox:setSortInterval(sortInterval)</a></td>
 	<td class="summary">Sets the sortInterval, or amount of time in milliseconds between auto sorting on a timer if timerSort is true</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:enableSort">SortBox:enableSort ()</a></td>
+	<td class="name" nowrap><a href="#SortBox:enableSort">SortBox:enableSort()</a></td>
 	<td class="summary">Enables sorting when items are added/removed, or if timerSort is true, every sortInterval milliseconds</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:disableSort">SortBox:disableSort ()</a></td>
+	<td class="name" nowrap><a href="#SortBox:disableSort">SortBox:disableSort()</a></td>
 	<td class="summary">Disables sorting when items are added or removed</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:setBoxType">SortBox:setBoxType (boxType)</a></td>
+	<td class="name" nowrap><a href="#SortBox:setBoxType">SortBox:setBoxType(boxType)</a></td>
 	<td class="summary">Set whether the SortBox acts as a VBox or HBox.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:setSortFunction">SortBox:setSortFunction (functionName)</a></td>
+	<td class="name" nowrap><a href="#SortBox:setSortFunction">SortBox:setSortFunction(functionName)</a></td>
 	<td class="summary">Sets the type of sorting in use by this SortBox.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#SortBox:new">SortBox:new (options[, container])</a></td>
+	<td class="name" nowrap><a href="#SortBox:new">SortBox:new(options[, container])</a></td>
 	<td class="summary">Creates a new SortBox</td>
 	</tr>
 </table>
@@ -108,7 +108,7 @@
     <dl class="function">
     <dt>
     <a name = "SortBox:organize"></a>
-    <strong>SortBox:organize ()</strong>
+    <strong>SortBox:organize()</strong>
     </dt>
     <dd>
     Calling this will cause the SortBox to reposition/resize everything
@@ -122,7 +122,7 @@
 </dd>
     <dt>
     <a name = "SortBox:enableTimer"></a>
-    <strong>SortBox:enableTimer ()</strong>
+    <strong>SortBox:enableTimer()</strong>
     </dt>
     <dd>
     Starts the SortBox sorting and organizing itself on a timer
@@ -136,7 +136,7 @@
 </dd>
     <dt>
     <a name = "SortBox:disableTimer"></a>
-    <strong>SortBox:disableTimer ()</strong>
+    <strong>SortBox:disableTimer()</strong>
     </dt>
     <dd>
     Stops the SortBox from sorting and organizing itself on a timer
@@ -150,7 +150,7 @@
 </dd>
     <dt>
     <a name = "SortBox:setSortInterval"></a>
-    <strong>SortBox:setSortInterval (sortInterval)</strong>
+    <strong>SortBox:setSortInterval(sortInterval)</strong>
     </dt>
     <dd>
     Sets the sortInterval, or amount of time in milliseconds between auto sorting on a timer if timerSort is true
@@ -171,7 +171,7 @@
 </dd>
     <dt>
     <a name = "SortBox:enableSort"></a>
-    <strong>SortBox:enableSort ()</strong>
+    <strong>SortBox:enableSort()</strong>
     </dt>
     <dd>
     Enables sorting when items are added/removed, or if timerSort is true, every sortInterval milliseconds
@@ -185,7 +185,7 @@
 </dd>
     <dt>
     <a name = "SortBox:disableSort"></a>
-    <strong>SortBox:disableSort ()</strong>
+    <strong>SortBox:disableSort()</strong>
     </dt>
     <dd>
     Disables sorting when items are added or removed
@@ -199,7 +199,7 @@
 </dd>
     <dt>
     <a name = "SortBox:setBoxType"></a>
-    <strong>SortBox:setBoxType (boxType)</strong>
+    <strong>SortBox:setBoxType(boxType)</strong>
     </dt>
     <dd>
     Set whether the SortBox acts as a VBox or HBox.
@@ -226,7 +226,7 @@
 </dd>
     <dt>
     <a name = "SortBox:setSortFunction"></a>
-    <strong>SortBox:setSortFunction (functionName)</strong>
+    <strong>SortBox:setSortFunction(functionName)</strong>
     </dt>
     <dd>
     Sets the type of sorting in use by this SortBox.
@@ -242,42 +242,42 @@
  <table class="tg">
  <thead>
    <tr>
-     <th class="tg-0pky">sort type</th>
-     <th class="tg-0pky">description</th>
+     <th>sort type</th>
+     <th>description</th>
    </tr>
  </thead>
  <tbody>
    <tr>
-     <td class="tg-phtq">gaugeValue</td>
-     <td class="tg-phtq">sort gauges based on how full the gauge is, from less full to more</td>
+     <td class="tg-odd">gaugeValue</td>
+     <td class="tg-odd">sort gauges based on how full the gauge is, from less full to more</td>
    </tr>
    <tr>
-     <td class="tg-0pky">reverseGaugeValue</td>
-     <td class="tg-0pky">sort gauges based on how full the gauge is, from more full to less</td>
+     <td class="tg-even">reverseGaugeValue</td>
+     <td class="tg-even">sort gauges based on how full the gauge is, from more full to less</td>
    </tr>
    <tr>
-     <td class="tg-phtq">timeLeft</td>
-     <td class="tg-phtq">sort TimerGauges based on the total time left in the gauge, from less time to more</td>
+     <td class="tg-odd">timeLeft</td>
+     <td class="tg-odd">sort TimerGauges based on the total time left in the gauge, from less time to more</td>
    </tr>
    <tr>
-     <td class="tg-0lax">reverseTimeLeft</td>
-     <td class="tg-0lax">sort TimerGauges based on the total time left in the gauge, from more time to less</td>
+     <td class="tg-even">reverseTimeLeft</td>
+     <td class="tg-even">sort TimerGauges based on the total time left in the gauge, from more time to less</td>
    </tr>
    <tr>
-     <td class="tg-hmp3">name</td>
-     <td class="tg-hmp3">sort any item (and mixed types) by name, alphabetically.</td>
+     <td class="tg-odd">name</td>
+     <td class="tg-odd">sort any item (and mixed types) by name, alphabetically.</td>
    </tr>
    <tr>
-     <td class="tg-0lax">reverseName</td>
-     <td class="tg-0lax">sort any item (and mixed types) by name, reverse alphabetically.</td>
+     <td class="tg-even">reverseName</td>
+     <td class="tg-even">sort any item (and mixed types) by name, reverse alphabetically.</td>
    </tr>
    <tr>
-     <td class="tg-hmp3">message</td>
-     <td class="tg-hmp3">sorts Labels based on their echoed message, alphabetically. If not a label, the empty string will be used</td>
+     <td class="tg-odd">message</td>
+     <td class="tg-odd">sorts Labels based on their echoed message, alphabetically. If not a label, the empty string will be used</td>
    </tr>
    <tr>
-     <td class="tg-0lax">reverseMessage</td>
-     <td class="tg-0lax">sorts Labels based on their echoed message, reverse alphabetically. If not a label, the empty string will be used</td>
+     <td class="tg-even">reverseMessage</td>
+     <td class="tg-even">sorts Labels based on their echoed message, reverse alphabetically. If not a label, the empty string will be used</td>
    </tr>
  </tbody>
  </table>
@@ -295,7 +295,7 @@
 </dd>
     <dt>
     <a name = "SortBox:new"></a>
-    <strong>SortBox:new (options[, container])</strong>
+    <strong>SortBox:new(options[, container])</strong>
     </dt>
     <dd>
     Creates a new SortBox
@@ -310,50 +310,39 @@
         <li><span class="parameter">container</span>
          the container to add the SortBox into
 <br><br>Table of new options
- <style type="text/css">
- .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
- .tg td{background-color:#8b8b8b;border-color:#ccc;border-style:solid;border-width:1px;color:#000;
-   font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
- .tg th{background-color:#000000;border-color:#ccc;border-style:solid;border-width:1px;color:#FFF;
-   font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
- .tg .tg-phtq{background-color:#797979;border-color:inherit;text-align:left;vertical-align:top;color:#DDD}
- .tg .tg-hmp3{background-color:#797979;text-align:left;vertical-align:top;color:#DDD}
- .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
- .tg .tg-0lax{text-align:left;vertical-align:top}
- </style>
  <table class="tg">
  <thead>
    <tr>
-     <th class="tg-0pky">option name</th>
-     <th class="tg-0pky">description</th>
-     <th class="tg-0lax">default</th>
+     <th>option name</th>
+     <th>description</th>
+     <th>default</th>
    </tr>
  </thead>
  <tbody>
    <tr>
-     <td class="tg-phtq">autoSort</td>
-     <td class="tg-phtq">should the SortBox perform function based sorting? If false, will behave like a normal H/VBox</td>
-     <td class="tg-hmp3">true</td>
+     <td class="tg-odd">autoSort</td>
+     <td class="tg-odd">should the SortBox perform function based sorting? If false, will behave like a normal H/VBox</td>
+     <td class="tg-odd">true</td>
    </tr>
    <tr>
-     <td class="tg-0pky">timerSort</td>
-     <td class="tg-0pky">should the SortBox automatically perform sorting on a timer?</td>
-     <td class="tg-0lax">true</td>
+     <td class="tg-even">timerSort</td>
+     <td class="tg-even">should the SortBox automatically perform sorting on a timer?</td>
+     <td class="tg-even">true</td>
    </tr>
    <tr>
-     <td class="tg-phtq">sortInterval</td>
-     <td class="tg-phtq">how frequently should we sort on a timer if timerSort is true, in milliseconds</td>
-     <td class="tg-hmp3">500</td>
+     <td class="tg-odd">sortInterval</td>
+     <td class="tg-odd">how frequently should we sort on a timer if timerSort is true, in milliseconds</td>
+     <td class="tg-odd">500</td>
    </tr>
    <tr>
-     <td class="tg-0lax">boxType</td>
-     <td class="tg-0lax">Should we stack like an HBox or VBox? use 'h' for hbox and 'v' for vbox</td>
-     <td class="tg-0lax">v</td>
+     <td class="tg-even">boxType</td>
+     <td class="tg-even">Should we stack like an HBox or VBox? use 'h' for hbox and 'v' for vbox</td>
+     <td class="tg-even">v</td>
    </tr>
    <tr>
-     <td class="tg-hmp3">sortFunction</td>
-     <td class="tg-hmp3">how should we sort the items in the SortBox? see setSortFunction for valid options</td>
-     <td class="tg-hmp3">gaugeValue</td>
+     <td class="tg-odd">sortFunction</td>
+     <td class="tg-odd">how should we sort the items in the SortBox? see setSortFunction for valid options</td>
+     <td class="tg-odd">gaugeValue</td>
    </tr>
  </tbody>
  </table>
@@ -384,7 +373,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-06-17 23:28:32 </i>
+<i style="float:right;">Last updated 2020-06-19 19:46:32 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

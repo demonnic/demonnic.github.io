@@ -32,90 +32,93 @@
 
 <h2>Contents</h2>
 <ul>
-<li><a href="#Functions">Functions</a></li>
+<li><a href="#Methods">Methods</a></li>
 </ul>
 
 
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
+  <li><a href="../classes/SortBox.html">SortBox</a></li>
+  <li><strong>TableMaker</strong></li>
+  <li><a href="../classes/TextFormatter.html">TextFormatter</a></li>
+  <li><a href="../classes/TimerGauge.html">TimerGauge</a></li>
+</ul>
 <h2>Modules</h2>
 <ul class="nowrap">
-  <li><a href="../modules/EMCO.html">EMCO</a></li>
-  <li><a href="../modules/TextGauge.html">TextGauge</a></li>
   <li><a href="../modules/ftext.html">ftext</a></li>
-  <li><a href="../modules/SortBox.html">SortBox</a></li>
-  <li><strong>TableMaker</strong></li>
-  <li><a href="../modules/TextFormatter.html">TextFormatter</a></li>
-  <li><a href="../modules/TimerGauge.html">TimerGauge</a></li>
 </ul>
 
 </div>
 
 <div id="content">
 
-<h1>Module <code>TableMaker</code></h1>
+<h1>Class <code>TableMaker</code></h1>
 <p>Easy formatting for text tables</p>
 <p></p>
 
 
-<h2><a href="#Functions">Functions</a></h2>
+<h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#addColumn">addColumn (options, position)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:addColumn">TableMaker:addColumn(options, position)</a></td>
 	<td class="summary">Adds a column definition for the table.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#deleteColumn">deleteColumn (position)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:deleteColumn">TableMaker:deleteColumn(position)</a></td>
 	<td class="summary">Deletes a column at the given position</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#replaceColumn">replaceColumn (options, position)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:replaceColumn">TableMaker:replaceColumn(options, position)</a></td>
 	<td class="summary">Replaces a column at a specific position with the newly provided formatting</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#addRow">addRow (columnEntries, position)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:addRow">TableMaker:addRow(columnEntries, position)</a></td>
 	<td class="summary">Adds a row of output to the table</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#deleteRow">deleteRow (position)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:deleteRow">TableMaker:deleteRow(position)</a></td>
 	<td class="summary">Deletes the row at the given position</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#replaceRow">replaceRow (columnEntries, position)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:replaceRow">TableMaker:replaceRow(columnEntries, position)</a></td>
 	<td class="summary">Replaces a row of output in the table</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setCell">setCell (row, column, entry)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:setCell">TableMaker:setCell(row, column, entry)</a></td>
 	<td class="summary">Sets a specific cell's display information</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enablePopups">enablePopups ()</a></td>
+	<td class="name" nowrap><a href="#TableMaker:enablePopups">TableMaker:enablePopups()</a></td>
 	<td class="summary">enables making cells which incorporate insertLink/insertPopup</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableAutoEcho">enableAutoEcho ()</a></td>
+	<td class="name" nowrap><a href="#TableMaker:enableAutoEcho">TableMaker:enableAutoEcho()</a></td>
 	<td class="summary">enables autoEcho so that when assemble is called it echos automatically</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableAutoEcho">disableAutoEcho ()</a></td>
+	<td class="name" nowrap><a href="#TableMaker:disableAutoEcho">TableMaker:disableAutoEcho()</a></td>
 	<td class="summary">disables autoecho.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableAutoClear">enableAutoClear ()</a></td>
+	<td class="name" nowrap><a href="#TableMaker:enableAutoClear">TableMaker:enableAutoClear()</a></td>
 	<td class="summary">Enables automatically clearing the miniconsole we echo to</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableAutoClear">disableAutoClear ()</a></td>
+	<td class="name" nowrap><a href="#TableMaker:disableAutoClear">TableMaker:disableAutoClear()</a></td>
 	<td class="summary">Disables automatically clearing the miniconsole we echo to</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setAutoEchoConsole">setAutoEchoConsole (console)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:setAutoEchoConsole">TableMaker:setAutoEchoConsole(console)</a></td>
 	<td class="summary">Set the miniconsole to echo to</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#assemble">assemble ()</a></td>
+	<td class="name" nowrap><a href="#TableMaker:assemble">TableMaker:assemble()</a></td>
 	<td class="summary">Assemble the table.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#new">new (options)</a></td>
+	<td class="name" nowrap><a href="#TableMaker:new">TableMaker:new(options)</a></td>
 	<td class="summary">Creates and returns a new TableMaker.</td>
 	</tr>
 </table>
@@ -124,12 +127,12 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
 
     <dl class="function">
     <dt>
-    <a name = "addColumn"></a>
-    <strong>addColumn (options, position)</strong>
+    <a name = "TableMaker:addColumn"></a>
+    <strong>TableMaker:addColumn(options, position)</strong>
     </dt>
     <dd>
     Adds a column definition for the table.
@@ -153,8 +156,8 @@
 
 </dd>
     <dt>
-    <a name = "deleteColumn"></a>
-    <strong>deleteColumn (position)</strong>
+    <a name = "TableMaker:deleteColumn"></a>
+    <strong>TableMaker:deleteColumn(position)</strong>
     </dt>
     <dd>
     Deletes a column at the given position
@@ -174,8 +177,8 @@
 
 </dd>
     <dt>
-    <a name = "replaceColumn"></a>
-    <strong>replaceColumn (options, position)</strong>
+    <a name = "TableMaker:replaceColumn"></a>
+    <strong>TableMaker:replaceColumn(options, position)</strong>
     </dt>
     <dd>
     Replaces a column at a specific position with the newly provided formatting
@@ -199,8 +202,8 @@
 
 </dd>
     <dt>
-    <a name = "addRow"></a>
-    <strong>addRow (columnEntries, position)</strong>
+    <a name = "TableMaker:addRow"></a>
+    <strong>TableMaker:addRow(columnEntries, position)</strong>
     </dt>
     <dd>
     Adds a row of output to the table
@@ -224,8 +227,8 @@
 
 </dd>
     <dt>
-    <a name = "deleteRow"></a>
-    <strong>deleteRow (position)</strong>
+    <a name = "TableMaker:deleteRow"></a>
+    <strong>TableMaker:deleteRow(position)</strong>
     </dt>
     <dd>
     Deletes the row at the given position
@@ -245,8 +248,8 @@
 
 </dd>
     <dt>
-    <a name = "replaceRow"></a>
-    <strong>replaceRow (columnEntries, position)</strong>
+    <a name = "TableMaker:replaceRow"></a>
+    <strong>TableMaker:replaceRow(columnEntries, position)</strong>
     </dt>
     <dd>
     Replaces a row of output in the table
@@ -270,8 +273,8 @@
 
 </dd>
     <dt>
-    <a name = "setCell"></a>
-    <strong>setCell (row, column, entry)</strong>
+    <a name = "TableMaker:setCell"></a>
+    <strong>TableMaker:setCell(row, column, entry)</strong>
     </dt>
     <dd>
     Sets a specific cell's display information
@@ -298,8 +301,8 @@
 
 </dd>
     <dt>
-    <a name = "enablePopups"></a>
-    <strong>enablePopups ()</strong>
+    <a name = "TableMaker:enablePopups"></a>
+    <strong>TableMaker:enablePopups()</strong>
     </dt>
     <dd>
     enables making cells which incorporate insertLink/insertPopup
@@ -312,8 +315,8 @@
 
 </dd>
     <dt>
-    <a name = "enableAutoEcho"></a>
-    <strong>enableAutoEcho ()</strong>
+    <a name = "TableMaker:enableAutoEcho"></a>
+    <strong>TableMaker:enableAutoEcho()</strong>
     </dt>
     <dd>
     enables autoEcho so that when assemble is called it echos automatically
@@ -326,8 +329,8 @@
 
 </dd>
     <dt>
-    <a name = "disableAutoEcho"></a>
-    <strong>disableAutoEcho ()</strong>
+    <a name = "TableMaker:disableAutoEcho"></a>
+    <strong>TableMaker:disableAutoEcho()</strong>
     </dt>
     <dd>
     disables autoecho.  Cannot be used if allowPopups is set
@@ -340,8 +343,8 @@
 
 </dd>
     <dt>
-    <a name = "enableAutoClear"></a>
-    <strong>enableAutoClear ()</strong>
+    <a name = "TableMaker:enableAutoClear"></a>
+    <strong>TableMaker:enableAutoClear()</strong>
     </dt>
     <dd>
     Enables automatically clearing the miniconsole we echo to
@@ -354,8 +357,8 @@
 
 </dd>
     <dt>
-    <a name = "disableAutoClear"></a>
-    <strong>disableAutoClear ()</strong>
+    <a name = "TableMaker:disableAutoClear"></a>
+    <strong>TableMaker:disableAutoClear()</strong>
     </dt>
     <dd>
     Disables automatically clearing the miniconsole we echo to
@@ -368,8 +371,8 @@
 
 </dd>
     <dt>
-    <a name = "setAutoEchoConsole"></a>
-    <strong>setAutoEchoConsole (console)</strong>
+    <a name = "TableMaker:setAutoEchoConsole"></a>
+    <strong>TableMaker:setAutoEchoConsole(console)</strong>
     </dt>
     <dd>
     Set the miniconsole to echo to
@@ -388,8 +391,8 @@
 
 </dd>
     <dt>
-    <a name = "assemble"></a>
-    <strong>assemble ()</strong>
+    <a name = "TableMaker:assemble"></a>
+    <strong>TableMaker:assemble()</strong>
     </dt>
     <dd>
     Assemble the table.  If autoEcho is enabled/set to true, will automatically echo. Otherwise, returns the formatted string to echo the table
@@ -402,8 +405,8 @@
 
 </dd>
     <dt>
-    <a name = "new"></a>
-    <strong>new (options)</strong>
+    <a name = "TableMaker:new"></a>
+    <strong>TableMaker:new(options)</strong>
     </dt>
     <dd>
     Creates and returns a new TableMaker.  See https://github.com/demonnic/fText/wiki/TableMaker for valid entries to the options table.
@@ -429,7 +432,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-06-14 21:39:03 </i>
+<i style="float:right;">Last updated 2020-06-19 19:46:32 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
