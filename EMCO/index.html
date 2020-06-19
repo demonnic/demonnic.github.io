@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
     <title>Reference</title>
-    <link rel="stylesheet" href="ldoc_one.css" type="text/css" />
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
 </head>
 <body>
 
@@ -24,16 +24,16 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>EMCO</h1>
 
 
 <h2>Contents</h2>
 <ul>
-<li><a href="#Functions">Functions</a></li>
+<li><a href="#Methods">Methods</a></li>
 </ul>
 
 
-<h2>Modules</h2>
+<h2>Classes</h2>
 <ul class="nowrap">
   <li><strong>EMCO</strong></li>
 </ul>
@@ -42,7 +42,7 @@
 
 <div id="content">
 
-<h1>Module <code>EMCO</code></h1>
+<h1>Class <code>EMCO</code></h1>
 <p>Embeddable Multi Console Object.</p>
 <p>
  This is essentially YATCO, but with some tweaks, updates, and it returns an object
@@ -50,279 +50,279 @@
  into your existing UI as you would any other Geyser element.</p>
 
 
-<h2><a href="#Functions">Functions</a></h2>
+<h2><a href="#Methods">Methods</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#miniConvertYATCO">miniConvertYATCO ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:new">EMCO:new(cons, container)</a></td>
+	<td class="summary">Creates a new Embeddable Multi Console Object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#EMCO:miniConvertYATCO">EMCO:miniConvertYATCO()</a></td>
 	<td class="summary">Scans for the old YATCO configuration values and prints out a set of constraints to use.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#convertYATCO">convertYATCO ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:convertYATCO">EMCO:convertYATCO()</a></td>
 	<td class="summary">Echos to the main console a script object you can add which will fully convert YATCO to EMCO.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#addTab">addTab (tabName[, position])</a></td>
+	<td class="name" nowrap><a href="#EMCO:addTab">EMCO:addTab(tabName[, position])</a></td>
 	<td class="summary">Adds a tab to the EMCO object</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#reset">reset ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:reset">EMCO:reset()</a></td>
 	<td class="summary">resets the object, redrawing everything</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#fuzzyBoolean">fuzzyBoolean (bool)</a></td>
+	<td class="name" nowrap><a href="#EMCO:fuzzyBoolean">EMCO:fuzzyBoolean(bool)</a></td>
 	<td class="summary">Expands boolean definitions to be more flexible.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#clear">clear (tabName)</a></td>
+	<td class="name" nowrap><a href="#EMCO:clear">EMCO:clear(tabName)</a></td>
 	<td class="summary">clears a specific tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#clearAll">clearAll ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:clearAll">EMCO:clearAll()</a></td>
 	<td class="summary">clears all the tabs</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTabFont">setTabFont (font)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTabFont">EMCO:setTabFont(font)</a></td>
 	<td class="summary">sets the font for all tabs</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setSingleTabFont">setSingleTabFont (tabName, font)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setSingleTabFont">EMCO:setSingleTabFont(tabName, font)</a></td>
 	<td class="summary">sets the font for a single tab.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setFont">setFont (font)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setFont">EMCO:setFont(font)</a></td>
 	<td class="summary">sets the font for all the miniconsoles</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setSingleWindowFont">setSingleWindowFont (tabName, font)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setSingleWindowFont">EMCO:setSingleWindowFont(tabName, font)</a></td>
 	<td class="summary">sets the font for a specific miniconsole.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableCustomTimestampColor">enableCustomTimestampColor ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableCustomTimestampColor">EMCO:enableCustomTimestampColor()</a></td>
 	<td class="summary">enables custom colors for the timestamp, if displayed</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableCustomTimestampColor">disableCustomTimestampColor ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableCustomTimestampColor">EMCO:disableCustomTimestampColor()</a></td>
 	<td class="summary">disables custom colors for the timestamp, if displayed</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableTimestamp">enableTimestamp ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableTimestamp">EMCO:enableTimestamp()</a></td>
 	<td class="summary">enables the display of timestamps</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableTimestamp">disableTimestamp ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableTimestamp">EMCO:disableTimestamp()</a></td>
 	<td class="summary">disables the display of timestamps</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTimestampFormat">setTimestampFormat (format)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTimestampFormat">EMCO:setTimestampFormat(format)</a></td>
 	<td class="summary">Sets the formatting for the timestamp, if enabled</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTimestampBGColor">setTimestampBGColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTimestampBGColor">EMCO:setTimestampBGColor(color)</a></td>
 	<td class="summary">Sets the background color for the timestamp, if customTimestampColor is enabled.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTimestampFGColor">setTimestampFGColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTimestampFGColor">EMCO:setTimestampFGColor(color)</a></td>
 	<td class="summary">Sets the foreground color for the timestamp, if customTimestampColor is enabled.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setAllTabName">setAllTabName (allTabName)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setAllTabName">EMCO:setAllTabName(allTabName)</a></td>
 	<td class="summary">Sets the 'all' tab name.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableAllTab">enableAllTab ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableAllTab">EMCO:enableAllTab()</a></td>
 	<td class="summary">Enables use of the 'all' tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableAllTab">disableAllTab ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableAllTab">EMCO:disableAllTab()</a></td>
 	<td class="summary">Disables use of the 'all' tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableMapTab">enableMapTab ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableMapTab">EMCO:enableMapTab()</a></td>
 	<td class="summary">Enables tying the Mudlet Mapper to one of the tabs.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableMapTab">disableMapTab ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableMapTab">EMCO:disableMapTab()</a></td>
 	<td class="summary">disables binding the Mudlet Mapper to one of the tabs.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setMapTabName">setMapTabName (mapTabName)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setMapTabName">EMCO:setMapTabName(mapTabName)</a></td>
 	<td class="summary">sets the name of the tab to bind the Mudlet Map.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableBlinkFromAll">enableBlinkFromAll ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableBlinkFromAll">EMCO:enableBlinkFromAll()</a></td>
 	<td class="summary">Enables tab blinking even if you're on the 'all' tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableBlinkFromAll">disableBlinkFromAll ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableBlinkFromAll">EMCO:disableBlinkFromAll()</a></td>
 	<td class="summary">Disables tab blinking when you're on the 'all' tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableGag">enableGag ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableGag">EMCO:enableGag()</a></td>
 	<td class="summary">Enables gagging of the line passed in to :append(tabName)</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableGag">disableGag ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableGag">EMCO:disableGag()</a></td>
 	<td class="summary">Disables gagging of the line passed in to :append(tabName)</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableBlink">enableBlink ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableBlink">EMCO:enableBlink()</a></td>
 	<td class="summary">Enables tab blinking when new information comes in to an inactive tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableBlink">disableBlink ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableBlink">EMCO:disableBlink()</a></td>
 	<td class="summary">Disables tab blinking when new information comes in to an inactive tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enablePreserveBackground">enablePreserveBackground ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enablePreserveBackground">EMCO:enablePreserveBackground()</a></td>
 	<td class="summary">Enables preserving the chat's background over the background of an incoming :append()</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disablePreserveBackground">disablePreserveBackground ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disablePreserveBackground">EMCO:disablePreserveBackground()</a></td>
 	<td class="summary">Enables preserving the chat's background over the background of an incoming :append()</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setBlinkTime">setBlinkTime (blinkTime)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setBlinkTime">EMCO:setBlinkTime(blinkTime)</a></td>
 	<td class="summary">Sets how long in seconds to wait between blinks</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setFontSize">setFontSize (fontSize)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setFontSize">EMCO:setFontSize(fontSize)</a></td>
 	<td class="summary">Sets the font size of the attached consoles</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setActiveTabFGColor">setActiveTabFGColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setActiveTabFGColor">EMCO:setActiveTabFGColor(color)</a></td>
 	<td class="summary">Sets the FG color for the active tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setInactiveTabFGColor">setInactiveTabFGColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setInactiveTabFGColor">EMCO:setInactiveTabFGColor(color)</a></td>
 	<td class="summary">Sets the FG color for the inactive tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setActiveTabBGColor">setActiveTabBGColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setActiveTabBGColor">EMCO:setActiveTabBGColor(color)</a></td>
 	<td class="summary">Sets the BG color for the active tab.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setInactiveTabBGColor">setInactiveTabBGColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setInactiveTabBGColor">EMCO:setInactiveTabBGColor(color)</a></td>
 	<td class="summary">Sets the BG color for the inactive tab.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setConsoleColor">setConsoleColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setConsoleColor">EMCO:setConsoleColor(color)</a></td>
 	<td class="summary">Sets the BG color for the consoles attached to this object</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTabBoxCSS">setTabBoxCSS (css)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTabBoxCSS">EMCO:setTabBoxCSS(css)</a></td>
 	<td class="summary">Sets the CSS to use for the tab box which contains the tabs for the object</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTabBoxColor">setTabBoxColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTabBoxColor">EMCO:setTabBoxColor(color)</a></td>
 	<td class="summary">Sets the color to use for the tab box background</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setConsoleContainerColor">setConsoleContainerColor (color)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setConsoleContainerColor">EMCO:setConsoleContainerColor(color)</a></td>
 	<td class="summary">Sets the color for the container which holds the consoles attached to this object.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setConsoleContainerCSS">setConsoleContainerCSS (css)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setConsoleContainerCSS">EMCO:setConsoleContainerCSS(css)</a></td>
 	<td class="summary">Sets the CSS to use for the container which holds the consoles attached to this object</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setGap">setGap (gap)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setGap">EMCO:setGap(gap)</a></td>
 	<td class="summary">Sets the amount of space to use between the tabs and the consoles</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setTabHeight">setTabHeight (tabHeight)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setTabHeight">EMCO:setTabHeight(tabHeight)</a></td>
 	<td class="summary">Sets the height of the tabs in pixels</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableAutoWrap">enableAutoWrap ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableAutoWrap">EMCO:enableAutoWrap()</a></td>
 	<td class="summary">Enables autowrap for the object, and by extension all attached consoles.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableAutoWrap">disableAutoWrap ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableAutoWrap">EMCO:disableAutoWrap()</a></td>
 	<td class="summary">Disables autowrap for the object, and by extension all attached consoles.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#setWrap">setWrap (wrapAt)</a></td>
+	<td class="name" nowrap><a href="#EMCO:setWrap">EMCO:setWrap(wrapAt)</a></td>
 	<td class="summary">Sets the number of characters to wordwrap the attached consoles at.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#append">append (tabName, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:append">EMCO:append(tabName, excludeAll)</a></td>
 	<td class="summary">Appends the current line from the MUD to a tab.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho">cecho (tabName, message, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:cecho">EMCO:cecho(tabName, message, excludeAll)</a></td>
 	<td class="summary">cecho to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho">decho (tabName, message, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:decho">EMCO:decho(tabName, message, excludeAll)</a></td>
 	<td class="summary">decho to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho">hecho (tabName, message, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:hecho">EMCO:hecho(tabName, message, excludeAll)</a></td>
 	<td class="summary">hecho to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#echo">echo (tabName, message, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:echo">EMCO:echo(tabName, message, excludeAll)</a></td>
 	<td class="summary">echo to a tab, maintaining functionality</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cechoLink">cechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:cechoLink">EMCO:cechoLink(tabName, text, command, hint, excludeAll)</a></td>
 	<td class="summary">cechoLink to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#dechoLink">dechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:dechoLink">EMCO:dechoLink(tabName, text, command, hint, excludeAll)</a></td>
 	<td class="summary">dechoLink to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hechoLink">hechoLink (tabName, text, command, hint, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:hechoLink">EMCO:hechoLink(tabName, text, command, hint, excludeAll)</a></td>
 	<td class="summary">hechoLink to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#echoLink">echoLink (tabName, text, command, hint, useCurrentFormat, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:echoLink">EMCO:echoLink(tabName, text, command, hint, useCurrentFormat, excludeAll)</a></td>
 	<td class="summary">echoLink to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cechoPopup">cechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:cechoPopup">EMCO:cechoPopup(tabName, text, commands, hints, excludeAll)</a></td>
 	<td class="summary">cechoPopup to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#dechoPopup">dechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:dechoPopup">EMCO:dechoPopup(tabName, text, commands, hints, excludeAll)</a></td>
 	<td class="summary">dechoPopup to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hechoPopup">hechoPopup (tabName, text, commands, hints, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:hechoPopup">EMCO:hechoPopup(tabName, text, commands, hints, excludeAll)</a></td>
 	<td class="summary">hechoPopup to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#echoPopup">echoPopup (tabName, text, commands, hints, useCurrentFormat, excludeAll)</a></td>
+	<td class="name" nowrap><a href="#EMCO:echoPopup">EMCO:echoPopup(tabName, text, commands, hints, useCurrentFormat, excludeAll)</a></td>
 	<td class="summary">echoPopup to a tab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#addAllTabExclusion">addAllTabExclusion (tabName)</a></td>
+	<td class="name" nowrap><a href="#EMCO:addAllTabExclusion">EMCO:addAllTabExclusion(tabName)</a></td>
 	<td class="summary">adds a tab to the exclusion list for echoing to the allTab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#removeAllTabExclusion">removeAllTabExclusion (tabName)</a></td>
+	<td class="name" nowrap><a href="#EMCO:removeAllTabExclusion">EMCO:removeAllTabExclusion(tabName)</a></td>
 	<td class="summary">removess a tab from the exclusion list for echoing to the allTab</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableBlankLine">enableBlankLine ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableBlankLine">EMCO:enableBlankLine()</a></td>
 	<td class="summary">Enable placing a blank line between all messages.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableBlankLine">disableBlankLine ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableBlankLine">EMCO:disableBlankLine()</a></td>
 	<td class="summary">Enable placing a blank line between all messages.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#enableScrollbars">enableScrollbars ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:enableScrollbars">EMCO:enableScrollbars()</a></td>
 	<td class="summary">Enable scrollbars for the miniconsoles</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#disableScrollbars">disableScrollbars ()</a></td>
+	<td class="name" nowrap><a href="#EMCO:disableScrollbars">EMCO:disableScrollbars()</a></td>
 	<td class="summary">Disable scrollbars for the miniconsoles</td>
-	</tr>
-	<tr>
-	<td class="name" nowrap><a href="#new">new (cons, container)</a></td>
-	<td class="summary">Creates a new Embeddable Multi Console Object.</td>
 	</tr>
 </table>
 
@@ -330,12 +330,255 @@
 <br/>
 
 
-    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
 
     <dl class="function">
     <dt>
-    <a name = "miniConvertYATCO"></a>
-    <strong>miniConvertYATCO ()</strong>
+    <a name = "EMCO:new"></a>
+    <strong>EMCO:new(cons, container)</strong>
+    </dt>
+    <dd>
+    Creates a new Embeddable Multi Console Object.
+ <br>see https://github.com/demonnic/EMCO/wiki for information on valid constraints and defaults
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of constraints which configures the EMCO.
+ <table class="tg">
+ <thead>
+   <tr>
+     <th>option name</th>
+     <th>description</th>
+     <th>default</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td class="tg-odd">timeStamp</td>
+     <td class="tg-odd">display timestamps on the miniconsoles?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">blankLine</td>
+     <td class="tg-even">put a blank line between appends/echos?</td>
+     <td class="tg-even">false</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">scrollbars</td>
+     <td class="tg-odd">enable scrollbars for the miniconsoles?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">customTimestampColor</td>
+     <td class="tg-even">if showing timestamps, use a custom color?</td>
+     <td class="tg-even">false</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">mapTab</td>
+     <td class="tg-odd">should we attach the Mudlet Mapper to this EMCO?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">mapTabName</td>
+     <td class="tg-even">Which tab should we attach the map to?
+                     <br>If mapTab is true and you do not set this, it will throw an error</td>
+     <td class="tg-even"></td>
+   </tr>
+   <tr>
+     <td class="tg-odd">blinkFromAll</td>
+     <td class="tg-odd">should tabs still blink, even if you're on the 'all' tab?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">preserveBackground</td>
+     <td class="tg-even">preserve the miniconsole background color during append()?</td>
+     <td class="tg-even">false</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">gag</td>
+     <td class="tg-odd">when running :append(), should we also gag the line?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">timestampFormat</td>
+     <td class="tg-even">Format string for the timestamp. Uses getTime()</td>
+     <td class="tg-even">"HH:mm:ss"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">timestampBGColor</td>
+     <td class="tg-odd">Custom BG color to use for timestamps. Any valid Geyser.Color works.</td>
+     <td class="tg-odd">"blue"</td>
+   </tr>
+   <tr>
+     <td class="tg-even">timestampFGColor</td>
+     <td class="tg-even">Custom FG color to use for timestamps. Any valid Geyser.Color works</td>
+     <td class="tg-even">"red"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">allTab</td>
+     <td class="tg-odd">Should we send everything to an 'all' tab?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">allTabName</td>
+     <td class="tg-even">And which tab should we use for the 'all' tab?</td>
+     <td class="tg-even">"All"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">blink</td>
+     <td class="tg-odd">Should we blink tabs that have been written to since you looked at them?</td>
+     <td class="tg-odd">false</td>
+   </tr>
+   <tr>
+     <td class="tg-even">blinkTime</td>
+     <td class="tg-even">How long to wait between blinks, in seconds?</td>
+     <td class="tg-even">3</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">fontSize</td>
+     <td class="tg-odd">What font size to use for the miniconsoles?</td>
+     <td class="tg-odd">9</td>
+   </tr>
+   <tr>
+     <td class="tg-even">font</td>
+     <td class="tg-even">What font to use for the miniconsoles?</td>
+     <td class="tg-even"></td>
+   </tr>
+   <tr>
+     <td class="tg-odd">tabFont</td>
+     <td class="tg-odd">What font to use for the tabs?</td>
+     <td class="tg-odd"></td>
+   </tr>
+   <tr>
+     <td class="tg-even">activeTabCss</td>
+     <td class="tg-even">What css to use for the active tab?</td>
+     <td class="tg-even">""</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">inactiveTabCSS</td>
+     <td class="tg-odd">What css to use for the inactive tabs?</td>
+     <td class="tg-odd">""</td>
+   </tr>
+   <tr>
+     <td class="tg-even">activeTabFGColor</td>
+     <td class="tg-even">What color to use for the text on the active tab. Any Geyser.Color works.</td>
+     <td class="tg-even">"purple"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">inactiveTabFGColor</td>
+     <td class="tg-odd">What color to use for the text on the inactive tabs. Any Geyser.Color works.</td>
+     <td class="tg-odd">"white"</td>
+   </tr>
+   <tr>
+     <td class="tg-even">activeTabBGColor</td>
+     <td class="tg-even">What BG color to use for the active tab? Any Geyser.Color works. Overriden by activeTabCSS</td>
+     <td class="tg-even">"<0,180,0>"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">inactiveTabBGColor</td>
+     <td class="tg-odd">What BG color to use for the inactavie tabs? Any Geyser.Color works. Overridden by inactiveTabCSS</td>
+     <td class="tg-odd">"<60,60,60>"</td>
+   </tr>
+   <tr>
+     <td class="tg-even">consoleColor</td>
+     <td class="tg-even">Default background color for the miniconsoles. Any Geyser.Color works</td>
+     <td class="tg-even">"black"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">tabBoxCSS</td>
+     <td class="tg-odd">tss for the entire tabBox (not individual tabs)</td>
+     <td class="tg-odd">""</td>
+   </tr>
+   <tr>
+     <td class="tg-even">tabBoxColor</td>
+     <td class="tg-even">What color to use for the tabBox? Any Geyser.Color works. Overridden by tabBoxCSS</td>
+     <td class="tg-even">"black"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">consoleContainerCSS</td>
+     <td class="tg-odd">CSS to use for the container holding the miniconsoles</td>
+     <td class="tg-odd">""</td>
+   </tr>
+   <tr>
+     <td class="tg-even">consoleContainerColor</td>
+     <td class="tg-even">Color to use for the container holding the miniconsole. Any Geyser.Color works. Overridden by consoleContainerCSS</td>
+     <td class="tg-even">"black"</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">gap</td>
+     <td class="tg-odd">How many pixels to place between the tabs and the miniconsoles?</td>
+     <td class="tg-odd">1</td>
+   </tr>
+   <tr>
+     <td class="tg-even">consoles</td>
+     <td class="tg-even">List of the tabs for this EMCO in table format</td>
+     <td class="tg-even">{ "All" }</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">allTabExclusions</td>
+     <td class="tg-odd">List of the tabs which should never echo to the 'all' tab in table format</td>
+     <td class="tg-odd">{}</td>
+   </tr>
+   <tr>
+     <td class="tg-even">tabHeight</td>
+     <td class="tg-even">How many pixels high should the tabs be?</td>
+     <td class="tg-even">25</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">autoWrap</td>
+     <td class="tg-odd">Use autoWrap for the miniconsoles?</td>
+     <td class="tg-odd">true</td>
+   </tr>
+   <tr>
+     <td class="tg-even">wrapAt</td>
+     <td class="tg-even">How many characters to wrap it, if autoWrap is turned off?</td>
+     <td class="tg-even">300</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">leftMargin</td>
+     <td class="tg-odd">Number of pixels to put between the left edge of the EMCO and the miniconsole?</td>
+     <td class="tg-odd">0</td>
+   </tr>
+   <tr>
+     <td class="tg-even">rightMargin</td>
+     <td class="tg-even">Number of pixels to put between the right edge of the EMCO and the miniconsole?</td>
+     <td class="tg-even">0</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">bottomMargin</td>
+     <td class="tg-odd">Number of pixels to put between the bottom edge of the EMCO and the miniconsole?</td>
+     <td class="tg-odd">0</td>
+   </tr>
+   <tr>
+     <td class="tg-even">topMargin</td>
+     <td class="tg-even">Number of pixels to put between the top edge of the miniconsole container, and the miniconsole? This is in addition to gap</td>
+     <td class="tg-even">0</td>
+   </tr>
+ </tbody>
+ </table>
+        </li>
+        <li><span class="parameter">container</span>
+            <span class="types"><span class="type">GeyserObject</span></span>
+         The container to use as the parent for the EMCO
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        the newly created EMCO
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "EMCO:miniConvertYATCO"></a>
+    <strong>EMCO:miniConvertYATCO()</strong>
     </dt>
     <dd>
     Scans for the old YATCO configuration values and prints out a set of constraints to use.
@@ -349,8 +592,8 @@
 
 </dd>
     <dt>
-    <a name = "convertYATCO"></a>
-    <strong>convertYATCO ()</strong>
+    <a name = "EMCO:convertYATCO"></a>
+    <strong>EMCO:convertYATCO()</strong>
     </dt>
     <dd>
     Echos to the main console a script object you can add which will fully convert YATCO to EMCO.
@@ -366,8 +609,8 @@
 
 </dd>
     <dt>
-    <a name = "addTab"></a>
-    <strong>addTab (tabName[, position])</strong>
+    <a name = "EMCO:addTab"></a>
+    <strong>EMCO:addTab(tabName[, position])</strong>
     </dt>
     <dd>
     Adds a tab to the EMCO object
@@ -392,8 +635,8 @@
 
 </dd>
     <dt>
-    <a name = "reset"></a>
-    <strong>reset ()</strong>
+    <a name = "EMCO:reset"></a>
+    <strong>EMCO:reset()</strong>
     </dt>
     <dd>
     resets the object, redrawing everything
@@ -406,8 +649,8 @@
 
 </dd>
     <dt>
-    <a name = "fuzzyBoolean"></a>
-    <strong>fuzzyBoolean (bool)</strong>
+    <a name = "EMCO:fuzzyBoolean"></a>
+    <strong>EMCO:fuzzyBoolean(bool)</strong>
     </dt>
     <dd>
     Expands boolean definitions to be more flexible.
@@ -428,8 +671,8 @@
 
 </dd>
     <dt>
-    <a name = "clear"></a>
-    <strong>clear (tabName)</strong>
+    <a name = "EMCO:clear"></a>
+    <strong>EMCO:clear(tabName)</strong>
     </dt>
     <dd>
     clears a specific tab
@@ -449,8 +692,8 @@
 
 </dd>
     <dt>
-    <a name = "clearAll"></a>
-    <strong>clearAll ()</strong>
+    <a name = "EMCO:clearAll"></a>
+    <strong>EMCO:clearAll()</strong>
     </dt>
     <dd>
     clears all the tabs
@@ -463,8 +706,8 @@
 
 </dd>
     <dt>
-    <a name = "setTabFont"></a>
-    <strong>setTabFont (font)</strong>
+    <a name = "EMCO:setTabFont"></a>
+    <strong>EMCO:setTabFont(font)</strong>
     </dt>
     <dd>
     sets the font for all tabs
@@ -484,8 +727,8 @@
 
 </dd>
     <dt>
-    <a name = "setSingleTabFont"></a>
-    <strong>setSingleTabFont (tabName, font)</strong>
+    <a name = "EMCO:setSingleTabFont"></a>
+    <strong>EMCO:setSingleTabFont(tabName, font)</strong>
     </dt>
     <dd>
     sets the font for a single tab.  If you use setTabFont this will be overridden
@@ -509,8 +752,8 @@
 
 </dd>
     <dt>
-    <a name = "setFont"></a>
-    <strong>setFont (font)</strong>
+    <a name = "EMCO:setFont"></a>
+    <strong>EMCO:setFont(font)</strong>
     </dt>
     <dd>
     sets the font for all the miniconsoles
@@ -530,8 +773,8 @@
 
 </dd>
     <dt>
-    <a name = "setSingleWindowFont"></a>
-    <strong>setSingleWindowFont (tabName, font)</strong>
+    <a name = "EMCO:setSingleWindowFont"></a>
+    <strong>EMCO:setSingleWindowFont(tabName, font)</strong>
     </dt>
     <dd>
     sets the font for a specific miniconsole.  If setFont is called this will be overridden
@@ -555,8 +798,8 @@
 
 </dd>
     <dt>
-    <a name = "enableCustomTimestampColor"></a>
-    <strong>enableCustomTimestampColor ()</strong>
+    <a name = "EMCO:enableCustomTimestampColor"></a>
+    <strong>EMCO:enableCustomTimestampColor()</strong>
     </dt>
     <dd>
     enables custom colors for the timestamp, if displayed
@@ -569,8 +812,8 @@
 
 </dd>
     <dt>
-    <a name = "disableCustomTimestampColor"></a>
-    <strong>disableCustomTimestampColor ()</strong>
+    <a name = "EMCO:disableCustomTimestampColor"></a>
+    <strong>EMCO:disableCustomTimestampColor()</strong>
     </dt>
     <dd>
     disables custom colors for the timestamp, if displayed
@@ -583,8 +826,8 @@
 
 </dd>
     <dt>
-    <a name = "enableTimestamp"></a>
-    <strong>enableTimestamp ()</strong>
+    <a name = "EMCO:enableTimestamp"></a>
+    <strong>EMCO:enableTimestamp()</strong>
     </dt>
     <dd>
     enables the display of timestamps
@@ -597,8 +840,8 @@
 
 </dd>
     <dt>
-    <a name = "disableTimestamp"></a>
-    <strong>disableTimestamp ()</strong>
+    <a name = "EMCO:disableTimestamp"></a>
+    <strong>EMCO:disableTimestamp()</strong>
     </dt>
     <dd>
     disables the display of timestamps
@@ -611,8 +854,8 @@
 
 </dd>
     <dt>
-    <a name = "setTimestampFormat"></a>
-    <strong>setTimestampFormat (format)</strong>
+    <a name = "EMCO:setTimestampFormat"></a>
+    <strong>EMCO:setTimestampFormat(format)</strong>
     </dt>
     <dd>
     Sets the formatting for the timestamp, if enabled
@@ -632,8 +875,8 @@
 
 </dd>
     <dt>
-    <a name = "setTimestampBGColor"></a>
-    <strong>setTimestampBGColor (color)</strong>
+    <a name = "EMCO:setTimestampBGColor"></a>
+    <strong>EMCO:setTimestampBGColor(color)</strong>
     </dt>
     <dd>
     Sets the background color for the timestamp, if customTimestampColor is enabled.
@@ -652,8 +895,8 @@
 
 </dd>
     <dt>
-    <a name = "setTimestampFGColor"></a>
-    <strong>setTimestampFGColor (color)</strong>
+    <a name = "EMCO:setTimestampFGColor"></a>
+    <strong>EMCO:setTimestampFGColor(color)</strong>
     </dt>
     <dd>
     Sets the foreground color for the timestamp, if customTimestampColor is enabled.
@@ -672,8 +915,8 @@
 
 </dd>
     <dt>
-    <a name = "setAllTabName"></a>
-    <strong>setAllTabName (allTabName)</strong>
+    <a name = "EMCO:setAllTabName"></a>
+    <strong>EMCO:setAllTabName(allTabName)</strong>
     </dt>
     <dd>
     Sets the 'all' tab name.
@@ -694,8 +937,8 @@
 
 </dd>
     <dt>
-    <a name = "enableAllTab"></a>
-    <strong>enableAllTab ()</strong>
+    <a name = "EMCO:enableAllTab"></a>
+    <strong>EMCO:enableAllTab()</strong>
     </dt>
     <dd>
     Enables use of the 'all' tab
@@ -708,8 +951,8 @@
 
 </dd>
     <dt>
-    <a name = "disableAllTab"></a>
-    <strong>disableAllTab ()</strong>
+    <a name = "EMCO:disableAllTab"></a>
+    <strong>EMCO:disableAllTab()</strong>
     </dt>
     <dd>
     Disables use of the 'all' tab
@@ -722,8 +965,8 @@
 
 </dd>
     <dt>
-    <a name = "enableMapTab"></a>
-    <strong>enableMapTab ()</strong>
+    <a name = "EMCO:enableMapTab"></a>
+    <strong>EMCO:enableMapTab()</strong>
     </dt>
     <dd>
     Enables tying the Mudlet Mapper to one of the tabs.
@@ -737,8 +980,8 @@
 
 </dd>
     <dt>
-    <a name = "disableMapTab"></a>
-    <strong>disableMapTab ()</strong>
+    <a name = "EMCO:disableMapTab"></a>
+    <strong>EMCO:disableMapTab()</strong>
     </dt>
     <dd>
     disables binding the Mudlet Mapper to one of the tabs.
@@ -753,8 +996,8 @@
 
 </dd>
     <dt>
-    <a name = "setMapTabName"></a>
-    <strong>setMapTabName (mapTabName)</strong>
+    <a name = "EMCO:setMapTabName"></a>
+    <strong>EMCO:setMapTabName(mapTabName)</strong>
     </dt>
     <dd>
     sets the name of the tab to bind the Mudlet Map.
@@ -777,8 +1020,8 @@
 
 </dd>
     <dt>
-    <a name = "enableBlinkFromAll"></a>
-    <strong>enableBlinkFromAll ()</strong>
+    <a name = "EMCO:enableBlinkFromAll"></a>
+    <strong>EMCO:enableBlinkFromAll()</strong>
     </dt>
     <dd>
     Enables tab blinking even if you're on the 'all' tab
@@ -791,8 +1034,8 @@
 
 </dd>
     <dt>
-    <a name = "disableBlinkFromAll"></a>
-    <strong>disableBlinkFromAll ()</strong>
+    <a name = "EMCO:disableBlinkFromAll"></a>
+    <strong>EMCO:disableBlinkFromAll()</strong>
     </dt>
     <dd>
     Disables tab blinking when you're on the 'all' tab
@@ -805,8 +1048,8 @@
 
 </dd>
     <dt>
-    <a name = "enableGag"></a>
-    <strong>enableGag ()</strong>
+    <a name = "EMCO:enableGag"></a>
+    <strong>EMCO:enableGag()</strong>
     </dt>
     <dd>
     Enables gagging of the line passed in to :append(tabName)
@@ -819,8 +1062,8 @@
 
 </dd>
     <dt>
-    <a name = "disableGag"></a>
-    <strong>disableGag ()</strong>
+    <a name = "EMCO:disableGag"></a>
+    <strong>EMCO:disableGag()</strong>
     </dt>
     <dd>
     Disables gagging of the line passed in to :append(tabName)
@@ -833,8 +1076,8 @@
 
 </dd>
     <dt>
-    <a name = "enableBlink"></a>
-    <strong>enableBlink ()</strong>
+    <a name = "EMCO:enableBlink"></a>
+    <strong>EMCO:enableBlink()</strong>
     </dt>
     <dd>
     Enables tab blinking when new information comes in to an inactive tab
@@ -847,8 +1090,8 @@
 
 </dd>
     <dt>
-    <a name = "disableBlink"></a>
-    <strong>disableBlink ()</strong>
+    <a name = "EMCO:disableBlink"></a>
+    <strong>EMCO:disableBlink()</strong>
     </dt>
     <dd>
     Disables tab blinking when new information comes in to an inactive tab
@@ -861,8 +1104,8 @@
 
 </dd>
     <dt>
-    <a name = "enablePreserveBackground"></a>
-    <strong>enablePreserveBackground ()</strong>
+    <a name = "EMCO:enablePreserveBackground"></a>
+    <strong>EMCO:enablePreserveBackground()</strong>
     </dt>
     <dd>
     Enables preserving the chat's background over the background of an incoming :append()
@@ -875,8 +1118,8 @@
 
 </dd>
     <dt>
-    <a name = "disablePreserveBackground"></a>
-    <strong>disablePreserveBackground ()</strong>
+    <a name = "EMCO:disablePreserveBackground"></a>
+    <strong>EMCO:disablePreserveBackground()</strong>
     </dt>
     <dd>
     Enables preserving the chat's background over the background of an incoming :append()
@@ -889,8 +1132,8 @@
 
 </dd>
     <dt>
-    <a name = "setBlinkTime"></a>
-    <strong>setBlinkTime (blinkTime)</strong>
+    <a name = "EMCO:setBlinkTime"></a>
+    <strong>EMCO:setBlinkTime(blinkTime)</strong>
     </dt>
     <dd>
     Sets how long in seconds to wait between blinks
@@ -910,8 +1153,8 @@
 
 </dd>
     <dt>
-    <a name = "setFontSize"></a>
-    <strong>setFontSize (fontSize)</strong>
+    <a name = "EMCO:setFontSize"></a>
+    <strong>EMCO:setFontSize(fontSize)</strong>
     </dt>
     <dd>
     Sets the font size of the attached consoles
@@ -931,8 +1174,8 @@
 
 </dd>
     <dt>
-    <a name = "setActiveTabFGColor"></a>
-    <strong>setActiveTabFGColor (color)</strong>
+    <a name = "EMCO:setActiveTabFGColor"></a>
+    <strong>EMCO:setActiveTabFGColor(color)</strong>
     </dt>
     <dd>
     Sets the FG color for the active tab
@@ -951,8 +1194,8 @@
 
 </dd>
     <dt>
-    <a name = "setInactiveTabFGColor"></a>
-    <strong>setInactiveTabFGColor (color)</strong>
+    <a name = "EMCO:setInactiveTabFGColor"></a>
+    <strong>EMCO:setInactiveTabFGColor(color)</strong>
     </dt>
     <dd>
     Sets the FG color for the inactive tab
@@ -971,8 +1214,8 @@
 
 </dd>
     <dt>
-    <a name = "setActiveTabBGColor"></a>
-    <strong>setActiveTabBGColor (color)</strong>
+    <a name = "EMCO:setActiveTabBGColor"></a>
+    <strong>EMCO:setActiveTabBGColor(color)</strong>
     </dt>
     <dd>
     Sets the BG color for the active tab.
@@ -992,8 +1235,8 @@
 
 </dd>
     <dt>
-    <a name = "setInactiveTabBGColor"></a>
-    <strong>setInactiveTabBGColor (color)</strong>
+    <a name = "EMCO:setInactiveTabBGColor"></a>
+    <strong>EMCO:setInactiveTabBGColor(color)</strong>
     </dt>
     <dd>
     Sets the BG color for the inactive tab.
@@ -1013,8 +1256,8 @@
 
 </dd>
     <dt>
-    <a name = "setConsoleColor"></a>
-    <strong>setConsoleColor (color)</strong>
+    <a name = "EMCO:setConsoleColor"></a>
+    <strong>EMCO:setConsoleColor(color)</strong>
     </dt>
     <dd>
     Sets the BG color for the consoles attached to this object
@@ -1033,8 +1276,8 @@
 
 </dd>
     <dt>
-    <a name = "setTabBoxCSS"></a>
-    <strong>setTabBoxCSS (css)</strong>
+    <a name = "EMCO:setTabBoxCSS"></a>
+    <strong>EMCO:setTabBoxCSS(css)</strong>
     </dt>
     <dd>
     Sets the CSS to use for the tab box which contains the tabs for the object
@@ -1054,8 +1297,8 @@
 
 </dd>
     <dt>
-    <a name = "setTabBoxColor"></a>
-    <strong>setTabBoxColor (color)</strong>
+    <a name = "EMCO:setTabBoxColor"></a>
+    <strong>EMCO:setTabBoxColor(color)</strong>
     </dt>
     <dd>
     Sets the color to use for the tab box background
@@ -1074,8 +1317,8 @@
 
 </dd>
     <dt>
-    <a name = "setConsoleContainerColor"></a>
-    <strong>setConsoleContainerColor (color)</strong>
+    <a name = "EMCO:setConsoleContainerColor"></a>
+    <strong>EMCO:setConsoleContainerColor(color)</strong>
     </dt>
     <dd>
     Sets the color for the container which holds the consoles attached to this object.
@@ -1094,8 +1337,8 @@
 
 </dd>
     <dt>
-    <a name = "setConsoleContainerCSS"></a>
-    <strong>setConsoleContainerCSS (css)</strong>
+    <a name = "EMCO:setConsoleContainerCSS"></a>
+    <strong>EMCO:setConsoleContainerCSS(css)</strong>
     </dt>
     <dd>
     Sets the CSS to use for the container which holds the consoles attached to this object
@@ -1115,8 +1358,8 @@
 
 </dd>
     <dt>
-    <a name = "setGap"></a>
-    <strong>setGap (gap)</strong>
+    <a name = "EMCO:setGap"></a>
+    <strong>EMCO:setGap(gap)</strong>
     </dt>
     <dd>
     Sets the amount of space to use between the tabs and the consoles
@@ -1136,8 +1379,8 @@
 
 </dd>
     <dt>
-    <a name = "setTabHeight"></a>
-    <strong>setTabHeight (tabHeight)</strong>
+    <a name = "EMCO:setTabHeight"></a>
+    <strong>EMCO:setTabHeight(tabHeight)</strong>
     </dt>
     <dd>
     Sets the height of the tabs in pixels
@@ -1157,8 +1400,8 @@
 
 </dd>
     <dt>
-    <a name = "enableAutoWrap"></a>
-    <strong>enableAutoWrap ()</strong>
+    <a name = "EMCO:enableAutoWrap"></a>
+    <strong>EMCO:enableAutoWrap()</strong>
     </dt>
     <dd>
     Enables autowrap for the object, and by extension all attached consoles.
@@ -1173,8 +1416,8 @@
 
 </dd>
     <dt>
-    <a name = "disableAutoWrap"></a>
-    <strong>disableAutoWrap ()</strong>
+    <a name = "EMCO:disableAutoWrap"></a>
+    <strong>EMCO:disableAutoWrap()</strong>
     </dt>
     <dd>
     Disables autowrap for the object, and by extension all attached consoles.
@@ -1189,8 +1432,8 @@
 
 </dd>
     <dt>
-    <a name = "setWrap"></a>
-    <strong>setWrap (wrapAt)</strong>
+    <a name = "EMCO:setWrap"></a>
+    <strong>EMCO:setWrap(wrapAt)</strong>
     </dt>
     <dd>
     Sets the number of characters to wordwrap the attached consoles at.
@@ -1211,8 +1454,8 @@
 
 </dd>
     <dt>
-    <a name = "append"></a>
-    <strong>append (tabName, excludeAll)</strong>
+    <a name = "EMCO:append"></a>
+    <strong>EMCO:append(tabName, excludeAll)</strong>
     </dt>
     <dd>
     Appends the current line from the MUD to a tab.
@@ -1238,8 +1481,8 @@
 
 </dd>
     <dt>
-    <a name = "cecho"></a>
-    <strong>cecho (tabName, message, excludeAll)</strong>
+    <a name = "EMCO:cecho"></a>
+    <strong>EMCO:cecho(tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     cecho to a tab, maintaining functionality
@@ -1267,8 +1510,8 @@
 
 </dd>
     <dt>
-    <a name = "decho"></a>
-    <strong>decho (tabName, message, excludeAll)</strong>
+    <a name = "EMCO:decho"></a>
+    <strong>EMCO:decho(tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     decho to a tab, maintaining functionality
@@ -1296,8 +1539,8 @@
 
 </dd>
     <dt>
-    <a name = "hecho"></a>
-    <strong>hecho (tabName, message, excludeAll)</strong>
+    <a name = "EMCO:hecho"></a>
+    <strong>EMCO:hecho(tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     hecho to a tab, maintaining functionality
@@ -1325,8 +1568,8 @@
 
 </dd>
     <dt>
-    <a name = "echo"></a>
-    <strong>echo (tabName, message, excludeAll)</strong>
+    <a name = "EMCO:echo"></a>
+    <strong>EMCO:echo(tabName, message, excludeAll)</strong>
     </dt>
     <dd>
     echo to a tab, maintaining functionality
@@ -1354,8 +1597,8 @@
 
 </dd>
     <dt>
-    <a name = "cechoLink"></a>
-    <strong>cechoLink (tabName, text, command, hint, excludeAll)</strong>
+    <a name = "EMCO:cechoLink"></a>
+    <strong>EMCO:cechoLink(tabName, text, command, hint, excludeAll)</strong>
     </dt>
     <dd>
     cechoLink to a tab
@@ -1391,8 +1634,8 @@
 
 </dd>
     <dt>
-    <a name = "dechoLink"></a>
-    <strong>dechoLink (tabName, text, command, hint, excludeAll)</strong>
+    <a name = "EMCO:dechoLink"></a>
+    <strong>EMCO:dechoLink(tabName, text, command, hint, excludeAll)</strong>
     </dt>
     <dd>
     dechoLink to a tab
@@ -1428,8 +1671,8 @@
 
 </dd>
     <dt>
-    <a name = "hechoLink"></a>
-    <strong>hechoLink (tabName, text, command, hint, excludeAll)</strong>
+    <a name = "EMCO:hechoLink"></a>
+    <strong>EMCO:hechoLink(tabName, text, command, hint, excludeAll)</strong>
     </dt>
     <dd>
     hechoLink to a tab
@@ -1465,8 +1708,8 @@
 
 </dd>
     <dt>
-    <a name = "echoLink"></a>
-    <strong>echoLink (tabName, text, command, hint, useCurrentFormat, excludeAll)</strong>
+    <a name = "EMCO:echoLink"></a>
+    <strong>EMCO:echoLink(tabName, text, command, hint, useCurrentFormat, excludeAll)</strong>
     </dt>
     <dd>
     echoLink to a tab
@@ -1506,8 +1749,8 @@
 
 </dd>
     <dt>
-    <a name = "cechoPopup"></a>
-    <strong>cechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    <a name = "EMCO:cechoPopup"></a>
+    <strong>EMCO:cechoPopup(tabName, text, commands, hints, excludeAll)</strong>
     </dt>
     <dd>
     cechoPopup to a tab
@@ -1543,8 +1786,8 @@
 
 </dd>
     <dt>
-    <a name = "dechoPopup"></a>
-    <strong>dechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    <a name = "EMCO:dechoPopup"></a>
+    <strong>EMCO:dechoPopup(tabName, text, commands, hints, excludeAll)</strong>
     </dt>
     <dd>
     dechoPopup to a tab
@@ -1580,8 +1823,8 @@
 
 </dd>
     <dt>
-    <a name = "hechoPopup"></a>
-    <strong>hechoPopup (tabName, text, commands, hints, excludeAll)</strong>
+    <a name = "EMCO:hechoPopup"></a>
+    <strong>EMCO:hechoPopup(tabName, text, commands, hints, excludeAll)</strong>
     </dt>
     <dd>
     hechoPopup to a tab
@@ -1617,8 +1860,8 @@
 
 </dd>
     <dt>
-    <a name = "echoPopup"></a>
-    <strong>echoPopup (tabName, text, commands, hints, useCurrentFormat, excludeAll)</strong>
+    <a name = "EMCO:echoPopup"></a>
+    <strong>EMCO:echoPopup(tabName, text, commands, hints, useCurrentFormat, excludeAll)</strong>
     </dt>
     <dd>
     echoPopup to a tab
@@ -1658,8 +1901,8 @@
 
 </dd>
     <dt>
-    <a name = "addAllTabExclusion"></a>
-    <strong>addAllTabExclusion (tabName)</strong>
+    <a name = "EMCO:addAllTabExclusion"></a>
+    <strong>EMCO:addAllTabExclusion(tabName)</strong>
     </dt>
     <dd>
     adds a tab to the exclusion list for echoing to the allTab
@@ -1679,8 +1922,8 @@
 
 </dd>
     <dt>
-    <a name = "removeAllTabExclusion"></a>
-    <strong>removeAllTabExclusion (tabName)</strong>
+    <a name = "EMCO:removeAllTabExclusion"></a>
+    <strong>EMCO:removeAllTabExclusion(tabName)</strong>
     </dt>
     <dd>
     removess a tab from the exclusion list for echoing to the allTab
@@ -1700,8 +1943,8 @@
 
 </dd>
     <dt>
-    <a name = "enableBlankLine"></a>
-    <strong>enableBlankLine ()</strong>
+    <a name = "EMCO:enableBlankLine"></a>
+    <strong>EMCO:enableBlankLine()</strong>
     </dt>
     <dd>
     Enable placing a blank line between all messages.
@@ -1714,8 +1957,8 @@
 
 </dd>
     <dt>
-    <a name = "disableBlankLine"></a>
-    <strong>disableBlankLine ()</strong>
+    <a name = "EMCO:disableBlankLine"></a>
+    <strong>EMCO:disableBlankLine()</strong>
     </dt>
     <dd>
     Enable placing a blank line between all messages.
@@ -1728,8 +1971,8 @@
 
 </dd>
     <dt>
-    <a name = "enableScrollbars"></a>
-    <strong>enableScrollbars ()</strong>
+    <a name = "EMCO:enableScrollbars"></a>
+    <strong>EMCO:enableScrollbars()</strong>
     </dt>
     <dd>
     Enable scrollbars for the miniconsoles
@@ -1742,45 +1985,14 @@
 
 </dd>
     <dt>
-    <a name = "disableScrollbars"></a>
-    <strong>disableScrollbars ()</strong>
+    <a name = "EMCO:disableScrollbars"></a>
+    <strong>EMCO:disableScrollbars()</strong>
     </dt>
     <dd>
     Disable scrollbars for the miniconsoles
 
 
 
-
-
-
-
-</dd>
-    <dt>
-    <a name = "new"></a>
-    <strong>new (cons, container)</strong>
-    </dt>
-    <dd>
-    Creates a new Embeddable Multi Console Object.
- <br>see https://github.com/demonnic/EMCO/wiki for information on valid constraints and defaults
-
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">cons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-         table of constraints which configures the EMCO.
-        </li>
-        <li><span class="parameter">container</span>
-            <span class="types"><span class="type">GeyserObject</span></span>
-         The container to use as the parent for the EMCO
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        the newly created EMCO
-    </ol>
 
 
 
@@ -1793,7 +2005,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2020-05-03 23:40:08 </i>
+<i style="float:right;">Last updated 2020-06-19 19:29:40 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
