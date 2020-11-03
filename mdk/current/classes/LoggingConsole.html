@@ -1,0 +1,771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>MDK</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
+  <li><a href="../classes/Chyron.html">Chyron</a></li>
+  <li><strong>LoggingConsole</strong></li>
+  <li><a href="../classes/SortBox.html">SortBox</a></li>
+  <li><a href="../classes/SUG.html">SUG</a></li>
+  <li><a href="../classes/TableMaker.html">TableMaker</a></li>
+  <li><a href="../classes/TextFormatter.html">TextFormatter</a></li>
+  <li><a href="../classes/TimerGauge.html">TimerGauge</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/DemonTools.html">DemonTools</a></li>
+  <li><a href="../modules/ftext.html">ftext</a></li>
+  <li><a href="../modules/gradientmaker.html">gradientmaker</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>LoggingConsole</code></h1>
+<p>MiniConsole with logging capabilities</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 Damian Monogue</li>
+        <li><strong>License</strong>: MIT, see LICENSE.lua</li>
+        <li><strong>Author</strong>: Damian Monogue <demonnic@gmail.com></li>
+    </ul>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:new">LoggingConsole:new(cons, container)</a></td>
+	<td class="summary">Creates and returns a new LoggingConsole.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:getExtension">LoggingConsole:getExtension()</a></td>
+	<td class="summary">Returns the file extension of the logfile this console will log to</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:getPath">LoggingConsole:getPath()</a></td>
+	<td class="summary">Returns the path to the logfile for this console</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:setPath">LoggingConsole:setPath(path)</a></td>
+	<td class="summary">Sets the path to use for the log file.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:getFileName">LoggingConsole:getFileName()</a></td>
+	<td class="summary">Returns the filename for the logfile for this console</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:setFileName">LoggingConsole:setFileName(fileName)</a></td>
+	<td class="summary">Sets the fileName to use for the log file.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:getFullFilename">LoggingConsole:getFullFilename()</a></td>
+	<td class="summary">Returns the pull path and filename for the logfile for this console</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:enableLogging">LoggingConsole:enableLogging()</a></td>
+	<td class="summary">Turns logging for this console on</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:disableLogging">LoggingConsole:disableLogging()</a></td>
+	<td class="summary">Turns logging for this console off</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:cechoLink">LoggingConsole:cechoLink(text, command, hint, log)</a></td>
+	<td class="summary">cechoLink for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:dechoLink">LoggingConsole:dechoLink(text, command, hint, log)</a></td>
+	<td class="summary">dechoLink for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:hechoLink">LoggingConsole:hechoLink(text, command, hint, log)</a></td>
+	<td class="summary">hechoLink for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:echoLink">LoggingConsole:echoLink(text, command, hint, useCurrentFormat, log)</a></td>
+	<td class="summary">echoLink for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:cechoPopup">LoggingConsole:cechoPopup(text, commands, hints, log)</a></td>
+	<td class="summary">cechoPopup for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:dechoPopup">LoggingConsole:dechoPopup(text, commands, hints, log)</a></td>
+	<td class="summary">dechoPopup for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:hechoPopup">LoggingConsole:hechoPopup(text, commands, hints, log)</a></td>
+	<td class="summary">hechoPopup for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:echoPopup">LoggingConsole:echoPopup(text, commands, hints, useCurrentFormat, log)</a></td>
+	<td class="summary">echoPopup for LoggingConsole</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:appendBuffer">LoggingConsole:appendBuffer(log)</a></td>
+	<td class="summary">Append copy()ed text to the console</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:append">LoggingConsole:append(log)</a></td>
+	<td class="summary">Append copy()ed text to the console</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:echo">LoggingConsole:echo(str, log)</a></td>
+	<td class="summary">echo's a string to the console.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:hecho">LoggingConsole:hecho(str, log)</a></td>
+	<td class="summary">hecho's a string to the console.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:decho">LoggingConsole:decho(str, log)</a></td>
+	<td class="summary">decho's a string to the console.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:cecho">LoggingConsole:cecho(str, log)</a></td>
+	<td class="summary">cecho's a string to the console.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#LoggingConsole:replay">LoggingConsole:replay(numberOfLines)</a></td>
+	<td class="summary">Replays the last X lines from the console's log file, if it exists</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "LoggingConsole:new"></a>
+    <strong>LoggingConsole:new(cons, container)</strong>
+    </dt>
+    <dd>
+    Creates and returns a new LoggingConsole.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cons</span>
+         table of constraints. Includes all the valid Geyser.MiniConsole constraints, plus
+ <table class="tg">
+ <thead>
+   <tr>
+     <th>option name</th>
+     <th>description</th>
+     <th>default</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <td class="tg-odd">log</td>
+     <td class="tg-odd">Should the miniconsole be logging?</td>
+     <td class="tg-odd">true</td>
+   </tr>
+   <tr>
+     <td class="tg-even">logFormat</td>
+     <td class="tg-even">"h" for html, "t" for plaintext, "l" for log (with ansi)</td>
+     <td class="tg-even">h</td>
+   </tr>
+   <tr>
+     <td class="tg-odd">path</td>
+     <td class="tg-odd">The path the file lives in. It is templated.<br>|h is replaced by the profile homedir.<br>|y by 4 digit year.<br>|m by 2 digit month<br>|d by 2 digit day<br>|n by the name constraint<br>|e by the file extension (html for h logType, log for others)</td>
+     <td class="tg-odd">"|h/log/consoleLogs/|y/|m/|d/"</td>
+   </tr>
+   <tr>
+     <td class="tg-even">fileName</td>
+     <td class="tg-even">The name of the log file. It is templated, same as path above</td>
+     <td class="tg-even">"|n.|e"</td>
+   </tr>
+</tbody>
+</table>
+        </li>
+        <li><span class="parameter">container</span>
+         the container for the console
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:getExtension"></a>
+    <strong>LoggingConsole:getExtension()</strong>
+    </dt>
+    <dd>
+    Returns the file extension of the logfile this console will log to
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:getPath"></a>
+    <strong>LoggingConsole:getPath()</strong>
+    </dt>
+    <dd>
+    Returns the path to the logfile for this console
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:setPath"></a>
+    <strong>LoggingConsole:setPath(path)</strong>
+    </dt>
+    <dd>
+    Sets the path to use for the log file.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+         the path to put the log file in. It is templated.<br>|h is replaced by the profile homedir.<br>|y by 4 digit year.<br>|m by 2 digit month<br>|d by 2 digit day<br>|n by the name constraint<br>|e by the file extension (html for h logType, log for others)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:getFileName"></a>
+    <strong>LoggingConsole:getFileName()</strong>
+    </dt>
+    <dd>
+    Returns the filename for the logfile for this console
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:setFileName"></a>
+    <strong>LoggingConsole:setFileName(fileName)</strong>
+    </dt>
+    <dd>
+    Sets the fileName to use for the log file.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fileName</span>
+         the fileName to use for the logfile. It is templated.<br>|h is replaced by the profile homedir.<br>|y by 4 digit year.<br>|m by 2 digit month<br>|d by 2 digit day<br>|n by the name constraint<br>|e by the file extension (html for h logType, log for others)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:getFullFilename"></a>
+    <strong>LoggingConsole:getFullFilename()</strong>
+    </dt>
+    <dd>
+    Returns the pull path and filename for the logfile for this console
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:enableLogging"></a>
+    <strong>LoggingConsole:enableLogging()</strong>
+    </dt>
+    <dd>
+    Turns logging for this console on
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:disableLogging"></a>
+    <strong>LoggingConsole:disableLogging()</strong>
+    </dt>
+    <dd>
+    Turns logging for this console off
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:cechoLink"></a>
+    <strong>LoggingConsole:cechoLink(text, command, hint, log)</strong>
+    </dt>
+    <dd>
+    cechoLink for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">command</span>
+         the command to send when the link is clicked, as text. IE [[send("sleep")]]
+        </li>
+        <li><span class="parameter">hint</span>
+         A tooltip which is displayed when the mouse is over the link
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:dechoLink"></a>
+    <strong>LoggingConsole:dechoLink(text, command, hint, log)</strong>
+    </dt>
+    <dd>
+    dechoLink for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">command</span>
+         the command to send when the link is clicked, as text. IE [[send("sleep")]]
+        </li>
+        <li><span class="parameter">hint</span>
+         A tooltip which is displayed when the mouse is over the link
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:hechoLink"></a>
+    <strong>LoggingConsole:hechoLink(text, command, hint, log)</strong>
+    </dt>
+    <dd>
+    hechoLink for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">command</span>
+         the command to send when the link is clicked, as text. IE [[send("sleep")]]
+        </li>
+        <li><span class="parameter">hint</span>
+         A tooltip which is displayed when the mouse is over the link
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:echoLink"></a>
+    <strong>LoggingConsole:echoLink(text, command, hint, useCurrentFormat, log)</strong>
+    </dt>
+    <dd>
+    echoLink for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">command</span>
+         the command to send when the link is clicked, as text. IE [[send("sleep")]]
+        </li>
+        <li><span class="parameter">hint</span>
+         A tooltip which is displayed when the mouse is over the link
+        </li>
+        <li><span class="parameter">useCurrentFormat</span>
+         If set to true, will look like the text around it. If false it will be blue and underline.
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed. If you want to pass this you must pass in useCurrentFormat
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <li><pre class="example">myLoggingConsole:echoLink(<span class="string">"This is a link!"</span>, <span class="string">[[send("sleep")]]</span>, <span class="string">"sleep"</span>) <span class="comment">-- text "This is a link" will send("sleep") when clicked and be blue w/ underline. Defaut log behaviour (self.log)</span></pre></li>
+        <li><pre class="example">myLoggingConsole:echoLink(<span class="string">"This is a link!"</span>, <span class="string">[[send("sleep")]]</span>, <span class="string">"sleep"</span>, <span class="keyword">false</span>, <span class="keyword">false</span>) <span class="comment">-- same as above, but forces it not to log regardless of self.log setting</span></pre></li>
+        <li><pre class="example">myLoggingConsole:echoLink(<span class="string">"This is a link!"</span>, <span class="string">[[send("sleep")]]</span>, <span class="string">"sleep"</span>, <span class="keyword">true</span>, <span class="keyword">true</span>) <span class="comment">-- same as above, but forces it to log regardless of self.log setting and the text will look like anything else echoed to the console.</span></pre></li>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:cechoPopup"></a>
+    <strong>LoggingConsole:cechoPopup(text, commands, hints, log)</strong>
+    </dt>
+    <dd>
+    cechoPopup for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">commands</span>
+         the commands to send when the popup is activated, as table. IE {[[send("sleep")]], [[send("stand")]]}
+        </li>
+        <li><span class="parameter">hints</span>
+         A tooltip which is displayed when the mouse is over the link. IE {{"sleep", "stand"}}
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:dechoPopup"></a>
+    <strong>LoggingConsole:dechoPopup(text, commands, hints, log)</strong>
+    </dt>
+    <dd>
+    dechoPopup for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">commands</span>
+         the commands to send when the popup is activated, as table. IE {[[send("sleep")]], [[send("stand")]]}
+        </li>
+        <li><span class="parameter">hints</span>
+         A tooltip which is displayed when the mouse is over the link. IE {{"sleep", "stand"}}
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:hechoPopup"></a>
+    <strong>LoggingConsole:hechoPopup(text, commands, hints, log)</strong>
+    </dt>
+    <dd>
+    hechoPopup for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">commands</span>
+         the commands to send when the popup is activated, as table. IE {[[send("sleep")]], [[send("stand")]]}
+        </li>
+        <li><span class="parameter">hints</span>
+         A tooltip which is displayed when the mouse is over the link. IE {{"sleep", "stand"}}
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:echoPopup"></a>
+    <strong>LoggingConsole:echoPopup(text, commands, hints, useCurrentFormat, log)</strong>
+    </dt>
+    <dd>
+    echoPopup for LoggingConsole
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         the text to use for the link
+        </li>
+        <li><span class="parameter">commands</span>
+         the commands to send when the popup is activated, as table. IE {[[send("sleep")]], [[send("stand")]]}
+        </li>
+        <li><span class="parameter">hints</span>
+         A tooltip which is displayed when the mouse is over the link. IE {{"sleep", "stand"}}
+        </li>
+        <li><span class="parameter">useCurrentFormat</span>
+         If set to true, will look like the text around it. If false it will be blue and underline.
+        </li>
+        <li><span class="parameter">log</span>
+         Should we log this line? Defaults to self.log if not passed. If you want to pass this you must pass in useCurrentFormat
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <li><pre class="example">myLoggingConsole:echoPopup(<span class="string">"This is a link!"</span>, {<span class="string">[[send("sleep")]]</span>, <span class="string">[[send("stand")]]</span>, {<span class="string">"sleep"</span>, <span class="string">"stand"</span>}) <span class="comment">-- text "This is a link" will send("sleep") when clicked and be blue w/ underline. Defaut log behaviour (self.log)</span></pre></li>
+        <li><pre class="example">myLoggingConsole:echoPopup(<span class="string">"This is a link!"</span>, {<span class="string">[[send("sleep")]]</span>, <span class="string">[[send("stand")]]</span>, {<span class="string">"sleep"</span>, <span class="string">"stand"</span>}, <span class="keyword">false</span>, <span class="keyword">false</span>) <span class="comment">-- same as above, but forces it not to log regardless of self.log setting</span></pre></li>
+        <li><pre class="example">myLoggingConsole:echoPopup(<span class="string">"This is a link!"</span>, {<span class="string">[[send("sleep")]]</span>, <span class="string">[[send("stand")]]</span>, {<span class="string">"sleep"</span>, <span class="string">"stand"</span>}, <span class="keyword">true</span>, <span class="keyword">true</span>) <span class="comment">-- same as above, but forces it to log regardless of self.log setting and the text will look like anything else echoed to the console.</span></pre></li>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:appendBuffer"></a>
+    <strong>LoggingConsole:appendBuffer(log)</strong>
+    </dt>
+    <dd>
+    Append copy()ed text to the console
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">log</span>
+         should we log this?
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:append"></a>
+    <strong>LoggingConsole:append(log)</strong>
+    </dt>
+    <dd>
+    Append copy()ed text to the console
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">log</span>
+         should we log this?
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:echo"></a>
+    <strong>LoggingConsole:echo(str, log)</strong>
+    </dt>
+    <dd>
+    echo's a string to the console.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+         the string to echo
+        </li>
+        <li><span class="parameter">log</span>
+         should this be logged? Used to override the .log constraint
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:hecho"></a>
+    <strong>LoggingConsole:hecho(str, log)</strong>
+    </dt>
+    <dd>
+    hecho's a string to the console.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+         the string to hecho
+        </li>
+        <li><span class="parameter">log</span>
+         should this be logged? Used to override the .log constraint
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:decho"></a>
+    <strong>LoggingConsole:decho(str, log)</strong>
+    </dt>
+    <dd>
+    decho's a string to the console.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+         the string to decho
+        </li>
+        <li><span class="parameter">log</span>
+         should this be logged? Used to override the .log constraint
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:cecho"></a>
+    <strong>LoggingConsole:cecho(str, log)</strong>
+    </dt>
+    <dd>
+    cecho's a string to the console.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">str</span>
+         the string to cecho
+        </li>
+        <li><span class="parameter">log</span>
+         should this be logged? Used to override the .log constraint
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "LoggingConsole:replay"></a>
+    <strong>LoggingConsole:replay(numberOfLines)</strong>
+    </dt>
+    <dd>
+    Replays the last X lines from the console's log file, if it exists
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">numberOfLines</span>
+         The number of lines to replay from the end of the file
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-11-03 15:31:29 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
