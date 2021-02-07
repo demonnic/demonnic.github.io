@@ -38,21 +38,19 @@
 
 <h2>Modules</h2>
 <ul class="nowrap">
-  <li><strong>DemonTools</strong></li>
+  <li><strong>demontools</strong></li>
   <li><a href="../modules/echofile.html">echofile</a></li>
   <li><a href="../modules/ftext.html">ftext</a></li>
   <li><a href="../modules/gradientmaker.html">gradientmaker</a></li>
 </ul>
 <h2>Classes</h2>
 <ul class="nowrap">
-  <li><a href="../classes/EMCO.html">EMCO</a></li>
-  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
   <li><a href="../classes/Chyron.html">Chyron</a></li>
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
   <li><a href="../classes/LoggingConsole.html">LoggingConsole</a></li>
   <li><a href="../classes/SortBox.html">SortBox</a></li>
   <li><a href="../classes/SUG.html">SUG</a></li>
-  <li><a href="../classes/TableMaker.html">TableMaker</a></li>
-  <li><a href="../classes/TextFormatter.html">TextFormatter</a></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
   <li><a href="../classes/TimerGauge.html">TimerGauge</a></li>
 </ul>
 
@@ -60,7 +58,7 @@
 
 <div id="content">
 
-<h1>Module <code>DemonTools</code></h1>
+<h1>Module <code>demontools</code></h1>
 <p>Collection of miscellaneous functions and tools which don't necessarily warrant their own module/class</p>
 <p></p>
     <h3>Info:</h3>
@@ -74,159 +72,159 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#chunkify">chunkify(tbl, num_chunks)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.chunkify">DemonTools.chunkify(tbl, num_chunks)</a></td>
 	<td class="summary">Takes a list table and returns it as a table of 'chunks'.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#ansi2cecho">ansi2cecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.ansi2cecho">DemonTools.ansi2cecho(text)</a></td>
 	<td class="summary">Takes an ansi colored text string and returns a cecho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#ansi2decho">ansi2decho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.ansi2decho">DemonTools.ansi2decho(text)</a></td>
 	<td class="summary">Takes an ansi colored text string and returns a decho colored one.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#ansi2hecho">ansi2hecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.ansi2hecho">DemonTools.ansi2hecho(text)</a></td>
 	<td class="summary">Takes an ansi colored text string and returns a hecho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho2decho">cecho2decho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.cecho2decho">DemonTools.cecho2decho(text)</a></td>
 	<td class="summary">Takes an cecho colored text string and returns a decho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho2ansi">cecho2ansi(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.cecho2ansi">DemonTools.cecho2ansi(text)</a></td>
 	<td class="summary">Takes an cecho colored text string and returns an ansi colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho2hecho">cecho2hecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.cecho2hecho">DemonTools.cecho2hecho(text)</a></td>
 	<td class="summary">Takes an cecho colored text string and returns a hecho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho2cecho">decho2cecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.decho2cecho">DemonTools.decho2cecho(text)</a></td>
 	<td class="summary">Takes an decho colored text string and returns a cecho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho2ansi">decho2ansi(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.decho2ansi">DemonTools.decho2ansi(text)</a></td>
 	<td class="summary">Takes an decho colored text string and returns an ansi colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho2hecho">decho2hecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.decho2hecho">DemonTools.decho2hecho(text)</a></td>
 	<td class="summary">Takes an decho colored text string and returns an hecho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho2html">decho2html(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.decho2html">DemonTools.decho2html(text)</a></td>
 	<td class="summary">Takes a decho colored text string and returns html.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho2html">cecho2html(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.cecho2html">DemonTools.cecho2html(text)</a></td>
 	<td class="summary">Takes a cecho colored text string and returns html.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho2html">hecho2html(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.hecho2html">DemonTools.hecho2html(text)</a></td>
 	<td class="summary">Takes a hecho colored text string and returns html.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#ansi2html">ansi2html(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.ansi2html">DemonTools.ansi2html(text)</a></td>
 	<td class="summary">Takes an ansi colored text string and returns html.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#html2cecho">html2cecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.html2cecho">DemonTools.html2cecho(text)</a></td>
 	<td class="summary">Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns a cecho string</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#html2decho">html2decho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.html2decho">DemonTools.html2decho(text)</a></td>
 	<td class="summary">Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns a decho string</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#html2ansi">html2ansi(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.html2ansi">DemonTools.html2ansi(text)</a></td>
 	<td class="summary">Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns an ansi string</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#html2hecho">html2hecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.html2hecho">DemonTools.html2hecho(text)</a></td>
 	<td class="summary">Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns an hecho string</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#cecho2string">cecho2string(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.cecho2string">DemonTools.cecho2string(text)</a></td>
 	<td class="summary">Takes a cecho string and returns it without the formatting</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#decho2string">decho2string(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.decho2string">DemonTools.decho2string(text)</a></td>
 	<td class="summary">Takes a decho string and returns it without the formatting</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho2string">hecho2string(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.hecho2string">DemonTools.hecho2string(text)</a></td>
 	<td class="summary">Takes a hecho string and returns it without the formatting</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#html2string">html2string(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.html2string">DemonTools.html2string(text)</a></td>
 	<td class="summary">Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns a clean string</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho2ansi">hecho2ansi(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.hecho2ansi">DemonTools.hecho2ansi(text)</a></td>
 	<td class="summary">Takes an hecho colored text string and returns a ansi colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho2cecho">hecho2cecho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.hecho2cecho">DemonTools.hecho2cecho(text)</a></td>
 	<td class="summary">Takes an hecho colored text string and returns a cecho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#hecho2decho">hecho2decho(text)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.hecho2decho">DemonTools.hecho2decho(text)</a></td>
 	<td class="summary">Takes an hecho colored text string and returns a decho colored one</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#append2decho">append2decho()</a></td>
+	<td class="name" nowrap><a href="#DemonTools.append2decho">DemonTools.append2decho()</a></td>
 	<td class="summary">Takes the currently copy()ed item and returns it as a decho string</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#consoleToString">consoleToString(options)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.consoleToString">DemonTools.consoleToString(options)</a></td>
 	<td class="summary">Dump the contents of a miniconsole, user window, or the main window in one of several formats, as determined by a table of options</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#displayColors">displayColors(options)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.displayColors">DemonTools.displayColors(options)</a></td>
 	<td class="summary">Alternative to Mudlet's showColors(), this one has additional options.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#roundInt">roundInt(number)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.roundInt">DemonTools.roundInt(number)</a></td>
 	<td class="summary">Rounds a number to the nearest whole integer</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#scientific_round">scientific_round(number, sig_digits)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.scientific_round">DemonTools.scientific_round(number, sig_digits)</a></td>
 	<td class="summary">Rounds a number to a specified number of significant digits</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#string2color">string2color(str)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.string2color">DemonTools.string2color(str)</a></td>
 	<td class="summary">Returns a color table {r,g,b} derived from str.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#colorMunge">colorMunge(strForColor, strToColor, format)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.colorMunge">DemonTools.colorMunge(strForColor, strToColor, format)</a></td>
 	<td class="summary">Returns a colored string where strForColor is run through DemonTools.string2color and applied to strToColor based on format.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#colorMungeEcho">colorMungeEcho(strForColor, strToEcho, format, win)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.colorMungeEcho">DemonTools.colorMungeEcho(strForColor, strToEcho, format, win)</a></td>
 	<td class="summary">Like colorMunge but also echos the result to win.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#milliToHuman">milliToHuman(milliseconds, tbl)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.milliToHuman">DemonTools.milliToHuman(milliseconds, tbl)</a></td>
 	<td class="summary">Converts milliseconds to hours:minutes:seconds:milliseconds</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#getValueAt">getValueAt(variableString)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.getValueAt">DemonTools.getValueAt(variableString)</a></td>
 	<td class="summary">Takes the name of a variable as a string and returns the value.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#exists">exists(path)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.exists">DemonTools.exists(path)</a></td>
 	<td class="summary">Returns if a file or directory exists on the filesystem</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#isDir">isDir(path)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.isDir">DemonTools.isDir(path)</a></td>
 	<td class="summary">Returns if a path is a directory or not</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#isWindows">isWindows()</a></td>
+	<td class="name" nowrap><a href="#DemonTools.isWindows">DemonTools.isWindows()</a></td>
 	<td class="summary">Returns true if running on windows, false otherwise</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#mkdir_p">mkdir_p(path)</a></td>
+	<td class="name" nowrap><a href="#DemonTools.mkdir_p">DemonTools.mkdir_p(path)</a></td>
 	<td class="summary">Creates a directory, creating each directory as necessary along the way.</td>
 	</tr>
 </table>
@@ -239,8 +237,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "chunkify"></a>
-    <strong>chunkify(tbl, num_chunks)</strong>
+    <a name = "DemonTools.chunkify"></a>
+    <strong>DemonTools.chunkify(tbl, num_chunks)</strong>
     </dt>
     <dd>
     Takes a list table and returns it as a table of 'chunks'.  If the table has 12 items and you ask for 3 chunks, each chunk will have 4 items in it
@@ -263,7 +261,7 @@
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="keyword">local</span> dt = <span class="global">require</span>(<span class="string">"MDK-1.demontools"</span>)
+        <pre class="example"><span class="keyword">local</span> dt = <span class="global">require</span>(<span class="string">"MDK.demontools"</span>)
 testTable = { <span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>, <span class="string">"four"</span>, <span class="string">"five"</span>, <span class="string">"six"</span>, <span class="string">"seven"</span>, <span class="string">"eight"</span>, <span class="string">"nine"</span>, <span class="string">"ten"</span> }
 display(dt.chunkify(testTable, <span class="number">3</span>))
 <span class="comment">--displays the following
@@ -289,8 +287,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "ansi2cecho"></a>
-    <strong>ansi2cecho(text)</strong>
+    <a name = "DemonTools.ansi2cecho"></a>
+    <strong>DemonTools.ansi2cecho(text)</strong>
     </dt>
     <dd>
     Takes an ansi colored text string and returns a cecho colored one
@@ -315,8 +313,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "ansi2decho"></a>
-    <strong>ansi2decho(text)</strong>
+    <a name = "DemonTools.ansi2decho"></a>
+    <strong>DemonTools.ansi2decho(text)</strong>
     </dt>
     <dd>
     Takes an ansi colored text string and returns a decho colored one.  Handles 256 color SGR codes better than Mudlet's ansi2decho
@@ -342,8 +340,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "ansi2hecho"></a>
-    <strong>ansi2hecho(text)</strong>
+    <a name = "DemonTools.ansi2hecho"></a>
+    <strong>DemonTools.ansi2hecho(text)</strong>
     </dt>
     <dd>
     Takes an ansi colored text string and returns a hecho colored one
@@ -368,8 +366,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "cecho2decho"></a>
-    <strong>cecho2decho(text)</strong>
+    <a name = "DemonTools.cecho2decho"></a>
+    <strong>DemonTools.cecho2decho(text)</strong>
     </dt>
     <dd>
     Takes an cecho colored text string and returns a decho colored one
@@ -393,8 +391,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "cecho2ansi"></a>
-    <strong>cecho2ansi(text)</strong>
+    <a name = "DemonTools.cecho2ansi"></a>
+    <strong>DemonTools.cecho2ansi(text)</strong>
     </dt>
     <dd>
     Takes an cecho colored text string and returns an ansi colored one
@@ -418,8 +416,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "cecho2hecho"></a>
-    <strong>cecho2hecho(text)</strong>
+    <a name = "DemonTools.cecho2hecho"></a>
+    <strong>DemonTools.cecho2hecho(text)</strong>
     </dt>
     <dd>
     Takes an cecho colored text string and returns a hecho colored one
@@ -443,8 +441,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "decho2cecho"></a>
-    <strong>decho2cecho(text)</strong>
+    <a name = "DemonTools.decho2cecho"></a>
+    <strong>DemonTools.decho2cecho(text)</strong>
     </dt>
     <dd>
     Takes an decho colored text string and returns a cecho colored one
@@ -468,8 +466,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "decho2ansi"></a>
-    <strong>decho2ansi(text)</strong>
+    <a name = "DemonTools.decho2ansi"></a>
+    <strong>DemonTools.decho2ansi(text)</strong>
     </dt>
     <dd>
     Takes an decho colored text string and returns an ansi colored one
@@ -493,8 +491,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "decho2hecho"></a>
-    <strong>decho2hecho(text)</strong>
+    <a name = "DemonTools.decho2hecho"></a>
+    <strong>DemonTools.decho2hecho(text)</strong>
     </dt>
     <dd>
     Takes an decho colored text string and returns an hecho colored one
@@ -518,8 +516,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "decho2html"></a>
-    <strong>decho2html(text)</strong>
+    <a name = "DemonTools.decho2html"></a>
+    <strong>DemonTools.decho2html(text)</strong>
     </dt>
     <dd>
     Takes a decho colored text string and returns html.
@@ -539,8 +537,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "cecho2html"></a>
-    <strong>cecho2html(text)</strong>
+    <a name = "DemonTools.cecho2html"></a>
+    <strong>DemonTools.cecho2html(text)</strong>
     </dt>
     <dd>
     Takes a cecho colored text string and returns html.
@@ -560,8 +558,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "hecho2html"></a>
-    <strong>hecho2html(text)</strong>
+    <a name = "DemonTools.hecho2html"></a>
+    <strong>DemonTools.hecho2html(text)</strong>
     </dt>
     <dd>
     Takes a hecho colored text string and returns html.
@@ -581,8 +579,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "ansi2html"></a>
-    <strong>ansi2html(text)</strong>
+    <a name = "DemonTools.ansi2html"></a>
+    <strong>DemonTools.ansi2html(text)</strong>
     </dt>
     <dd>
     Takes an ansi colored text string and returns html.
@@ -602,8 +600,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "html2cecho"></a>
-    <strong>html2cecho(text)</strong>
+    <a name = "DemonTools.html2cecho"></a>
+    <strong>DemonTools.html2cecho(text)</strong>
     </dt>
     <dd>
     Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns a cecho string
@@ -623,8 +621,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "html2decho"></a>
-    <strong>html2decho(text)</strong>
+    <a name = "DemonTools.html2decho"></a>
+    <strong>DemonTools.html2decho(text)</strong>
     </dt>
     <dd>
     Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns a decho string
@@ -644,8 +642,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "html2ansi"></a>
-    <strong>html2ansi(text)</strong>
+    <a name = "DemonTools.html2ansi"></a>
+    <strong>DemonTools.html2ansi(text)</strong>
     </dt>
     <dd>
     Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns an ansi string
@@ -665,8 +663,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "html2hecho"></a>
-    <strong>html2hecho(text)</strong>
+    <a name = "DemonTools.html2hecho"></a>
+    <strong>DemonTools.html2hecho(text)</strong>
     </dt>
     <dd>
     Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns an hecho string
@@ -686,8 +684,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "cecho2string"></a>
-    <strong>cecho2string(text)</strong>
+    <a name = "DemonTools.cecho2string"></a>
+    <strong>DemonTools.cecho2string(text)</strong>
     </dt>
     <dd>
     Takes a cecho string and returns it without the formatting
@@ -706,8 +704,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "decho2string"></a>
-    <strong>decho2string(text)</strong>
+    <a name = "DemonTools.decho2string"></a>
+    <strong>DemonTools.decho2string(text)</strong>
     </dt>
     <dd>
     Takes a decho string and returns it without the formatting
@@ -726,8 +724,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "hecho2string"></a>
-    <strong>hecho2string(text)</strong>
+    <a name = "DemonTools.hecho2string"></a>
+    <strong>DemonTools.hecho2string(text)</strong>
     </dt>
     <dd>
     Takes a hecho string and returns it without the formatting
@@ -746,8 +744,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "html2string"></a>
-    <strong>html2string(text)</strong>
+    <a name = "DemonTools.html2string"></a>
+    <strong>DemonTools.html2string(text)</strong>
     </dt>
     <dd>
     Takes an html colored string of the sort turned out by the DemonTools *2html functions and returns a clean string
@@ -766,8 +764,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "hecho2ansi"></a>
-    <strong>hecho2ansi(text)</strong>
+    <a name = "DemonTools.hecho2ansi"></a>
+    <strong>DemonTools.hecho2ansi(text)</strong>
     </dt>
     <dd>
     Takes an hecho colored text string and returns a ansi colored one
@@ -791,8 +789,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "hecho2cecho"></a>
-    <strong>hecho2cecho(text)</strong>
+    <a name = "DemonTools.hecho2cecho"></a>
+    <strong>DemonTools.hecho2cecho(text)</strong>
     </dt>
     <dd>
     Takes an hecho colored text string and returns a cecho colored one
@@ -816,8 +814,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "hecho2decho"></a>
-    <strong>hecho2decho(text)</strong>
+    <a name = "DemonTools.hecho2decho"></a>
+    <strong>DemonTools.hecho2decho(text)</strong>
     </dt>
     <dd>
     Takes an hecho colored text string and returns a decho colored one
@@ -841,8 +839,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "append2decho"></a>
-    <strong>append2decho()</strong>
+    <a name = "DemonTools.append2decho"></a>
+    <strong>DemonTools.append2decho()</strong>
     </dt>
     <dd>
     Takes the currently copy()ed item and returns it as a decho string
@@ -855,8 +853,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "consoleToString"></a>
-    <strong>consoleToString(options)</strong>
+    <a name = "DemonTools.consoleToString"></a>
+    <strong>DemonTools.consoleToString(options)</strong>
     </dt>
     <dd>
     Dump the contents of a miniconsole, user window, or the main window in one of several formats, as determined by a table of options
@@ -901,8 +899,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
      <td class="tg-odd">If the format is html, should it include the front and back portions required to make it a functioning html page?</td>
      <td class="tg-odd">true</td>
    </tr>
-</tbody>
-</table>
+ </tbody>
+ </table>
         </li>
     </ul>
 
@@ -912,8 +910,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "displayColors"></a>
-    <strong>displayColors(options)</strong>
+    <a name = "DemonTools.displayColors"></a>
+    <strong>DemonTools.displayColors(options)</strong>
     </dt>
     <dd>
     Alternative to Mudlet's showColors(), this one has additional options.
@@ -978,8 +976,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
      <td class="tg-odd">Table of colors to display. If you provide your own table, it must be in the same format as Mudlet's own color_table</td>
      <td class="tg-odd">color_table</td>
    </tr>
-</tbody>
-</table>
+ </tbody>
+ </table>
         </li>
     </ul>
 
@@ -989,8 +987,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "roundInt"></a>
-    <strong>roundInt(number)</strong>
+    <a name = "DemonTools.roundInt"></a>
+    <strong>DemonTools.roundInt(number)</strong>
     </dt>
     <dd>
     Rounds a number to the nearest whole integer
@@ -1014,8 +1012,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "scientific_round"></a>
-    <strong>scientific_round(number, sig_digits)</strong>
+    <a name = "DemonTools.scientific_round"></a>
+    <strong>DemonTools.scientific_round(number, sig_digits)</strong>
     </dt>
     <dd>
     Rounds a number to a specified number of significant digits
@@ -1044,8 +1042,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "string2color"></a>
-    <strong>string2color(str)</strong>
+    <a name = "DemonTools.string2color"></a>
+    <strong>DemonTools.string2color(str)</strong>
     </dt>
     <dd>
     Returns a color table {r,g,b} derived from str.  Will return the same color every time for the same string.
@@ -1069,8 +1067,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "colorMunge"></a>
-    <strong>colorMunge(strForColor, strToColor, format)</strong>
+    <a name = "DemonTools.colorMunge"></a>
+    <strong>DemonTools.colorMunge(strForColor, strToColor, format)</strong>
     </dt>
     <dd>
     Returns a colored string where strForColor is run through DemonTools.string2color and applied to strToColor based on format.
@@ -1101,8 +1099,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "colorMungeEcho"></a>
-    <strong>colorMungeEcho(strForColor, strToEcho, format, win)</strong>
+    <a name = "DemonTools.colorMungeEcho"></a>
+    <strong>DemonTools.colorMungeEcho(strForColor, strToEcho, format, win)</strong>
     </dt>
     <dd>
     Like colorMunge but also echos the result to win.
@@ -1132,8 +1130,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "milliToHuman"></a>
-    <strong>milliToHuman(milliseconds, tbl)</strong>
+    <a name = "DemonTools.milliToHuman"></a>
+    <strong>DemonTools.milliToHuman(milliseconds, tbl)</strong>
     </dt>
     <dd>
     Converts milliseconds to hours:minutes:seconds:milliseconds
@@ -1169,8 +1167,8 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
 
 </dd>
     <dt>
-    <a name = "getValueAt"></a>
-    <strong>getValueAt(variableString)</strong>
+    <a name = "DemonTools.getValueAt"></a>
+    <strong>DemonTools.getValueAt(variableString)</strong>
     </dt>
     <dd>
     Takes the name of a variable as a string and returns the value.  "health" will return the value in varable health, "gmcp.Char.Vitals" will return the table at gmcp.Char.Vitals, etc
@@ -1190,13 +1188,13 @@ display(dt.chunkify(testTable, <span class="number">3</span>))
     <h3>Usage:</h3>
     <ul>
         <pre class="example">currentHP = <span class="number">50</span>
-dt.getValueAt(<span class="string">"currentHP"</span>) <span class="comment">-- returns 50</span></pre>
+ dt.getValueAt(<span class="string">"currentHP"</span>) <span class="comment">-- returns 50</span></pre>
     </ul>
 
 </dd>
     <dt>
-    <a name = "exists"></a>
-    <strong>exists(path)</strong>
+    <a name = "DemonTools.exists"></a>
+    <strong>DemonTools.exists(path)</strong>
     </dt>
     <dd>
     Returns if a file or directory exists on the filesystem
@@ -1216,8 +1214,8 @@ dt.getValueAt(<span class="string">"currentHP"</span>) <span class="comment">-- 
 
 </dd>
     <dt>
-    <a name = "isDir"></a>
-    <strong>isDir(path)</strong>
+    <a name = "DemonTools.isDir"></a>
+    <strong>DemonTools.isDir(path)</strong>
     </dt>
     <dd>
     Returns if a path is a directory or not
@@ -1237,8 +1235,8 @@ dt.getValueAt(<span class="string">"currentHP"</span>) <span class="comment">-- 
 
 </dd>
     <dt>
-    <a name = "isWindows"></a>
-    <strong>isWindows()</strong>
+    <a name = "DemonTools.isWindows"></a>
+    <strong>DemonTools.isWindows()</strong>
     </dt>
     <dd>
     Returns true if running on windows, false otherwise
@@ -1251,8 +1249,8 @@ dt.getValueAt(<span class="string">"currentHP"</span>) <span class="comment">-- 
 
 </dd>
     <dt>
-    <a name = "mkdir_p"></a>
-    <strong>mkdir_p(path)</strong>
+    <a name = "DemonTools.mkdir_p"></a>
+    <strong>DemonTools.mkdir_p(path)</strong>
     </dt>
     <dd>
     Creates a directory, creating each directory as necessary along the way.
@@ -1278,7 +1276,7 @@ dt.getValueAt(<span class="string">"currentHP"</span>) <span class="comment">-- 
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-02-06 01:02:19 </i>
+<i style="float:right;">Last updated 2021-02-07 18:13:02 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
