@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>MDK</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="nowrap">
+  <li><a href="../classes/Chyron.html">Chyron</a></li>
+  <li><a href="../classes/EMCO.html">EMCO</a></li>
+  <li><a href="../classes/LoggingConsole.html">LoggingConsole</a></li>
+  <li><a href="../classes/MasterMindSolver.html">MasterMindSolver</a></li>
+  <li><a href="../classes/SortBox.html">SortBox</a></li>
+  <li><strong>SUG</strong></li>
+  <li><a href="../classes/TextGauge.html">TextGauge</a></li>
+  <li><a href="../classes/TimerGauge.html">TimerGauge</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/demontools.html">demontools</a></li>
+  <li><a href="../modules/echofile.html">echofile</a></li>
+  <li><a href="../modules/ftext.html">ftext</a></li>
+  <li><a href="../modules/gradientmaker.html">gradientmaker</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>SUG</code></h1>
+<p>Self Updating Gauge, extends <a href="https://www.mudlet.org/geyser/files/geyser/GeyserGauge.html">Geyser.Gauge</a></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 Damian Monogue</li>
+        <li><strong>License</strong>: MIT, see LICENSE.lua</li>
+        <li><strong>Author</strong>: Damian Monogue <demonnic@gmail.com></li>
+    </ul>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#SUG:new">SUG:new(cons, container)</a></td>
+	<td class="summary">Creates a new Self Updating Gauge.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUG:setCurrentVariable">SUG:setCurrentVariable(variableName)</a></td>
+	<td class="summary">Set the name of the variable the Self Updating Gauge watches for the 'current' value of the gauge</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUG:setMaxVariable">SUG:setMaxVariable(variableName)</a></td>
+	<td class="summary">Set the name of the variable the Self Updating Gauge watches for the 'max' value of the gauge</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUG:setTextTemplate">SUG:setTextTemplate(template)</a></td>
+	<td class="summary">Set the template for the Self Updating Gauge to set the text with.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUG:stop">SUG:stop()</a></td>
+	<td class="summary">Stops the Self Updating Gauge from updating</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUG:start">SUG:start()</a></td>
+	<td class="summary">Starts the Self Updating Gauge updating.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#SUG:update">SUG:update()</a></td>
+	<td class="summary">Reads the values from currentVariable and maxVariable, and updates the gauge's value and text.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "SUG:new"></a>
+    <strong>SUG:new(cons, container)</strong>
+    </dt>
+    <dd>
+    Creates a new Self Updating Gauge.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         table of options which control the Gauge's behaviour. In addition to all valid contraints for Geyser.Gauge, SUG adds:
+ <br>
+ <table class="tg">
+ <tr>
+  <th>name</th>
+  <th>description</th>
+  <th>default</th>
+ </tr>
+ <tr>
+  <td class="tg-odd">active</td>
+  <td class="tg-odd">boolean, if true starts the timer updating</td>
+  <td class="tg-odd">true</td>
+ </tr>
+ <tr>
+  <td class="tg-even">updateTime</td>
+  <td class="tg-even">How often should the gauge autoupdate? Milliseconds</td>
+  <td class="tg-even">333</td>
+ </tr>
+ <tr>
+  <td class="tg-odd">currentVariable</td>
+  <td class="tg-odd">What variable will hold the 'current' value of the gauge? Pass the name as a string, IE "currentHP" or "gmcp.Char.Vitals.hp"</td>
+  <td class="tg-odd">""</td>
+ </tr>
+ <tr>
+  <td class="tg-even">maxVariable</td>
+  <td class="tg-even">What variable will hold the 'current' value of the gauge? Pass the name as a string, IE "maxHP" or "gmcp.Char.Vitals.maxhp"</td>
+  <td class="tg-even">""</td>
+ </tr>
+ <tr>
+  <td class="tg-odd">textTemplate</td>
+  <td class="tg-odd">Template to use for the text on the gauge. "|c" replaced with current value, "|m" replaced with max value, "|p" replaced with the % full the gauge should be</td>
+  <td class="tg-odd">" |c/|m |p%"</td>
+ </tr>
+ <tr>
+  <td class="tg-even">defaultCurrent</td>
+  <td class="tg-even">What value to use if the currentVariable points to nil or something which cannot be made a number?</td>
+  <td class="tg-even">50</td>
+ </tr>
+ <tr>
+  <td class="tg-odd">defaultMax</td>
+  <td class="tg-odd">What value to use if the maxVariable points to nil or something which cannot be made a number?</td>
+  <td class="tg-odd">100</td>
+ </tr>
+ </table>
+        </li>
+        <li><span class="parameter">container</span>
+         The Geyser container for this gauge
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> SUG = <span class="global">require</span>(<span class="string">"MDK.sug"</span>) <span class="comment">--the following will watch "gmcp.Char.Vitals.hp" and "gmcp.Char.Vitals.maxhp" and update itself every 333 milliseconds
+</span>myGauge = SUG:new({
+  name = <span class="string">"myGauge"</span>,
+  currentVariable = <span class="string">"gmcp.Char.Vitals.hp"</span>, <span class="comment">--if this is nil, it will use the defaultCurrent of 50
+</span>  maxVariable = <span class="string">"gmcp.Char.Vitals.maxhp"</span>,  <span class="comment">--if this is nil, it will use the defaultMax of 100.
+</span>  height = <span class="number">50</span>,
+})</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "SUG:setCurrentVariable"></a>
+    <strong>SUG:setCurrentVariable(variableName)</strong>
+    </dt>
+    <dd>
+    Set the name of the variable the Self Updating Gauge watches for the 'current' value of the gauge
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">variableName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the variable to get the current value for the gauge. For instance "currentHP", "gmcp.Char.Vitals.hp" etc
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SUG:setMaxVariable"></a>
+    <strong>SUG:setMaxVariable(variableName)</strong>
+    </dt>
+    <dd>
+    Set the name of the variable the Self Updating Gauge watches for the 'max' value of the gauge
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">variableName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the variable to get the max value for the gauge. For instance "maxHP", "gmcp.Char.Vitals.maxhp" etc. Set to "" to only check the current value
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SUG:setTextTemplate"></a>
+    <strong>SUG:setTextTemplate(template)</strong>
+    </dt>
+    <dd>
+    Set the template for the Self Updating Gauge to set the text with.  "|c" is replaced by the current value, "|m" is replaced by the max value, and "|p" is replaced by the percentage current/max
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">template</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The template to use for the text on the gauge. If the max value is 200 and current is 68, then |c will be replace by 68, |m replaced by 200, and |p replaced by 34.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SUG:stop"></a>
+    <strong>SUG:stop()</strong>
+    </dt>
+    <dd>
+    Stops the Self Updating Gauge from updating
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SUG:start"></a>
+    <strong>SUG:start()</strong>
+    </dt>
+    <dd>
+    Starts the Self Updating Gauge updating.  If it is already updating, it will restart it.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "SUG:update"></a>
+    <strong>SUG:update()</strong>
+    </dt>
+    <dd>
+    Reads the values from currentVariable and maxVariable, and updates the gauge's value and text.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2021-04-23 18:19:38 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
