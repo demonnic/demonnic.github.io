@@ -6,6 +6,7 @@
 			<name>DefaultYATCOConversion</name>
 			<packageName></packageName>
 			<script>-- These are the same as the default YATCO options on a 1080p monitor. 
+local EMCO = require("MDK.emco")
 demonnic = demonnic or {}
 demonnic.chat = demonnic.chat or EMCO:new({
   -- these are the x and y coordinates for the top-left of the tabbed container
