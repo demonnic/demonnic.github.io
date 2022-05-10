@@ -14,19 +14,8 @@
           {"x": 635, "value": 71726},
           {"x": 646, "value": 72607}
         ]
-      },
-      {
-        "seriesType": "spline",
-        "stroke": {
-          "color": "black",
-          "thickness": 3
-        },
-        "data": [
-          {"x": 635, "value": 77.3798},
-          {"x": 646, "value": 77.4646}
-        ]
       }
     ],
-    "container": "container"
+    "container": "container1"
   }
 }
