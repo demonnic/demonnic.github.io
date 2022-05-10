@@ -4,6 +4,10 @@
     "series": [
       {
         "seriesType": "line",
+        "stroke": {
+          "color": "red",
+          "thickness": 3
+        },
         "data": [
           {"x": 613, "value": 67661},
           {"x": 632, "value": 70179},
