@@ -3,7 +3,7 @@
     "type": "line",
     "series": [
       {
-        "seriesType": "spline",
+        "seriesType": "line",
         "data": [
           {"x": 613, "value": 67661},
           {"x": 632, "value": 70179},
