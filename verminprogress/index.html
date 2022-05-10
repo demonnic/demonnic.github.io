@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>JavaScript Line Chart</title>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
+    <style type="text/css">      
+      html, body, #container { 
+        width: 100%; height: 100%; margin: 0; padding: 0; 
+      } 
+    </style>
+  </head>
+  <body>  
+    <div id="container"></div>
+    <script>
+      anychart.fromJsonFile("https://demonnic.github.io/verminprogress/vermindata.json", function (chart) {
+	// set additional settings
+    chart.title("Weevils killed over time played");
+    // display chart
+    //chart.container("container");
+    chart.draw();
+});
+    </script>
+  </body>
+</html>
