@@ -5,7 +5,6 @@
       {
         "seriesType": "spline",
         "data": [
-          {"x": 0, "value": 0},
           {"x": 613, "value": 67661},
           {"x": 632, "value": 70179},
           {"x": 635, "value": 71726},
