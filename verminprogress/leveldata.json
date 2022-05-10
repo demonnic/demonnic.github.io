@@ -1,0 +1,25 @@
+{
+  "chart": {
+    "type": "line",
+    "series": [
+      {
+        "seriesType": "spline",
+        "stroke": {
+          "color": "black",
+          "thickness": 3
+        },
+        "data": [
+          {
+            "x": 635,
+            "value": 77.3798
+          },
+          {
+            "x": 646,
+            "value": 77.4646
+          }
+        ]
+      }
+    ],
+    "container": "container2"
+  }
+}
