@@ -3,7 +3,6 @@
     "type": "line",
     "series": [
       {
-        "seriesType": "spline",
         "stroke": {
           "color": "orange",
           "thickness": 3
@@ -24,8 +23,13 @@
           {
             "value": 72607,
             "x": 77.4646
+          },
+          {
+            "value": 72607,
+            "x": 77.4742
           }
-        ]
+        ],
+        "seriesType": "spline"
       }
     ],
     "container": "container3"

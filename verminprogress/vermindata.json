@@ -3,29 +3,33 @@
     "type": "line",
     "series": [
       {
-        "seriesType": "spline",
         "stroke": {
           "color": "red",
           "thickness": 3
         },
         "data": [
           {
-            "x": 613,
-            "value": 67661
+            "value": 67661,
+            "x": 613
           },
           {
-            "x": 632,
-            "value": 70179
+            "value": 70179,
+            "x": 632
           },
           {
-            "x": 635,
-            "value": 71726
+            "value": 71726,
+            "x": 635
           },
           {
-            "x": 646,
-            "value": 72607
+            "value": 72607,
+            "x": 646
+          },
+          {
+            "value": 72607,
+            "x": 648.01666666667
           }
-        ]
+        ],
+        "seriesType": "spline"
       }
     ],
     "container": "container1"
