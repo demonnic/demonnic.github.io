@@ -32,12 +32,14 @@
       // set additional settings
       chart.title("Weevils killed over time played");
       // display chart
+      chart.container("container1");
       chart.draw();
     });
-    anychart.fromJsonFile("https://demonnic.github.io/verminprogress/leveldata.json", function (chart) {
+    anychart.fromJsonFile("https://demonnic.github.io/verminprogress/vermindata.json", function (chart) {
       // set additional settings
-      chart.title("Levels against time played");
+      chart.title("Weevils killed over time played");
       // display chart
+      chart.container("container2");
       chart.draw();
     });
   </script>
