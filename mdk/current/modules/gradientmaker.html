@@ -42,7 +42,7 @@
   <li><a href="../modules/echofile.html">echofile</a></li>
   <li><a href="../modules/figlet.html">figlet</a></li>
   <li><a href="../modules/ftext.html">ftext</a></li>
-  <li><strong>gradientmaker</strong></li>
+  <li><strong>GradientMaker</strong></li>
 </ul>
 <h2>Classes</h2>
 <ul class="nowrap">
@@ -62,7 +62,7 @@
 
 <div id="content">
 
-<h1>Module <code>gradientmaker</code></h1>
+<h1>Module <code>GradientMaker</code></h1>
 <p>Module which provides for creating color gradients for your text.</p>
 <p>
  Original functions found on <a href="https://forums.lusternia.com/discussion/3261/anyone-want-text-gradients">the Lusternia Forums</a>
@@ -78,35 +78,35 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.color_name">GradientMaker.color_name(r, g, b)</a></td>
+	<td class="name" nowrap><a href="#color_name">color_name(r, g, b)</a></td>
 	<td class="summary">Returns the closest color name to a given r,g,b color</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.dgradient">GradientMaker.dgradient(text, first_color, second_color, next_color)</a></td>
+	<td class="name" nowrap><a href="#dgradient">dgradient(text, first_color, second_color, next_color)</a></td>
 	<td class="summary">Returns the text, with the defined color gradients applied and formatted for us with decho.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.cgradient">GradientMaker.cgradient(text, first_color, second_color, next_color)</a></td>
+	<td class="name" nowrap><a href="#cgradient">cgradient(text, first_color, second_color, next_color)</a></td>
 	<td class="summary">Returns the text, with the defined color gradients applied and formatted for us with cecho.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.hgradient">GradientMaker.hgradient(text, first_color, second_color, next_color)</a></td>
+	<td class="name" nowrap><a href="#hgradient">hgradient(text, first_color, second_color, next_color)</a></td>
 	<td class="summary">Returns the text, with the defined color gradients applied and formatted for us with hecho.</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.cgradient_table">GradientMaker.cgradient_table(text, first_color, second_color, next_color)</a></td>
+	<td class="name" nowrap><a href="#cgradient_table">cgradient_table(text, first_color, second_color, next_color)</a></td>
 	<td class="summary">Returns a table, each element of which is a table, the first element of which is the color name to use and the character which should be that color</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.dgradient_table">GradientMaker.dgradient_table(text, first_color, second_color, next_color)</a></td>
+	<td class="name" nowrap><a href="#dgradient_table">dgradient_table(text, first_color, second_color, next_color)</a></td>
 	<td class="summary">Returns a table, each element of which is a table, the first element of which is the color({r,g,b} format) to use and the character which should be that color</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.hgradient_table">GradientMaker.hgradient_table(text, first_color, second_color, next_color)</a></td>
+	<td class="name" nowrap><a href="#hgradient_table">hgradient_table(text, first_color, second_color, next_color)</a></td>
 	<td class="summary">Returns a table, each element of which is a table, the first element of which is the color(in hex) to use and the second element of which is the character which should be that color</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#GradientMaker.install_global">GradientMaker.install_global()</a></td>
+	<td class="name" nowrap><a href="#install_global">install_global()</a></td>
 	<td class="summary">Creates global copies of the c/d/hgradient(_table) functions and color_name for use without accessing the module table</td>
 	</tr>
 </table>
@@ -119,8 +119,8 @@
 
     <dl class="function">
     <dt>
-    <a name = "GradientMaker.color_name"></a>
-    <strong>GradientMaker.color_name(r, g, b)</strong>
+    <a name = "color_name"></a>
+    <strong>color_name(r, g, b)</strong>
     </dt>
     <dd>
     Returns the closest color name to a given r,g,b color
@@ -150,8 +150,8 @@
 
 </dd>
     <dt>
-    <a name = "GradientMaker.dgradient"></a>
-    <strong>GradientMaker.dgradient(text, first_color, second_color, next_color)</strong>
+    <a name = "dgradient"></a>
+    <strong>dgradient(text, first_color, second_color, next_color)</strong>
     </dt>
     <dd>
     Returns the text, with the defined color gradients applied and formatted for us with decho.  Usage example below produces the following text
@@ -179,8 +179,8 @@
 
     <h3>See also:</h3>
     <ul>
-         <li><a href="../modules/gradientmaker.html#GradientMaker.cgradient">cgradient</a></li>
-         <li><a href="../modules/gradientmaker.html#GradientMaker.hgradient">hgradient</a></li>
+         <li><a href="../modules/GradientMaker.html#cgradient">cgradient</a></li>
+         <li><a href="../modules/GradientMaker.html#hgradient">hgradient</a></li>
     </ul>
 
     <h3>Usage:</h3>
@@ -192,8 +192,8 @@ decho(GradientMaker.dgradient(<span class="string">"a luminescent butterly float
 
 </dd>
     <dt>
-    <a name = "GradientMaker.cgradient"></a>
-    <strong>GradientMaker.cgradient(text, first_color, second_color, next_color)</strong>
+    <a name = "cgradient"></a>
+    <strong>cgradient(text, first_color, second_color, next_color)</strong>
     </dt>
     <dd>
     Returns the text, with the defined color gradients applied and formatted for us with cecho.  Usage example below produces the following text
@@ -221,8 +221,8 @@ decho(GradientMaker.dgradient(<span class="string">"a luminescent butterly float
 
     <h3>See also:</h3>
     <ul>
-         <li><a href="../modules/gradientmaker.html#GradientMaker.dgradient">dgradient</a></li>
-         <li><a href="../modules/gradientmaker.html#GradientMaker.hgradient">hgradient</a></li>
+         <li><a href="../modules/GradientMaker.html#dgradient">dgradient</a></li>
+         <li><a href="../modules/GradientMaker.html#hgradient">hgradient</a></li>
     </ul>
 
     <h3>Usage:</h3>
@@ -234,8 +234,8 @@ cecho(GradientMaker.cgradient(<span class="string">"a luminescent butterly float
 
 </dd>
     <dt>
-    <a name = "GradientMaker.hgradient"></a>
-    <strong>GradientMaker.hgradient(text, first_color, second_color, next_color)</strong>
+    <a name = "hgradient"></a>
+    <strong>hgradient(text, first_color, second_color, next_color)</strong>
     </dt>
     <dd>
     Returns the text, with the defined color gradients applied and formatted for us with hecho.  Usage example below produces the following text
@@ -263,8 +263,8 @@ cecho(GradientMaker.cgradient(<span class="string">"a luminescent butterly float
 
     <h3>See also:</h3>
     <ul>
-         <li><a href="../modules/gradientmaker.html#GradientMaker.cgradient">cgradient</a></li>
-         <li><a href="../modules/gradientmaker.html#GradientMaker.dgradient">dgradient</a></li>
+         <li><a href="../modules/GradientMaker.html#cgradient">cgradient</a></li>
+         <li><a href="../modules/GradientMaker.html#dgradient">dgradient</a></li>
     </ul>
 
     <h3>Usage:</h3>
@@ -276,8 +276,8 @@ hecho(GradientMaker.hgradient(<span class="string">"a luminescent butterly float
 
 </dd>
     <dt>
-    <a name = "GradientMaker.cgradient_table"></a>
-    <strong>GradientMaker.cgradient_table(text, first_color, second_color, next_color)</strong>
+    <a name = "cgradient_table"></a>
+    <strong>cgradient_table(text, first_color, second_color, next_color)</strong>
     </dt>
     <dd>
     Returns a table, each element of which is a table, the first element of which is the color name to use and the character which should be that color
@@ -304,14 +304,14 @@ hecho(GradientMaker.hgradient(<span class="string">"a luminescent butterly float
 
     <h3>See also:</h3>
     <ul>
-         <a href="../modules/gradientmaker.html#GradientMaker.cgradient">cgradient</a>
+         <a href="../modules/GradientMaker.html#cgradient">cgradient</a>
     </ul>
 
 
 </dd>
     <dt>
-    <a name = "GradientMaker.dgradient_table"></a>
-    <strong>GradientMaker.dgradient_table(text, first_color, second_color, next_color)</strong>
+    <a name = "dgradient_table"></a>
+    <strong>dgradient_table(text, first_color, second_color, next_color)</strong>
     </dt>
     <dd>
     Returns a table, each element of which is a table, the first element of which is the color({r,g,b} format) to use and the character which should be that color
@@ -338,14 +338,14 @@ hecho(GradientMaker.hgradient(<span class="string">"a luminescent butterly float
 
     <h3>See also:</h3>
     <ul>
-         <a href="../modules/gradientmaker.html#GradientMaker.dgradient">dgradient</a>
+         <a href="../modules/GradientMaker.html#dgradient">dgradient</a>
     </ul>
 
 
 </dd>
     <dt>
-    <a name = "GradientMaker.hgradient_table"></a>
-    <strong>GradientMaker.hgradient_table(text, first_color, second_color, next_color)</strong>
+    <a name = "hgradient_table"></a>
+    <strong>hgradient_table(text, first_color, second_color, next_color)</strong>
     </dt>
     <dd>
     Returns a table, each element of which is a table, the first element of which is the color(in hex) to use and the second element of which is the character which should be that color
@@ -372,14 +372,14 @@ hecho(GradientMaker.hgradient(<span class="string">"a luminescent butterly float
 
     <h3>See also:</h3>
     <ul>
-         <a href="../modules/gradientmaker.html#GradientMaker.hgradient">hgradient</a>
+         <a href="../modules/GradientMaker.html#hgradient">hgradient</a>
     </ul>
 
 
 </dd>
     <dt>
-    <a name = "GradientMaker.install_global"></a>
-    <strong>GradientMaker.install_global()</strong>
+    <a name = "install_global"></a>
+    <strong>install_global()</strong>
     </dt>
     <dd>
     Creates global copies of the c/d/hgradient(_table) functions and color_name for use without accessing the module table
@@ -403,7 +403,7 @@ cecho(cgradient(...)) <span class="comment">-- use cgradient directly now</span>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2022-12-18 17:28:57 </i>
+<i style="float:right;">Last updated 2023-03-11 19:16:36 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
